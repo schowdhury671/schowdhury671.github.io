@@ -3,6 +3,23 @@
 
 <head>
   <title>Sanjoy's webpage</title>
+  <style>
+    .code-box {
+      border: 2px solid #4CAF50; /* Green border for the box */
+      padding: 15px 20px; /* Add padding inside the box */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
+      font-family: 'Courier New', Courier, monospace; /* Monospace font for a code look */
+      background-color: #f9f9f9; /* Light background color */
+      display: inline-block; /* Make the box fit around the content */
+    }
+    .center-content {
+      text-align: center; /* Center align the content */
+    }
+    .red-text {
+      color: red; /* Red color for the bold text */
+    }
+  </style>
 
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
@@ -13,24 +30,6 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-<!--   <style>
-    .codebox {
-      display: block; /* Make code a block-level element */
-      margin: 0 auto; /* Horizontally center the code block */
-      padding: 10px;
-      border: 1px solid #ccc; /* Optional: border around the code */
-      background-color: #f4f4f4; /* Optional: background color for better visibility */
-      font-family: monospace; /* Optional: monospace font for code */
-      width: fit-content; /* Adjust width to the content inside the code block */
-    }
-    body {
-      display: flex;
-      justify-content: center; /* Center content horizontally */
-      align-items: center; /* Center content vertically */
-      height: 100vh; /* Full height of the viewport */
-      margin: 0;
-    }
-  </style> -->
 
 </head>
 
@@ -58,10 +57,18 @@
 
 
 		    
-	  <div align="center">
+<!-- 	  <div align="center">
 	    <code>
 	      <b style="color: red">Feel free to contact me if you're interested in research collaboration!</b>
 	    </code>
+	  </div> -->
+
+	  <div class="center-content">
+	    <div class="code-box">
+	      <code>
+	        <b class="red-text">Feel free to contact me if you're interested in research collaboration!</b>
+	      </code>
+	    </div>
 	  </div>
 
 		    
