@@ -15,10 +15,10 @@
 }
 #garden_title, #coauthor_hall_of_fame {
 }
-/* #coauthor_hall_of_fame {
+#coauthor_hall_of_fame {
     max-width: 1000px;
     margin: 0 auto;
-} */
+}
 #garden_title {
     margin-top: 50px;
     background: #e5e5f5;
@@ -110,7 +110,7 @@
 }
 
 /* coauthor hall of fame */
-/* #coauthor_hall_of_fame {
+#coauthor_hall_of_fame {
     margin-top: 20px;
 }
 #coauthor_title {
@@ -131,7 +131,7 @@
 .selected_coauthor {
     font-weight: 500;
     text-decoration: underline;
-} */
+}
 /* paper modal */
 
 #paper_modal {
