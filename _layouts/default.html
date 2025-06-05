@@ -1029,24 +1029,23 @@ achieve this by extracting and analyzing citation information from the text.</p>
     
 		
     <script>
-        var papers = [
-		{
-		    id: "meerkat",
-		    title: "Meerkat",
-		    venue: "ECCV 2024",
-		    url: "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08071.pdf",
-		    root_node: true,
-		    root_name: "Audio-Visual LLMs\n2024-now",
-		    root_color: "#D1BDFF",
-		    coauthors: ["Sanjoy Chowdhury"],
-		    full_title: "Meerkat: Audio-Visual Large Language Model for Grounding in Space and Time",
-		    summary: "Leveraging Large Language Models' remarkable proficiency in text-based tasks, recent works on Multi-modal LLMs (MLLMs) extend them to other modalities like vision and audio. However, the progress in these directions has been mostly focused on tasks that only require a coarse-grained understanding of the audio-visual semantics. We present Meerkat, an audio-visual LLM equipped with a fine-grained understanding of image and audio both spatially and temporally. With a new modality alignment module based on optimal transport and a cross-attention module that enforces audio-visual consistency, Meerkat can tackle challenging tasks such as audio referred image grounding, image guided audio temporal localization, and audio-visual fact-checking. Moreover, we carefully curate a large dataset AVFIT that comprises 3M instruction tuning samples collected from open-source datasets, and introduce MeerkatBench that unifies five challenging audio-visual tasks. We achieve state-of-the-art performance on all these downstream tasks with a relative improvement of up to 37.12%.",
-		    additional_links: {},
-		    indirect_connections: []
-	  	}
-	];
-
-        build_garden(papers);
+       $(document).ready(function () {
+    var papers = [{
+      id: "meerkat",
+      title: "Meerkat",
+      venue: "ECCV 2024",
+      url: "https://example.com",
+      root_node: true,
+      root_name: "Audio-Visual LLMs\n2024-now",
+      root_color: "#D1BDFF",
+      coauthors: ["Sanjoy Chowdhury"],
+      full_title: "Meerkat: Audio-Visual Large Language Model for Grounding in Space and Time",
+      summary: "Description here...",
+      additional_links: {},
+      indirect_connections: []
+    }];
+    build_garden(papers);
+  });
     </script>
 
 		
