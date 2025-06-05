@@ -1025,9 +1025,11 @@ achieve this by extracting and analyzing citation information from the text.</p>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="garden.js?v=2"></script>
+    <h2 style="text-align:center; font-family: sans-serif;">Sanjoy's Research Garden</h2>
+    <div id="garden" style="height: 800px;"></div>
     
 		
+<!-- 3. Add garden data and logic -->
 <script>
   var papers = [
     {
@@ -1038,19 +1040,43 @@ achieve this by extracting and analyzing citation information from the text.</p>
       "root_node": 1,
       "root_name": "InteractingN2023-now",
       "root_color": "#D18DFF",
-      "coauthors": ["Hiroaki Hayashi", "Yingbo Zhou", "Jennifer"]
+      "coauthors": ["Alice", "Bob"]
     },
     {
-      "id": "lost_in_conv",
-      "title": "Lost in Conversation",
-      "venue": "arXiv",
-      "url": "https://arxiv.org/abs/2505.06120",
-      "parent": "flipflop",
-      "coauthors": ["Hiroaki Hayashi", "Yingbo Zhou"]
+      "id": "summaryloop",
+      "title": "Summary Loop",
+      "venue": "ACL2020",
+      "url": "https://arxiv.org/abs/2105.05361",
+      "root_node": 1,
+      "root_name": "SummarizationN2019-now",
+      "root_color": "#FF6699",
+      "coauthors": ["Carol", "Dan"]
     }
   ];
 
-  build_garden(papers);
+  function build_garden(papers) {
+    const garden = $("#garden");
+    papers.forEach(paper => {
+      const el = $("<div></div>")
+        .css({
+          background: paper.root_color,
+          padding: "10px",
+          margin: "10px",
+          borderRadius: "8px",
+          width: "200px",
+          float: "left",
+          fontFamily: "sans-serif",
+          color: "white",
+          cursor: "pointer"
+        })
+        .html(`<strong>${paper.title}</strong><br><a style="color:white" href="${paper.url}" target="_blank">${paper.venue}</a>`);
+      garden.append(el);
+    });
+  }
+
+  $(document).ready(function() {
+    build_garden(papers);
+  });
 </script>
 
 		
