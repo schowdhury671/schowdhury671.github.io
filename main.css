@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    padding-bottom: 100px;
+}
+a {
+    color: #2a7ae2;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#column {
+    width: 800px;
+    max-width: 100%;
+    margin: 20px auto;
+}
+#right_block {
+    width: 200px;
+    padding: 0px 20px;
+    float: right;
+    position: relative;
+    text-align: center;
+}
+#right_block #phil_image {
+    width: 100%;
+    margin: 0px 0px;
+    border-radius: 50%;
+    border: 3px solid #666;
+}
+#name {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+#right_block a {
+    color: #2a7ae2;
+    text-decoration: none;
+}
+#right_block a:hover {
+    color: #333333;
+    text-decoration: underline;
+}
+#first_block {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.header {
+    font-size: 28px;
+    font-weight: 300;
+    margin: 10px 0px;
+}
+.pubs {
+    position: relative;
+    overflow: hidden;
+}
+.pub {
+    margin: 30px 0px;
+    line-height: 1.5;
+    position: relative;
+    overflow: hidden;
+}
+.pub .title {
+    font-weight: 500;
+}
+.pub .figure {
+    width: 170px;
+    padding-right: 10px;
+    float: left;
+}
+.pub .conference {
+    font-weight: 300;
+}
+.pub .links a {
+    padding: 10px;
+    font-weight: 500;
+}
+.pixel {
+    opacity: 0;
+    width: 0px; height: 0px;
+}
+.section {
+    width: 800px;
+    max-width: 100%;
+    margin: 20px auto;
+    margin-top: 40px;
+}
+.section_title {
+    font-size: 28px;
+    font-weight: 300;
+    margin: 10px 0px;
+}
+.section li {
+    margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+    #name {
+        text-align: center;
+    }
+    #right_block {
+        /* not float right, just center */
+        float: none;
+        margin: 0px auto;
+    }
+    #intro_para {
+        padding: 0px 20px;
+        padding-top: 20px;
+    }
+}
