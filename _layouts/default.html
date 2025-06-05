@@ -1028,25 +1028,30 @@ achieve this by extracting and analyzing citation information from the text.</p>
     <script src="garden.js?v=2"></script>
     
 		
-    <script>
-       $(document).ready(function () {
-    var papers = [{
-      id: "meerkat",
-      title: "Meerkat",
-      venue: "ECCV 2024",
-      url: "https://example.com",
-      root_node: true,
-      root_name: "Audio-Visual LLMs\n2024-now",
-      root_color: "#D1BDFF",
-      coauthors: ["Sanjoy Chowdhury"],
-      full_title: "Meerkat: Audio-Visual Large Language Model for Grounding in Space and Time",
-      summary: "Description here...",
-      additional_links: {},
-      indirect_connections: []
-    }];
-    build_garden(papers);
-  });
-    </script>
+<script>
+  var papers = [
+    {
+      "id": "flipflop",
+      "title": "FlipFlop Experiment",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2311.08596",
+      "root_node": 1,
+      "root_name": "InteractingN2023-now",
+      "root_color": "#D18DFF",
+      "coauthors": ["Hiroaki Hayashi", "Yingbo Zhou", "Jennifer"]
+    },
+    {
+      "id": "lost_in_conv",
+      "title": "Lost in Conversation",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2505.06120",
+      "parent": "flipflop",
+      "coauthors": ["Hiroaki Hayashi", "Yingbo Zhou"]
+    }
+  ];
+
+  build_garden(papers);
+</script>
 
 		
 </body>
