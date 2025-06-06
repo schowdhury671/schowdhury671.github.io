@@ -1,115 +1,107 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
-
-/* Layout fix for container and title */
 #garden_container {
-    margin: 0 auto;
-    width: 100%;
-    overflow-x: auto;
-    position: relative;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden; /* prevent scroll */
+  position: relative;
 }
 
 #garden_title {
-    margin-top: 50px;
-    background: #e5e5f5;
-    font-size: 20px;
-    line-height: 100px;
-    font-weight: 500;
-    text-align: center;
-    width: 100%;
-    color: #213269;
-    font-family: "Roboto Condensed";
+  margin-top: 40px;
+  background: #e5e5f5;
+  font-size: 18px;
+  line-height: 80px;
+  font-weight: 500;
+  text-align: center;
+  color: #213269;
+  font-family: "Roboto Condensed";
+  width: 100%;
 }
 
 .garden-inner-wrapper {
-    min-width: 1000px;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
 }
 
-/* Make SVG responsive */
 #garden {
-    background-color: #f8f2ef;
-    width: 100%;
-    height: 580px;
-    min-width: 800px;
+  background-color: #f8f2ef;
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  aspect-ratio: 1000 / 580;
+  transform: scale(0.9); /* scale to fit */
+  transform-origin: top center;
 }
 
-/* Coauthor section (optional) */
-#coauthor_hall_of_fame {
-    margin: 0 auto;
-    margin-top: 20px;
+/* Optional: Reduce font sizes slightly */
+.plant_label0 {
+  font-size: 16px;
 }
-#coauthor_title {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 10px;
-    text-align: center;
+.plant_label1 {
+  font-size: 14px;
 }
-.coauthor {
-    display: inline-block;
-    font-size: 18px;
-    margin: 5px 0px;
-    width: 200px;
-    text-align: center;
-    line-height: 2.0;
-    cursor: pointer;
+.paper_label0 {
+  font-size: 14px;
 }
-.selected_coauthor {
-    font-weight: 500;
-    text-decoration: underline;
+.paper_label1, .paper_label2, .paper_label3 {
+  font-size: 12px;
+}
+.title {
+  font-size: 36px;
 }
 
-/* Paper modal */
+/* Paper modal - unchanged */
 #paper_modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 500px;
-    max-width: 90vw;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    z-index: 1000;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    box-sizing: border-box;
-    display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  max-width: 90vw;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 1000;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  display: none;
 }
 #paper_modal_close {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    padding: 20px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 500;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
 }
 #paper_modal_title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 10px;
-    display: inline;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 #paper_modal_venue {
-    font-size: 16px;
-    font-weight: 300;
-    margin-bottom: 10px;
-    display: inline;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 10px;
 }
 #paper_modal_content {
-    font-size: 18px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+  font-size: 18px;
+  margin: 10px 0;
 }
 #paper_modal_links {
-    margin-top: 10px;
-    text-align: center;
+  margin-top: 10px;
+  text-align: center;
 }
 #paper_modal_links a {
-    padding: 20px;
+  padding: 20px;
 }
 
-/* Mobile tweaks */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-    #garden_title {
-        font-size: 30px;
-    }
+  #garden_title {
+    font-size: 24px;
+  }
+  #garden {
+    transform: scale(0.75);
+  }
 }
