@@ -1,53 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Sanjoy Chowdhury</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="garden.css">
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-  <style id="flower_css"></style>
-
-  <!-- Canonical Link -->
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-  <!-- Embedded Styles -->
+  <!-- ... other head elements ... -->
   <style>
     body {
-      font-family: 'Raleway', 'Lato', sans-serif;
+      font-family: 'Raleway', sans-serif; /* Use Raleway consistently */
       margin: 0;
       padding: 0;
       background: white;
       color: #111;
+      font-weight: 400; /* Set default weight */
     }
 
     .navbar {
       display: flex;
-      justify-content: space-between;  /* Keep this for overall spacing */
-      align-items: center;
+      align-items: center; /* Vertically align */
       padding: 15px 10%;
       background-color: #fff;
       border-bottom: 1px solid #eee;
-      gap: 10px; /* Adjust as needed */ 
     }
 
     .site-name {
       font-size: 28px;
       font-weight: 600;
+      margin-right: 20px; /* Adjust as needed */
+    }
+
+    .nav-links {  /* Style the nav container */
+      display: flex; /* Make nav links also flex */
     }
 
     .nav-links a {
       margin: 0 10px;
       text-decoration: none;
       color: #111;
-      font-weight: 500;
+      font-weight: 500; /* Or keep consistent 400 */
+    }
+
+    /* Consistent heading fonts */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600; /* Or adjust as preferred */
     }
 
     .page-wrapper {
