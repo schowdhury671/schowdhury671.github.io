@@ -3,12 +3,12 @@
 
 #garden_container, #garden_title {
     margin: 0 auto;
-    max-width: 1200px;          /* slightly squeezed overall width */
+    max-width: 1300px;
     overflow-x: auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;                  /* tighter spacing between plants */
+    /* border: 1px solid #666; */
     position: relative;
+    /* margin-bottom: 100px; */
+/*     width: 80%; */
 }
 #garden {
     background-color: #f8f2ef;
@@ -76,11 +76,11 @@
 #flower_template {
     display: none;
 }
-._label0 {
+.plant_label0 {
     font-weight: 500;
     font-size: 12px;
 }
-._label1 {
+.plant_label1 {
     font-weight: 300;
     font-size: 12px;
 }
