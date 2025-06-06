@@ -1,25 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
 
-#garden_container, #garden_title {
+/* Layout fix for container and title */
+#garden_container {
     margin: 0 auto;
-    max-width: 1000px;
+    width: 100%;
     overflow-x: auto;
-    /* border: 1px solid #666; */
     position: relative;
-    /* margin-bottom: 100px; */
-/*     width: 80%; */
 }
-#garden {
-    background-color: #f8f2ef;
-    width: 1000px;
-}
-/* #garden_title, #coauthor_hall_of_fame {
-} */
-#coauthor_hall_of_fame {
-/*     max-width: 500px; */
-    margin: 0 auto;
-}
+
 #garden_title {
     margin-top: 50px;
     background: #e5e5f5;
@@ -31,87 +20,22 @@
     color: #213269;
     font-family: "Roboto Condensed";
 }
-.grass {
-    fill: #85b9b1;
-}
-.clouds {
-    fill: #e5e5f5;
-}
-.stem {
-    stroke: #167264;
-    stroke-width: 3;
-    fill: none;
-}
-.root_stem {
-    stroke: #167264;
-    stroke-width: 5;
-}
-.petal {
-    transition: fill 0.2s;
-}
-.flower {
-    cursor: pointer;
 
-}
-.flower:hover .flower_subgroup {
-    transform: scale(1.2);
-    transition: transform 0.2s;
-}
-.flower:hover .petal {
-    opacity: 1 !important;
-    cursor: pointer;
-}
-.selected_flower .flower_subgroup {
-    /* make it bigger, but still centered */
-    transform: scale(1.5);
-    /* animate the transition */
-    transition: transform 0.2s;
-}
-.direction-label {
-    font-size: 16px;
-    font-weight: 500;
-    text-anchor: middle;
-    fill: #333;
-}
-#flower_template {
-    display: none;
-}
-.plant_label0 {
-    font-weight: 500;
-    font-size: 20px;
-}
-.plant_label1 {
-    font-weight: 300;
-    font-size: 18px;
-}
-.paper_label0 {
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 16px;
-}
-.paper_label1, .paper_label2, .paper_label3 {
-    cursor: pointer;
-    font-weight: 300;
-    font-size: 14px;
-}
-.left_child_title {
-    text-anchor: end;
-}
-.indirect_connection {
-    stroke: rgba(19, 150, 84, 0.25);
-    stroke-width: 1;
-}
-.title {
-    font-family: "Roboto Condensed";
-    font-size: 50px;
-    font-weight: 700;
-    fill: #213269;
-    text-anchor: middle;
-    dominant-baseline: middle;
+.garden-inner-wrapper {
+    min-width: 1000px;
 }
 
-/* coauthor hall of fame */
+/* Make SVG responsive */
+#garden {
+    background-color: #f8f2ef;
+    width: 100%;
+    height: 580px;
+    min-width: 800px;
+}
+
+/* Coauthor section (optional) */
 #coauthor_hall_of_fame {
+    margin: 0 auto;
     margin-top: 20px;
 }
 #coauthor_title {
@@ -133,8 +57,8 @@
     font-weight: 500;
     text-decoration: underline;
 }
-/* paper modal */
 
+/* Paper modal */
 #paper_modal {
     position: fixed;
     top: 50%;
@@ -158,7 +82,6 @@
     font-size: 20px;
     font-weight: 500;
 }
-
 #paper_modal_title {
     font-size: 20px;
     font-weight: 500;
@@ -182,8 +105,9 @@
 }
 #paper_modal_links a {
     padding: 20px;
-    /* margin-right: 20px; */
 }
+
+/* Mobile tweaks */
 @media (max-width: 768px) {
     #garden_title {
         font-size: 30px;
