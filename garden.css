@@ -23,7 +23,7 @@
 #garden_title {
     margin-top: 50px;
     background: #e5e5f5;
-    font-size: 34px;
+    font-size: 44px;
     line-height: 100px;
     font-weight: 500;
     text-align: center;
@@ -68,7 +68,7 @@
     transition: transform 0.2s;
 }
 .direction-label {
-    font-size: 12px;
+    font-size: 8px;
     font-weight: 500;
     text-anchor: middle;
     fill: #333;
@@ -78,21 +78,21 @@
 }
 .plant_label0 {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 12px;
 }
 .plant_label1 {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 12px;
 }
 .paper_label0 {
     cursor: pointer;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
 }
 .paper_label1, .paper_label2, .paper_label3 {
     cursor: pointer;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 10px;
 }
 .left_child_title {
     text-anchor: end;
@@ -155,24 +155,24 @@
     right: 0px;
     padding: 20px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
 }
 
 #paper_modal_title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     margin-bottom: 10px;
     display: inline;
 }
 #paper_modal_venue {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     margin-bottom: 10px;
     display: inline;
 }
 #paper_modal_content {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 10px;
     margin-top: 10px;
 }
@@ -186,6 +186,6 @@
 }
 @media (max-width: 768px) {
     #garden_title {
-        font-size: 30px;
+        font-size: 26px;
     }
 }
