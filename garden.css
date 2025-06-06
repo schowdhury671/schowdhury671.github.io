@@ -3,12 +3,12 @@
 
 #garden_container, #garden_title {
     margin: 0 auto;
-/*     max-width: 1000px; */
+    max-width: 1000px;
     overflow-x: auto;
     /* border: 1px solid #666; */
     position: relative;
     /* margin-bottom: 100px; */
-    width: 80%;
+/*     width: 80%; */
 }
 #garden {
     background-color: #f8f2ef;
