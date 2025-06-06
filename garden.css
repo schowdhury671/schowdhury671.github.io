@@ -3,7 +3,7 @@
 
 #garden_container {
     margin: 0 auto;
-    /* max-width: 1000px; */
+    max-width: 1000px;
     overflow-x: auto;
     /* border: 1px solid #666; */
     position: relative;
@@ -22,7 +22,7 @@
 #garden_title {
     margin-top: 50px;
     background: #e5e5f5;
-    font-size: 44px;
+    font-size: 34px;
     line-height: 100px;
     font-weight: 500;
     text-align: center;
