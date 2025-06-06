@@ -3,12 +3,12 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto';
-    font-size: 18px;
+    font-size: 22px;
     padding-bottom: 100px;
 } */
 body {
     font-family: 'Raleway', sans-serif;
-    font-weight: 400; /*  Or 300, 500, etc. – whatever looks good to you as a default  */
+    font-weight: 400; /*  Or 300, 500, etc. â€“ whatever looks good to you as a default  */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,7 +47,7 @@ a:hover {
     border: 3px solid #666;
 }
 #name {
-    font-size: 48px;
+    font-size: 52px;
     font-weight: 500;
     margin-bottom: 10px;
 }
@@ -60,13 +60,13 @@ a:hover {
     text-decoration: underline;
 }
 #first_block {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.5;
     margin-top: 40px;
     margin-bottom: 20px;
 }
 .header {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 300;
     margin: 10px 0px;
 }
@@ -106,7 +106,7 @@ a:hover {
     margin-top: 40px;
 }
 .section_title {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 300;
     margin: 10px 0px;
 }
