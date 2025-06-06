@@ -1,57 +1,107 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Sanjoy's webpage</title>
-  <style>
-    .code-box {
-      border: 2px solid #4CAF50; /* Green border for the box */
-      padding: 15px 20px; /* Add padding inside the box */
-      border-radius: 8px; /* Rounded corners */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
-      font-family: 'Courier New', Courier, monospace; /* Monospace font for a code look */
-      background-color: #f9f9f9; /* Light background color */
-      display: inline-block; /* Make the box fit around the content */
-    }
-    .center-content {
-      text-align: center; /* Center align the content */
-    }
-    .red-text {
-      color: red; /* Red color for the bold text */
-    }
-  </style>
-
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-
-  <meta name="Sanjoy" content="Sanjoy's webpage" />
+  <meta charset="UTF-8">
+  <title>Sanjoy Chowdhury</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
 
-
-	
-	
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8"> 
-<!--   <title>Simple Research Garden</title> -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="garden.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
   <style id="flower_css"></style>
 
-
-	
-	
+  <!-- Canonical Link -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+  <!-- Embedded Styles -->
+  
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif; /* Use Raleway consistently */
+      margin: 0;
+      padding: 0;
+      background: white;
+      color: #111;
+      font-weight: 400; /* Set default weight */
+    }
 
+.navbar {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  padding: 15px 10%;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar > * {  /* Add some space between the name and links */
+    margin: 40 120px;
+}
+
+    .site-name {
+      font-size: 38px;
+      font-weight: 600;
+      margin-right: 20px; /* Adjust as needed */
+    }
+
+    .nav-links {  /* Style the nav container */
+      display: flex; /* Make nav links also flex */
+    }
+
+    .nav-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500; /* Or keep consistent 400 */
+    }
+
+    /* Consistent heading fonts */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600; /* Or adjust as preferred */
+    }
+
+    .page-wrapper {
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 40px;
+    }
+
+    .code-box {
+      border: 2px solid #4CAF50;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #f9f9f9;
+      display: inline-block;
+    }
+
+    .center-content {
+      text-align: center;
+    }
+
+    .red-text {
+      color: red;
+    }
+  </style>
 </head>
-
-
 
 <body>
 
-
+  <header class="navbar">
+    <div class="site-name">Sanjoy Chowdhury</div>
+    <nav class="nav-links">
+      <a href="/about" style="font-size: large;">About</a>
+      <a href="/research" style="font-size: large;">Research</a>
+      <a href="/others" style="font-size: large;">Miscellaneous</a>
+    </nav>
+  </header>
 <!-- add others -->
 
 
