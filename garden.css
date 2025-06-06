@@ -3,8 +3,8 @@
 
 #garden_container {
     margin: 0 auto;
-    max-width: 700px;
-    overflow-x: auto;
+    max-width: 500px;
+/*     overflow-x: auto; */
     /* border: 1px solid #666; */
     position: relative;
     /* margin-bottom: 100px; */
