@@ -2,7 +2,7 @@
 
 var flowerTemplateHTML = $('#flower_template').html();
 
-var garden_height = 580;
+var garden_height = 480;
 // alert($('body').width());
 // if($('body').width() < 768) {
 //     garden_height *= 2;
