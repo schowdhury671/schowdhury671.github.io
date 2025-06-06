@@ -30,13 +30,18 @@
       font-weight: 400; /* Set default weight */
     }
 
-    .navbar {
-      display: flex;
-      align-items: center; /* Vertically align */
-      padding: 15px 10%;
-      background-color: #fff;
-      border-bottom: 1px solid #eee;
-    }
+.navbar {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  padding: 15px 10%;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar > * {  /* Add some space between the name and links */
+    margin: 0 10px;
+}
 
     .site-name {
       font-size: 28px;
