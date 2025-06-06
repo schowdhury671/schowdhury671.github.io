@@ -4,7 +4,7 @@
 #garden_container, #garden_title {
     margin: 0 auto;
     max-width: 1000px;
-    overflow-x: auto;
+/*     overflow-x: auto; */
     /* border: 1px solid #666; */
     position: relative;
     /* margin-bottom: 100px; */
