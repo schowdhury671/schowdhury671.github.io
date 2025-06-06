@@ -4,14 +4,14 @@
 #garden_container {
     margin: 0 auto;
     max-width: 500px;
-/*     overflow-x: auto; */
+    overflow-x: auto;
     /* border: 1px solid #666; */
     position: relative;
     /* margin-bottom: 100px; */
 }
 #garden {
     background-color: #f8f2ef;
-    /* width: 1000px; */
+    width: 500px;
 }
 #garden_title, #coauthor_hall_of_fame {
 }
