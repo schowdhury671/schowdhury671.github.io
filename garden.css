@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
 
-#garden_container {
+#garden_container, #garden_title {
     margin: 0 auto;
     max-width: 500px;
     overflow-x: auto;
@@ -13,8 +13,8 @@
     background-color: #f8f2ef;
     width: 500px;
 }
-#garden_title, #coauthor_hall_of_fame {
-}
+/* #garden_title, #coauthor_hall_of_fame {
+} */
 #coauthor_hall_of_fame {
     max-width: 500px;
     margin: 0 auto;
