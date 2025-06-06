@@ -3,7 +3,7 @@
 
 #garden_container, #garden_title {
     margin: 0 auto;
-    max-width: 1600px;
+    max-width: 1400px;
     overflow-x: auto;
     /* border: 1px solid #666; */
     position: relative;
@@ -12,7 +12,7 @@
 }
 #garden {
     background-color: #f8f2ef;
-    width: 1000px;
+    width: 800px;
 }
 /* #garden_title, #coauthor_hall_of_fame {
 } */
