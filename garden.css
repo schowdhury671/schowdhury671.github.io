@@ -1,10 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700');
 
 #garden_container, #garden_title {
     margin: 0 auto;
-    max-width: 1000px;
+/*     max-width: 1000px; */
     overflow-x: auto;
     /* border: 1px solid #666; */
     position: relative;
