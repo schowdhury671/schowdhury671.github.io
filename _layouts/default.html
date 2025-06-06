@@ -170,18 +170,28 @@
 
 
 
-      <div class="page-wrapper">
-    <h1>Sanjoy Chowdhury</h1>
+<div id="garden_title">Sanjoy's Research Garden</div>
 
-    <!-- Research Garden -->
-    <div id="garden_container">
-      <div id="garden_title">Research Garden</div>
-      <div class="garden-inner-wrapper">
-        <!-- Your SVG/visualization gets injected here by JS -->
-        <svg id="research_garden_svg" width="100%" height="580"></svg>
-      </div>
-    </div>
+<div id="garden_container">
+  <div class="garden-inner-wrapper">
+    <svg id="garden" preserveAspectRatio="xMinYMin meet" width="100%" height="580"></svg>
   </div>
+</div>
+
+<!--
+<div id="coauthor_hall_of_fame">
+  <div id="coauthor_title">Recent Coauthors</div>
+  <div id="coauthor_list"></div>
+</div>
+-->
+
+<div id="paper_modal">
+  <div id="paper_modal_close" onclick="$('#paper_modal').fadeOut(200);">X</div>
+  <div id="paper_modal_title"></div>
+  <div id="paper_modal_venue"></div>
+  <div id="paper_modal_content"></div>
+  <div id="paper_modal_links"></div>
+</div>
 	
 
 
