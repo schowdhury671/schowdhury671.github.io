@@ -3,7 +3,7 @@
 
 #garden_container, #garden_title {
     margin: 0 auto;
-    max-width: 1300px;
+    max-width: 1600px;
     overflow-x: auto;
     /* border: 1px solid #666; */
     position: relative;
@@ -23,7 +23,7 @@
 #garden_title {
     margin-top: 50px;
     background: #e5e5f5;
-    font-size: 24px;
+    font-size: 34px;
     line-height: 100px;
     font-weight: 500;
     text-align: center;
@@ -68,7 +68,7 @@
     transition: transform 0.2s;
 }
 .direction-label {
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 500;
     text-anchor: middle;
     fill: #333;
@@ -78,21 +78,21 @@
 }
 .plant_label0 {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 18px;
 }
 .plant_label1 {
     font-weight: 300;
-    font-size: 22px;
+    font-size: 16px;
 }
 .paper_label0 {
     cursor: pointer;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 14px;
 }
 .paper_label1, .paper_label2, .paper_label3 {
     cursor: pointer;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 12px;
 }
 .left_child_title {
     text-anchor: end;
@@ -103,7 +103,7 @@
 }
 .title {
     font-family: "Roboto Condensed";
-    font-size: 54px;
+    font-size: 48px;
     font-weight: 700;
     fill: #213269;
     text-anchor: middle;
@@ -155,24 +155,24 @@
     right: 0px;
     padding: 20px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
 }
 
 #paper_modal_title {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     margin-bottom: 10px;
     display: inline;
 }
 #paper_modal_venue {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
     margin-bottom: 10px;
     display: inline;
 }
 #paper_modal_content {
-    font-size: 22px;
+    font-size: 18px;
     margin-bottom: 10px;
     margin-top: 10px;
 }
@@ -186,6 +186,6 @@
 }
 @media (max-width: 768px) {
     #garden_title {
-        font-size: 34px;
+        font-size: 30px;
     }
 }
