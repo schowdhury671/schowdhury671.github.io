@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+size@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 /* body {
     margin: 0px;
     padding: 0px;
@@ -14,11 +14,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 600; /*  Adjust weight for headings as desired */
+    font-size: 80px;
 }
 
 p, a, li, td, div, span { /* Add other elements if needed */
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
+    font-size: 40px;
 }
 a {
     color: #2a7ae2;
