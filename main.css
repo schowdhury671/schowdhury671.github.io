@@ -26,6 +26,7 @@ a {
     color: #2a7ae2;
     font-weight: bold;
     text-decoration: none;
+    font-size: large;
 }
 a:hover {
     text-decoration: underline;
