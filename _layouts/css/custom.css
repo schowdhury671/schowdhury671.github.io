@@ -1,0 +1,28 @@
+.update-dates {
+    color: #cc0e00;
+    font-size: 15px;
+}
+
+.update-text {
+    font-size: 15px;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+.link-simple
+{
+   color:black;
+   text-decoration: none;
+}
+
+
+h2.year {
+    color: #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+    text-align: right;
+}
