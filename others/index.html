@@ -1,111 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Sanjoy Chowdhury</title>
+    <meta charset="UTF-8">
+    <title>Research Garden - Sanjoy Chowdhury</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Fonts -->
+<!--     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet"> -->
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="icon" type="image/png" href="../images/IMG-20200202-WA0044_2.jpg">
+
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif; /* Use Raleway consistently */
+            margin: 0;
+            padding: 0;
+            background: white;
+            color: #111;
+            font-weight: 400; /* Set default weight */
+        }
+	    <style>
+    body {
+      font-family: Arial, sans-serif; /* Use a clean font */
+    }
+    .navbar {
+      display: flex;
+      justify-content: center; /* Center the navbar items */
+      background-color: #f8f8f8; /* Light background color */
+      padding: 15px; /* Spacing around the navbar */
+      border-bottom: 2px solid #e0e0e0; /* Subtle border */
+    }
+    .navbar a {
+      margin: 0 30px; /* Increased spacing between links */
+      text-decoration: none; /* Remove underline */
+      color: #333; /* Text color */
+      font-weight: bold; /* Bold text for emphasis */
+    }
+    .navbar a:hover {
+      color: #4CAF50; /* Change color on hover */
+    }
+    .name {
+      font-family: 'Dancing Script', cursive; /* Artistic font for the name */
+      font-size: 2.5em; /* Make the name larger */
+      color: black; /* Black color for the name */
+      margin: 0; /* Remove default margin */
+    }
+        
+       
+
+        #garden_title {
+            text-align: center;
+            font-size: 2.5em; /* Title size */
+            margin-top: 20px; /* Margins */
+        }
+
+        #garden_container {
+            text-align: center; /* Center the garden */
+            margin: 20px auto;
+        }
+
+        #flower_template {
+            display: none; /* Hide the original flower template */
+        }
+        /* Add your additional styles here */
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> <!-- Importing the artistic font -->
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta name="Sanjoy" content="Sanjoy's webpage" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="garden.css">
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-  <style id="flower_css"></style>
-
-  <!-- Canonical Link -->
+  <link rel="icon" type="image/png" href="../images/IMG-20200202-WA0044_2.jpg">
+  <link rel="apple-touch-icon" type="image/png" href="img/apple-touch-icon.png">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-  <!-- Embedded Styles -->
-  
-  <style>
-    body {
-      font-family: 'Raleway', sans-serif; /* Use Raleway consistently */
-      margin: 0;
-      padding: 0;
-      background: white;
-      color: #111;
-      font-weight: 400; /* Set default weight */
-    }
-
-.navbar {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
-  padding: 15px 10%;
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
-}
-
-.navbar > * {  /* Add some space between the name and links */
-    margin: 40 120px;
-}
-
-    .site-name {
-      font-size: 38px;
-      font-weight: 600;
-      margin-right: 20px; /* Adjust as needed */
-    }
-
-    .nav-links {  /* Style the nav container */
-      display: flex; /* Make nav links also flex */
-    }
-
-    .nav-links a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #111;
-      font-weight: 500; /* Or keep consistent 400 */
-    }
-
-    /* Consistent heading fonts */
-    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Raleway', sans-serif;
-        font-weight: 600; /* Or adjust as preferred */
-    }
-
-    .page-wrapper {
-      width: 80%;
-      margin: 0 auto;
-      padding-top: 40px;
-    }
-
-    .code-box {
-      border: 2px solid #4CAF50;
-      padding: 15px 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      font-family: 'Courier New', Courier, monospace;
-      background-color: #f9f9f9;
-      display: inline-block;
-    }
-
-    .center-content {
-      text-align: center;
-    }
-
-    .red-text {
-      color: red;
-    }
-  </style>
 </head>
 
 <body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+	 <a class="name" href="https://schowdhury671.github.io/">Sanjoy Chowdhury</a>
+        <a href="https://schowdhury671.github.io/">Home</a>
+        <a href="../research/index.html">Research</a>
+    </div>
 
-  <header class="navbar">
-    <div class="site-name"><a href="https://schowdhury671.github.io/">Sanjoy Chowdhury</a></div>
-    <nav class="nav-links">
-      <a href="/about" style="font-size: large;">About</a>
-      <a href="/research" style="font-size: large;">Research</a>
-      <a href="/others" style="font-size: large;">Miscellaneous</a>
-    </nav>
-  </header>
-<!-- add others -->
+    
 
-
-<table style="width:70%;border:20px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+	<table style="width:70%;border:20px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:70%;vertical-align:middle">
               <h2><font color="blue">Blog(s)</font></h2>
@@ -137,8 +123,7 @@
           </tr>
           </table>
 
-
-            
+	
 </body>
 
 </html>
