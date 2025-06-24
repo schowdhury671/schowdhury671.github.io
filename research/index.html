@@ -87,6 +87,38 @@
         </div>
     </div>
 
+
+		<!-- Research Garden -->
+	<svg id="flower_template" xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 20 20">
+	<ellipse rx="10" ry="20" transform="rotate(0)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<ellipse rx="10" ry="20" transform="rotate(45)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<ellipse rx="10" ry="20" transform="rotate(90)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<ellipse rx="10" ry="20" transform="rotate(135)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<ellipse rx="10" ry="20" transform="rotate(180)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<ellipse rx="10" ry="20" transform="rotate(225)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<ellipse rx="10" ry="20" transform="rotate(270)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<ellipse rx="10" ry="20" transform="rotate(315)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<circle r="6" fill="white"/>
+    </svg>
+
+		    
+    
+
+
+
+
+<div id="garden_title">Sanjoy's Research Garden</div> 
+<div id="garden_container"> <svg id="garden" preserveAspectRatio="xMinYMin meet"></svg> </div> 
+<!--      <div id="coauthor_hall_of_fame"> 
+	<div id="coauthor_title">Recent Coauthors</div> 
+	<div id="coauthor_list"></div> </div> --> 
+<div id="paper_modal"> 
+<!-- a close icon at the top right --> 
+<div id="paper_modal_close" onclick="$('#paper_modal').fadeOut(200);">X</div> 
+<div id="paper_modal_title"></div> <div id="paper_modal_venue"></div> 	
+<div id="paper_modal_content"></div> <div id="paper_modal_links"></div> 
+</div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="garden.js?v=2"></script> <!-- Assuming this JS file handles your garden logic -->
 
