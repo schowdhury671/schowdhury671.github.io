@@ -20,12 +20,14 @@
       color: #333; /* Text color */
       font-weight: bold; /* Bold text for emphasis */
     }
-    .navbar .name {
-      font-size: 2.5em; /* Make the name larger */
-      color: #4CAF50; /* Change color for prominence */
-    }
     .navbar a:hover {
       color: #4CAF50; /* Change color on hover */
+    }
+    .name {
+      font-family: 'Dancing Script', cursive; /* Artistic font for the name */
+      font-size: 2.5em; /* Make the name larger */
+      color: black; /* Black color for the name */
+      margin: 0; /* Remove default margin */
     }
     .code-box {
       border: 2px solid #4CAF50; /* Green border for the box */
@@ -44,6 +46,7 @@
     }
   </style>
 
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> <!-- Importing the artistic font -->
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta name="Sanjoy" content="Sanjoy's webpage" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,15 +55,14 @@
   <link rel="icon" type="image/png" href="../images/IMG-20200202-WA0044_2.jpg">
   <link rel="apple-touch-icon" type="image/png" href="img/apple-touch-icon.png">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 
 <body>
   <!-- Navigation Bar -->
   <div class="navbar">
     <a class="name" href="#research-directions">Sanjoy Chowdhury</a>
-    <a href="#research-directions">Research Directions</a>
-    <a href="#more-details">More Details</a>
+    <a href="#research-directions">Research</a>
+    <a href="#more-details">Miscellaneous</a>
   </div>
 
 
