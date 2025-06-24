@@ -1,59 +1,98 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Simple Research Garden</title>
-    <link rel="stylesheet" href="../main.css">
-    <link rel="stylesheet" href="../garden.css">
-    <style id="flower_css"></style>
+    <title>Research Garden - Sanjoy Chowdhury</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="icon" type="image/png" href="../images/IMG-20200202-WA0044_2.jpg">
+
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif; /* Use Raleway consistently */
+            margin: 0;
+            padding: 0;
+            background: white;
+            color: #111;
+            font-weight: 400; /* Set default weight */
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            padding: 15px 10%;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar a {
+            margin: 0 30px; /* Spacing between links */
+            text-decoration: none; /* Remove underline */
+            color: #333; /* Text color */
+            font-weight: bold; /* Bold text */
+        }
+
+        .navbar a:hover {
+            color: #4CAF50; /* Change color on hover */
+        }
+
+        #garden_title {
+            text-align: center;
+            font-size: 2.5em; /* Title size */
+            margin-top: 20px; /* Margins */
+        }
+
+        #garden_container {
+            text-align: center; /* Center the garden */
+            margin: 20px auto;
+        }
+
+        #flower_template {
+            display: none; /* Hide the original flower template */
+        }
+        /* Add your additional styles here */
+    </style>
 </head>
+
 <body>
-    <!-- Research Garden -->
-    <svg id="flower_template" xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 20 20">
-        <ellipse rx="10" ry="20" transform="rotate(0)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
-        <ellipse rx="10" ry="20" transform="rotate(45)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
-        <ellipse rx="10" ry="20" transform="rotate(90)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
-        <ellipse rx="10" ry="20" transform="rotate(135)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
-        <ellipse rx="10" ry="20" transform="rotate(180)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
-        <ellipse rx="10" ry="20" transform="rotate(225)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
-        <ellipse rx="10" ry="20" transform="rotate(270)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
-        <ellipse rx="10" ry="20" transform="rotate(315)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
-        <circle r="6" fill="white"/>
-    </svg>
-
-
- 
-    <div id="garden_title">Sanjoy's Research Garden</div> 
-    <div id="garden_container"> <svg id="garden" preserveAspectRatio="xMinYMin meet"></svg> </div> 
-    <!--      <div id="coauthor_hall_of_fame"> 
-    	<div id="coauthor_title">Recent Coauthors</div> 
-    	<div id="coauthor_list"></div> </div> --> 
-    <div id="paper_modal"> 
-    <!-- a close icon at the top right --> 
-    <div id="paper_modal_close" onclick="$('#paper_modal').fadeOut(200);">X</div> 
-    <div id="paper_modal_title"></div> <div id="paper_modal_venue"></div> 	
-    <div id="paper_modal_content"></div> <div id="paper_modal_links"></div> 
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="miscellaneous.html">Miscellaneous</a>
     </div>
 
+    <div class="content">
+        <h1 id="garden_title">Sanjoy's Research Garden</h1>
+        <div id="garden_container"> 
+            <svg id="garden" preserveAspectRatio="xMinYMin meet"></svg> 
+        </div> 
 
- 
-    <div id="paper_modal">
-        <!-- a close icon at the top right -->
-        <div id="paper_modal_close" onclick="$('#paper_modal').fadeOut(200);">X</div>
-        <div id="paper_modal_title"></div>
-        <div id="paper_modal_venue"></div>
-        <div id="paper_modal_content"></div>
-        <div id="paper_modal_links"></div>
+        <div id="paper_modal"> 
+            <div id="paper_modal_close" onclick="$('#paper_modal').fadeOut(200);">X</div> 
+            <div id="paper_modal_title"></div> 
+            <div id="paper_modal_venue"></div>
+            <div id="paper_modal_content"></div> 
+            <div id="paper_modal_links"></div> 
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="garden.js?v=2"></script>
-    
- <script>
-      var papers = [
-	
-	       {"id": "adverb", "title": "Adverb", "venue": "ICCV 2023", "url": "https://openaccess.thecvf.com/content/ICCV2023/papers/Chowdhury_AdVerb_Visually_Guided_Audio_Dereverberation_ICCV_2023_paper.pdf", "root_node": 1, "root_name": "Cross-modal Generation\n2024-now", "root_color": "#FFE699", "coauthors": ["Sreyan Ghosh", "Subhrajyoti Dasgupta", "Anton Ratnarajah", "Utkarsh Tyagi", "Dinesh Manocha"], "full_title": "AdVerb: Visually Guided Audio Dereverberation", "summary": "We present a novel audio-visual dereverberation framework that uses visual cues in addition to the reverberant sound to estimate clean audio.", "additional_links": {"project page": "https://schowdhury671.github.io/adverb/", "code": "https://github.com/Sreyan88/AdVerb-dereverb", "video": "https://www.youtube.com/watch?v=dZuR-pZ9uM0"}},
+    <script src="garden.js?v=2"></script> <!-- Assuming this JS file handles your garden logic -->
+
+    <script>
+        var papers = [
+        {"id": "adverb", "title": "Adverb", "venue": "ICCV 2023", "url": "https://openaccess.thecvf.com/content/ICCV2023/papers/Chowdhury_AdVerb_Visually_Guided_Audio_Dereverberation_ICCV_2023_paper.pdf", "root_node": 1, "root_name": "Cross-modal Generation\n2024-now", "root_color": "#FFE699", "coauthors": ["Sreyan Ghosh", "Subhrajyoti Dasgupta", "Anton Ratnarajah", "Utkarsh Tyagi", "Dinesh Manocha"], "full_title": "AdVerb: Visually Guided Audio Dereverberation", "summary": "We present a novel audio-visual dereverberation framework that uses visual cues in addition to the reverberant sound to estimate clean audio.", "additional_links": {"project page": "https://schowdhury671.github.io/adverb/", "code": "https://github.com/Sreyan88/AdVerb-dereverb", "video": "https://www.youtube.com/watch?v=dZuR-pZ9uM0"}},
         {"id": "melfusion", "title": "MeLFusion", "venue": "CVPR 2024", "url": "https://www.arxiv.org/pdf/2406.04673", "parent": "adverb", "coauthors": ["Sayan Nag", "Joseph KJ", "BV Srinivasan", "Dinesh Manocha"], "full_title": "MeLFusion: Synthesizing Music from Image and Language Cues using Diffusion Models", "summary": "We propose MeLFusion, a model that can effectively use cues from a textual description and the corresponding image to synthesize music. MeLFusion is a text-to-music diffusion model with a novel `visual synapse`, which effectively infuses the semantics from the visual modality into the generated music. To facilitate research in this area, we introduce a new dataset MeLBench, and propose a new evaluation metric IMSM.", "additional_links": {"code": "https://github.com/schowdhury671/melfusion/tree/main", "data": "https://umd0-my.sharepoint.com/personal/sanjoyc_umd_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsanjoyc%5Fumd%5Fedu%2FDocuments%2FMeLFusion%20datasets&ga=1", "project page": "https://schowdhury671.github.io/melfusion_cvpr2024/"}},
         {"id": "magnet", "title": "MAGNET", "venue": "arXiv", "url": "https://schowdhury671.github.io/", "parent": "melfusion", "coauthors": ["Sayan Nag", "Mohamed Elmoghany", "Yohan Abeysinghe", "Yunjie Fei", "Salman Khan", "Dinesh Manocha", "Mohamed Elhoseiny"], "full_title": "MAGNET: A Multi-agent Framework for Finding Audio-Visual Needles by Reasoning over Multi-Video Haystacks", "summary": "we introduce a novel task named AV-HaystacksQA, where the goal is to identify salient segments across different videos in response to a query and link them together to generate the most informative answer. To this end, we present AVHaystacks, an audio-visual benchmark comprising 3100 annotated QA pairs designed to assess the capabilities of LMMs in multi-video retrieval and temporal grounding task. Additionally, we propose a model-agnostic, multi-agent framework MAGNET to address this challenge, achieving up to 89% and 65% relative improvements over baseline methods on BLEU@4 and GPT evaluation scores in QA task on our proposed AVHaystacks. To enable robust evaluation of multi-video retrieval and temporal grounding for optimal response generation, we introduce two new metrics, STEM, which captures alignment errors between a ground truth and a predicted step sequence and MTGS, to facilitate balanced and interpretable evaluation of segment-level grounding performance.", "additional_links": {"code": "https://schowdhury671.github.io/", "data": "https://schowdhury671.github.io/"}},
 
@@ -62,23 +101,22 @@
         {"id": "audvisum", "title": "AudViSum", "venue": "BMVC 2021", "url": "https://www.bmvc2021-virtualconference.com/assets/papers/1430.pdf", "indirect_connections": ["magnet"], "parent": "ltl", "coauthors": ["Aditya Patra", "Subhrajyoti Dasgupta", "Ujjwal Bhattacharya"], "full_title": "AudViSum: Self-Supervised Deep Reinforcement Learning for Diverse Audio-Visual Summary Generation", "summary": "Introduced a novel deep reinforcement learning-based self-supervised audio-visual summarization model that leverages both audio and visual information to generate diverse yet semantically meaningful summaries.", "additional_links": {"code": "https://github.com/schowdhury671/AudViSum", "video": "https://www.youtube.com/watch?v=Hier-zMWcc0"}},
         {"id": "egoadapt", "title": "EgoAdapt", "venue": "arXiv", "url": "https://schowdhury671.github.io/", "parent": "audvisum", "coauthors": ["Subrata Biswas", "Sayan Nag", "Tushar Nagarajan", "Calvin Murdock", "Yijun Qian", "Ishwarya Ananthabhotla", "Vamsi Ithapu", "Dinesh Manocha", "Ruohan Gao"], "full_title": "EgoAdapt: Adaptive Multisensory Distillation and Policy Learning for Efficient Egocentric Perception", "summary": "Modern perception models, particularly those designed for multisensory egocentric tasks, have achieved remark- able performance but often come with substantial compu- tational costs. These high demands pose challenges for real-world deployment, especially in resource-constrained environments. In this paper, we introduce EGOADAPT, a framework that adaptively performs cross-modal distilla- tion and policy learning to enable efficient inference across different egocentric perception tasks, including egocentric action recognition, active speaker localization, and behav- ior anticipation. Our proposed policy module is adaptable to task-specific action spaces, making it broadly applicable. Experimental results on three challenging egocentric datasets EPIC-Kitchens, EasyCom, and Aria Everyday Activities—demonstrate that our method significantly enhances efficiency, reducing GMACs by up to 89.09%, parameters up to 82.02%, and energy up to 9.6×, while still on-par and in many cases outperforming, the performance of corresponding state-of-the-art models.", "additional_links": {"code": "https://schowdhury671.github.io/", "data": "https://schowdhury671.github.io/"}},
 
-       	{"id": "meerkat", "title": "Meerkat", "venue": "ECCV 2024", "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08071.pdf", "root_node": 1, "root_name": "Audio-Visual LLMs\n2024-now", "root_color": "#D1BDFF", "coauthors": ["Sayan Nag", "Subhrajyoti Dasgupta", "Jun Chen", "Mohamed Elhoseiny", "Ruohan Gao", "Dinesh Manocha"], "full_title": "Meerkat: Audio-Visual Large Language Model for Grounding in Space and Time", "summary": "We present Meerkat, an audio-visual LLM equipped with a fine-grained understanding of image and audio both spatially and temporally. With a new modality alignment module based on optimal transport and a cross-attention module that enforces audio-visual consistency, Meerkat can tackle challenging tasks such as audio referred image grounding, image guided audio temporal localization, and audio-visual fact-checking. Moreover, we carefully curate a large dataset AVFIT that comprises 3M instruction tuning samples collected from open-source datasets, and introduce MeerkatBench that unifies five challenging audio-visual tasks.","additional_links": {"code": "https://github.com/schowdhury671/meerkat/tree/main", "data": "https://umd0-my.sharepoint.com/personal/sanjoyc_umd_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsanjoyc%5Fumd%5Fedu%2FDocuments%2FAVFIT%20dataset&ga=1"}},
-       	{"id": "aurelia", "title": "AURELIA", "venue": "arXiv", "url": "https://arxiv.org/pdf/2503.23219", "parent": "meerkat", "coauthors": ["Sayan Nag", "Hanan Gani", "Nishit Anand", "Mohamed Elhoseiny", "Ruohan Gao", "Salman Khan", "Dinesh Manocha"], "full_title": "AURELIA: Test-time Reasoning Distillation in Audio-Visual LLMs", "summary": "In this paper, we introduce AURELIA, a novel actor-critic based audio-visual reasoning framework that distils structured, step-by-step reasoning into AVLLMs at test time, improving their ability to process complex multi-modal inputs without additional training or fine-tuning. To further advance AVLLM reasoning skills, we present AVReasonBench, a challenging benchmark comprising 4500 audio-visual questions, each paired with detailed step-by-step reasoning. Our benchmark spans six distinct tasks, including AV-GeoIQ, which evaluates AV reasoning combined with geographical and cultural knowledge", "additional_links": {"code": "https://github.com/schowdhury671/aurelia", "data": "https://github.com/schowdhury671/aurelia"}},
-       	{"id": "avtrustbench", "title": "AVTrustBench", "venue": "arXiv", "url": "https://arxiv.org/abs/2501.02135", "parent": "meerkat", "coauthors": ["Sayan Nag", "Subhrajyoti Dasgupta", "Yaoting Wang", "Mohamed Elhoseiny", "Ruohan Gao", "Dinesh Manocha"], "full_title": "AVTrustBench: Assessing and Enhancing Reliability and Robustness in Audio-Visual LLMs", "summary": "We introduce Audio-Visual Trustworthiness assessment Benchmark (AVTrustBench), comprising 600K samples spanning over 9 meticulously crafted tasks, evaluating the capabilities of AVLLMs across three distinct dimensions: Adversarial attack, Compositional reasoning, and Modality-specific dependency. Using our benchmark we extensively evaluate 16 state-of-the-art AVLLMs. The findings reveal that the majority of existing models fall significantly short of achieving human-like comprehension, offering valuable insights for future research directions. To alleviate the limitations in the existing approaches, we further propose a robust, model-agnostic calibrated audio-visual preference optimization based training strategy CAVPref, obtaining a gain up to 30.19% across all 9 tasks.", "additional_links": {"code": "https://github.com/schowdhury671/avtrustbench-", "data": "https://github.com/schowdhury671/avtrustbench-"}},
-               
-       	{"id": "apollo", "title": "Apollo", "venue": "EMNLP 2023", "url": "https://aclanthology.org/2023.emnlp-main.629.pdf", "root_node": 1, "root_name": "Integrating Vision-Language\n2022-now", "root_color": "#FF409F", "coauthors": ["Sayan Nag", "Dinesh Manocha"], "full_title": "APoLLo: Unified Adapter and Prompt Learning for Vision Language Models", "summary": "Our method is designed to substantially improve the generalization capabilities of VLP models when they are fine-tuned in a few-shot setting. We introduce trainable cross-attention-based adapter layers in conjunction with vision and language encoders to strengthen the alignment between the two modalities.", "additional_links": {"code": "https://github.com/schowdhury671/APoLLo", "video": "https://www.youtube.com/watch?v=5OHwq3VCusA"}},
-       	{"id": "aspire", "title": "ASPIRE", "venue": "ACL Findings 2024", "url": "https://aclanthology.org/2024.findings-acl.22.pdf", "indirect_connections": ["avtrustbench"], "parent": "apollo", "coauthors": ["Sreyan Ghosh", "Chandra Kiran", "Sakshi S", "Sonal Kumar", "Utkarsh Tyagi", "Dinesh Manocha"], "full_title": "ASPIRE: Language-Guided Data Augmentation for Improving Robustness Against Spurious Correlations", "summary": "The paper proposes a simple yet effective solution for supplementing the training dataset with images without spurious features, for robust learning against spurious correlations via better generalization", "additional_links": {"code": "https://github.com/Sreyan88/ASPIRE"}},
-       	{"id": "vlmnav", "title": "VLMNav", "venue": "NAACL Findings 2024", "url": "https://arxiv.org/pdf/2403.11487v1", "parent": "aspire", "coauthors": ["Vishnu Dorbala", "Dinesh Manocha"], "full_title": "Can LLM’s Generate Human-Like Wayfinding Instructions? Towards Platform-Agnostic Embodied Instruction Synthesis", "summary": "We present a novel approach to automatically synthesize `wayfinding instructions` for an embodied robot agent. In contrast to prior approaches that are heavily reliant on human-annotated datasets designed exclusively for specific simulation platforms, our algorithm uses in-context learning to condition an LLM to generate instructions using just a few references."},      
-               {"id": "intent", "title": "Intent-o-Meter", "venue": "Nature Scientific Reports 2023", "url": "https://www.nature.com/articles/s41598-024-60299-w.pdf", "parent": "apollo", "coauthors": ["Trisha Mittal", "Pooja Guhan", "Dinesh Manocha", "Snikitha Chelluri"], "full_title": "Towards Determining Perceived Human Intent for Multimodal Social Media Posts using The Theory of Reasoned Action", "summary": "We propose Intent-o-meter, a perceived human intent prediction model for multimodal (image and text) social media posts. Intent-o-meter models ideas from psychology and cognitive modeling literature, in addition to using the visual and textual features for an improved perceived intent prediction.", "additional_links": {"data": "https://drive.google.com/drive/folders/1hQ1pdsuqBmKJkQ-bTQXdKuU2TkazCtbh"}},
-               
-       	{"id": "vdesirr", "title": "VDESIRR", "venue": "ICCV 2021", "url": "https://openaccess.thecvf.com/content/ICCV2021/papers/Prasad_V-DESIRR_Very_Fast_Deep_Embedded_Single_Image_Reflection_Removal_ICCV_2021_paper.pdf", "root_node": 1, "root_name": "Computational Photography\n2021-2022", "root_color": "#FA9189", "coauthors": ["BH Pawan Prasad", "Lokesh RB", "Koushik Mitra", "Green Rosh"], "full_title": "V-DESIRR: Very Fast Deep Embedded Single Image Reflection Removal", "summary": "We have proposed a multi-scale end-to-end architecture for detecting and removing weak, medium, and strong reflections from naturally occurring images.", "additional_links": {"code": "https://github.com/ee19d005/vdesirr"}},
+	{"id": "meerkat", "title": "Meerkat", "venue": "ECCV 2024", "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08071.pdf", "root_node": 1, "root_name": "Audio-Visual LLMs\n2024-now", "root_color": "#D1BDFF", "coauthors": ["Sayan Nag", "Subhrajyoti Dasgupta", "Jun Chen", "Mohamed Elhoseiny", "Ruohan Gao", "Dinesh Manocha"], "full_title": "Meerkat: Audio-Visual Large Language Model for Grounding in Space and Time", "summary": "We present Meerkat, an audio-visual LLM equipped with a fine-grained understanding of image and audio both spatially and temporally. With a new modality alignment module based on optimal transport and a cross-attention module that enforces audio-visual consistency, Meerkat can tackle challenging tasks such as audio referred image grounding, image guided audio temporal localization, and audio-visual fact-checking. Moreover, we carefully curate a large dataset AVFIT that comprises 3M instruction tuning samples collected from open-source datasets, and introduce MeerkatBench that unifies five challenging audio-visual tasks.","additional_links": {"code": "https://github.com/schowdhury671/meerkat/tree/main", "data": "https://umd0-my.sharepoint.com/personal/sanjoyc_umd_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsanjoyc%5Fumd%5Fedu%2FDocuments%2FAVFIT%20dataset&ga=1"}},
+	{"id": "aurelia", "title": "AURELIA", "venue": "arXiv", "url": "https://arxiv.org/pdf/2503.23219", "parent": "meerkat", "coauthors": ["Sayan Nag", "Hanan Gani", "Nishit Anand", "Mohamed Elhoseiny", "Ruohan Gao", "Salman Khan", "Dinesh Manocha"], "full_title": "AURELIA: Test-time Reasoning Distillation in Audio-Visual LLMs", "summary": "In this paper, we introduce AURELIA, a novel actor-critic based audio-visual reasoning framework that distils structured, step-by-step reasoning into AVLLMs at test time, improving their ability to process complex multi-modal inputs without additional training or fine-tuning. To further advance AVLLM reasoning skills, we present AVReasonBench, a challenging benchmark comprising 4500 audio-visual questions, each paired with detailed step-by-step reasoning. Our benchmark spans six distinct tasks, including AV-GeoIQ, which evaluates AV reasoning combined with geographical and cultural knowledge", "additional_links": {"code": "https://github.com/schowdhury671/aurelia", "data": "https://github.com/schowdhury671/aurelia"}},
+	{"id": "avtrustbench", "title": "AVTrustBench", "venue": "arXiv", "url": "https://arxiv.org/abs/2501.02135", "parent": "meerkat", "coauthors": ["Sayan Nag", "Subhrajyoti Dasgupta", "Yaoting Wang", "Mohamed Elhoseiny", "Ruohan Gao", "Dinesh Manocha"], "full_title": "AVTrustBench: Assessing and Enhancing Reliability and Robustness in Audio-Visual LLMs", "summary": "We introduce Audio-Visual Trustworthiness assessment Benchmark (AVTrustBench), comprising 600K samples spanning over 9 meticulously crafted tasks, evaluating the capabilities of AVLLMs across three distinct dimensions: Adversarial attack, Compositional reasoning, and Modality-specific dependency. Using our benchmark we extensively evaluate 16 state-of-the-art AVLLMs. The findings reveal that the majority of existing models fall significantly short of achieving human-like comprehension, offering valuable insights for future research directions. To alleviate the limitations in the existing approaches, we further propose a robust, model-agnostic calibrated audio-visual preference optimization based training strategy CAVPref, obtaining a gain up to 30.19% across all 9 tasks.", "additional_links": {"code": "https://github.com/schowdhury671/avtrustbench-", "data": "https://github.com/schowdhury671/avtrustbench-"}},
+        
+	{"id": "apollo", "title": "Apollo", "venue": "EMNLP 2023", "url": "https://aclanthology.org/2023.emnlp-main.629.pdf", "root_node": 1, "root_name": "Integrating Vision-Language\n2022-now", "root_color": "#FF409F", "coauthors": ["Sayan Nag", "Dinesh Manocha"], "full_title": "APoLLo: Unified Adapter and Prompt Learning for Vision Language Models", "summary": "Our method is designed to substantially improve the generalization capabilities of VLP models when they are fine-tuned in a few-shot setting. We introduce trainable cross-attention-based adapter layers in conjunction with vision and language encoders to strengthen the alignment between the two modalities.", "additional_links": {"code": "https://github.com/schowdhury671/APoLLo", "video": "https://www.youtube.com/watch?v=5OHwq3VCusA"}},
+	{"id": "aspire", "title": "ASPIRE", "venue": "ACL Findings 2024", "url": "https://aclanthology.org/2024.findings-acl.22.pdf", "indirect_connections": ["avtrustbench"], "parent": "apollo", "coauthors": ["Sreyan Ghosh", "Chandra Kiran", "Sakshi S", "Sonal Kumar", "Utkarsh Tyagi", "Dinesh Manocha"], "full_title": "ASPIRE: Language-Guided Data Augmentation for Improving Robustness Against Spurious Correlations", "summary": "The paper proposes a simple yet effective solution for supplementing the training dataset with images without spurious features, for robust learning against spurious correlations via better generalization", "additional_links": {"code": "https://github.com/Sreyan88/ASPIRE"}},
+	{"id": "vlmnav", "title": "VLMNav", "venue": "NAACL Findings 2024", "url": "https://arxiv.org/pdf/2403.11487v1", "parent": "aspire", "coauthors": ["Vishnu Dorbala", "Dinesh Manocha"], "full_title": "Can LLM’s Generate Human-Like Wayfinding Instructions? Towards Platform-Agnostic Embodied Instruction Synthesis", "summary": "We present a novel approach to automatically synthesize `wayfinding instructions` for an embodied robot agent. In contrast to prior approaches that are heavily reliant on human-annotated datasets designed exclusively for specific simulation platforms, our algorithm uses in-context learning to condition an LLM to generate instructions using just a few references."},      
+        {"id": "intent", "title": "Intent-o-Meter", "venue": "Nature Scientific Reports 2023", "url": "https://www.nature.com/articles/s41598-024-60299-w.pdf", "parent": "apollo", "coauthors": ["Trisha Mittal", "Pooja Guhan", "Dinesh Manocha", "Snikitha Chelluri"], "full_title": "Towards Determining Perceived Human Intent for Multimodal Social Media Posts using The Theory of Reasoned Action", "summary": "We propose Intent-o-meter, a perceived human intent prediction model for multimodal (image and text) social media posts. Intent-o-meter models ideas from psychology and cognitive modeling literature, in addition to using the visual and textual features for an improved perceived intent prediction.", "additional_links": {"data": "https://drive.google.com/drive/folders/1hQ1pdsuqBmKJkQ-bTQXdKuU2TkazCtbh"}},
+        
+	{"id": "vdesirr", "title": "VDESIRR", "venue": "ICCV 2021", "url": "https://openaccess.thecvf.com/content/ICCV2021/papers/Prasad_V-DESIRR_Very_Fast_Deep_Embedded_Single_Image_Reflection_Removal_ICCV_2021_paper.pdf", "root_node": 1, "root_name": "Computational Photography\n2021-2022", "root_color": "#FA9189", "coauthors": ["BH Pawan Prasad", "Lokesh RB", "Koushik Mitra", "Green Rosh"], "full_title": "V-DESIRR: Very Fast Deep Embedded Single Image Reflection Removal", "summary": "We have proposed a multi-scale end-to-end architecture for detecting and removing weak, medium, and strong reflections from naturally occurring images.", "additional_links": {"code": "https://github.com/ee19d005/vdesirr"}},
         {"id": "maw", "title": "MAW", "venue": "ICCP 2023", "url": "https://arxiv.org/pdf/2306.15662", "parent": "vdesirr", "coauthors": ["Jiaye Wu", "Roni Sengupta", "David Jacobs"], "full_title": "Measured Albedo in the Wild: Filling the Gap in Intrinsics Evaluation", "summary": "In order to comprehensively evaluate albedo, we collect a new dataset, Measured Albedo in the Wild (MAW), and propose three new metrics that complement WHDR", "additional_links": {"project page": "https://measuredalbedo.github.io/", "data": "https://umd.app.box.com/s/rzuzf12ooqnaxyojjgam09zctgp8fr2c"}},
 
-	]
+        ];
 
-      build_garden(papers);
-  </script>
-
-
+        build_garden(papers); // Initialize the garden with papers
+    </script>
 </body>
+
 </html>
