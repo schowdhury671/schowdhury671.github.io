@@ -361,54 +361,55 @@
 								<a class="btn btn-primary btn-outline btn-xs " href="">PDF</a>
 								<a class="btn btn-primary btn-outline btn-xs " href="">Code</a>
 
-<pre id="avtrustbench_abstract_publication", style="display:none">
-	We introduce Audio-Visual Trustworthiness assessment Benchmark (AVTrustBench), comprising 600K samples spanning over 9 meticulously crafted tasks, evaluating the capabilities of AVLLMs across three distinct dimensions: Adversarial attack, Compositional reasoning, and Modality-specific dependency. Using our benchmark we extensively evaluate 16 state-of-the-art AVLLMs. The findings reveal that the majority of existing models fall significantly short of achieving human-like comprehension, offering valuable insights for future research directions. To alleviate the limitations in the existing approaches, we further propose a robust, model-agnostic calibrated audio-visual preference optimization based training strategy CAVPref, obtaining a gain up to 30.19% across all 9 tasks.  
-
+							<pre id="avtrustbench_abstract_publication", style="display:none">
+								We introduce Audio-Visual Trustworthiness assessment Benchmark (AVTrustBench), comprising 600K samples spanning over 9 meticulously crafted tasks, evaluating the 
+								capabilities of AVLLMs across three distinct dimensions: Adversarial attack, Compositional reasoning, and Modality-specific dependency. Using our benchmark 
+								we extensively evaluate 16 state-of-the-art AVLLMs. The findings reveal that the majority of existing models fall significantly short of achieving 
+								human-like comprehension, offering valuable insights for future research directions. To alleviate the limitations in the existing approaches, we further propose a 
+								robust, model-agnostic calibrated audio-visual preference optimization based training strategy CAVPref, obtaining a gain up to 30.19% across all 9 tasks.  
+							
+							</pre>
 							</p>
 						</div>
 					</li>
 				</div>
 			</div>		
 			
-			<!-- CVPR 2025 UAPOSE -->
+			
 			<div class="row" style="margin: 2.5em 0 ">
 				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="img/Publications/UA-pose.png"></img>
+					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/meerkat_bg_removed.png"></img>
 				</div>
 				<div class="col-md-8">
 					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">UA-Pose: Uncertainty-aware 6D Object Pose Estimation and Online Object Completion with Partial References</span>
+						<span itemprop="name">Meerkat: Audio-Visual Large Language Model for Grounding in Space and Time </span>
 						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
 							<div class="pub-authors " itemprop="author ">
-								<!-- <text style="color: black">Nihal Jain</text>, -->
-								<!-- <text style="color: black">Praneetha Vaddamanu</text>, -->
-								 <!-- Ming-Feng Li, Xin Yang, Fu-En Wang, Hritam Basak, Yuyin Sun, Shreekant Gayaka, Min Sun, Cheng-Hao Kuo -->
-								<text style="color: black">Ming-Feng Li, Xin Yang, Fu-En Wang,</text>
-								<!-- <text style="color: black">Zhaozheng Yin</text> -->
-								<!-- <text style="color: black">Zhaozheng Yin</text> -->
-								 <b style="color: #0095eb">Hritam Basak</b>,
-								 <!--  -->
-								<text style="color: black">Yuyin Sun, Shreekant Gayaka, Min Sun, Cheng-Hao Kuo</text>
-								<!-- <text style="color: black">Kuldeep Kulkarni</text> -->
+								
+							
+								 <b style="color: #0095eb">Sanjoy Chowdhury*</b>,
+								 
+								<text style="color: black">Sayan Nag*, Subhrajyoti Dasgupta*, Jun Chen, Mohamed Elhoseiny, Ruohan Gao, Dinesh Manocha </text>
+								
 							</div>
-							<div class="pub-publication ">International Conference on Computer Vision and Pattern Recognition (CVPR 2025)</div>
+							<div class="pub-publication "> European Conference on Computer Vision(ECCV 2024)</div>
 							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('ua-pose_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://openaccess.thecvf.com/content/CVPR2025/html/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.html">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://minfenli.github.io/UA-Pose/">Code</a>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('ua-pose_bib_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a>
-<pre id="ua-pose_abstract_publication", style="display:none">
-<!-- In creative workflows, designers compile a collection (or “moodboard”) of inspirational assets for ideation. They may use this as reference for finding additional assets. In this work, we aim to stimulate creative ideation by making suggestions that take cues from the designer’s moodboard but also carefully diverge from it. A collection of images may have rich information along different axes (e.g. color, composition, or style) – these axes or channels can be used to model relevance or divergence of any image from a query collection. So, we develop a self-supervised model that can extract channel-specific representations from collections of images. We propose a search algorithm that uses these representations to obtain results that satisfy the collection’s intent along some channels but diverge from the query along others. We show that this allows for effective exploration of the creative space of possibilities. Finally, we demonstrate a mix-and-match visual querying mechanism that allows us to combine channels from different collections of inspirational content, thus facilitating ease in creative expression. -->
-6D object pose estimation has shown strong generalizability to novel objects. However, existing methods often require either a complete, well-reconstructed 3D model or numerous reference images that fully cover the object. Estimating 6D poses from partial references, which capture only fragments of an object's appearance and geometry, remains challenging. To address this, we propose UA-Pose, an uncertainty-aware approach for 6D object pose estimation and online object completion specifically designed for partial references. We assume access to either (1) a limited set of RGBD images with known poses or (2) a single 2D image. For the first case, we initialize a partial object 3D model based on the provided images and poses, while for the second, we use image-to-3D techniques to generate an initial object 3D model. Our method integrates uncertainty into the incomplete 3D model, distinguishing between seen and unseen regions. This uncertainty enables confidence assessment in pose estimation and guides an uncertainty-aware sampling strategy for online object completion, enhancing robustness in pose estimation accuracy and improving object completeness. We evaluate our method on the YCB-Video, YCBInEOAT, and HO3D datasets, including RGBD sequences of YCB objects manipulated by robots and human hands. Experimental results demonstrate significant performance improvements over existing methods, particularly when object observations are incomplete or partially captured.
-<pre id="ua-pose_bib_publication", style="display:none">
-	@inproceedings{li2025ua,
-  title={UA-Pose: Uncertainty-aware 6D object pose estimation and online object completion with partial references},
-  author={Li, Ming-Feng and Yang, Xin and Wang, Fu-En and Basak, Hritam and Sun, Yuyin and Gayaka, Shreekant and Sun, Min and Kuo, Cheng-Hao},
-  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
-  pages={1180--1189},
-  year={2025}
-}
-</pre>
+								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('meerkat_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08071.pdf">PDF</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/schowdhury671/meerkat/tree/main">Code</a>
+								
+							<pre id="meerkat_abstract_publication", style="display:none">
+							We present Meerkat, an audio-visual LLM equipped with a
+							fine-grained understanding of image and audio both spatially and temporally.
+							With a new modality alignment module based on optimal transport and a
+							cross-attention module that enforces audio-visual consistency, Meerkat can
+							tackle challenging tasks such as audio referred image grounding, image guided
+							audio temporal localization, and audio-visual fact-checking. Moreover, we
+							carefully curate a large dataset AVFIT that comprises 3M instruction tuning
+							samples collected from open-source datasets, and introduce MeerkatBench that
+							unifies five challenging audio-visual tasks. 
+							</pre>
+
 							</p>
 						</div>
 					</li>
@@ -416,40 +417,32 @@
 			</div>
 
 
-			<!-- CVPR 2025 -->
+			
 			<div class="row" style="margin: 2.5em 0 ">
 				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto; height: auto;" src="img/Publications/cvpr-25.png"></img>
+					<img class="pub-img " style="margin-right: auto; margin-left: auto; height: auto;" src="../images/aspire.png"></img>
 				</div>
 				<div class="col-md-8">
 					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">SemiDAViL: Semi-supervised Domain Adaptation with Vision-Language Guidance for Semantic Segmentation</span>
+						<span itemprop="name">ASPIRE: Language-Guided Data Augmentation for Improving Robustness Against Spurious Correlations</span>
 						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
 							<div class="pub-authors " itemprop="author ">
-								<!-- <text style="color: black">Nihal Jain</text>, -->
-								<!-- <text style="color: black">Praneetha Vaddamanu</text>, -->
-								<b style="color: #0095eb">Hritam Basak</b>,
-								<text style="color: black">Zhaozheng Yin</text>
-								<!-- <text style="color: black">Kuldeep Kulkarni</text> -->
+								<text style="color: black">Sreyan Ghosh*, Chandra Kiran Reddy Evuru*, Sonal Kumar, Utkarsh Tyagi, Sakshi Singh,</text>,
+							
+								<b style="color: #0095eb">Sanjoy Chowdhury</b>,
+								<text style="color: black">Dinesh Manocha</text>
+								
 							</div>
-							<div class="pub-publication ">International Conference on Computer Vision and Pattern Recognition (CVPR 2025)</div>
+							<div class="pub-publication ">Association for Computational Linguistics(ACL 2024) Findings</div>
 							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('semidavil_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://openaccess.thecvf.com/content/CVPR2025/html/Basak_SemiDAViL_Semi-supervised_Domain_Adaptation_with_Vision-Language_Guidance_for_Semantic_Segmentation_CVPR_2025_paper.html">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/hritam-98/SemiDAViL">Code</a>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('semidavil_bib_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a>
-<pre id="semidavil_abstract_publication", style="display:none">
-<!-- In creative workflows, designers compile a collection (or “moodboard”) of inspirational assets for ideation. They may use this as reference for finding additional assets. In this work, we aim to stimulate creative ideation by making suggestions that take cues from the designer’s moodboard but also carefully diverge from it. A collection of images may have rich information along different axes (e.g. color, composition, or style) – these axes or channels can be used to model relevance or divergence of any image from a query collection. So, we develop a self-supervised model that can extract channel-specific representations from collections of images. We propose a search algorithm that uses these representations to obtain results that satisfy the collection’s intent along some channels but diverge from the query along others. We show that this allows for effective exploration of the creative space of possibilities. Finally, we demonstrate a mix-and-match visual querying mechanism that allows us to combine channels from different collections of inspirational content, thus facilitating ease in creative expression. -->
-Domain Adaptation (DA) and Semi-supervised Learning (SSL) converge in Semi-supervised Domain Adaptation (SSDA), where the objective is to transfer knowledge from a source domain to a target domain using a combination of limited labeled target samples and abundant unlabeled target data. Although intuitive, a simple amalgamation of DA and SSL is suboptimal in semantic segmentation due to two major reasons: (1) previous methods, while able to learn good segmentation boundaries, are prone to confuse classes with similar visual appearance due to limited supervision; and (2) skewed and imbalanced training data distribution preferring source representation learning whereas impeding from exploring limited information about tailed classes. Language guidance can serve as a pivotal semantic bridge, facilitating robust class discrimination and mitigating visual ambiguities by leveraging the rich semantic relationships encoded in pre-trained language models to enhance feature representations across domains. Therefore, we propose the first language-guided SSDA setting for semantic segmentation in this work. Specifically, we harness the semantic generalization capabilities inherent in vision-language models (VLMs) to establish a synergistic framework within the SSDA paradigm. To address the inherent class-imbalance challenges in long-tailed distributions, we introduce class-balanced segmentation loss formulations that effectively regularize the learning process. Through extensive experimentation across diverse domain adaptation scenarios, our approach demonstrates substantial performance improvements over contemporary state-of-the-art (SoTA) methodologies.
-<pre id="semidavil_bib_publication", style="display:none">
-	@inproceedings{basak2025semidavil,
-  title={SemiDAViL: Semi-supervised Domain Adaptation with Vision-Language Guidance for Semantic Segmentation},
-  author={Basak, Hritam and Yin, Zhaozheng},
-  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
-  pages={9816--9828},
-  year={2025}
-}
-</pre>
+								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('aspire_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://aclanthology.org/2024.findings-acl.22.pdf">PDF</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/Sreyan88/ASPIRE">Code</a>
+								
+							<pre id="semidavil_abstract_publication", style="display:none">
+							The paper proposes a simple yet effective solution for supplementing the training dataset with images without spurious features, 
+								for robust learning against spurious correlations via better generalization.
+							</pre>
 							</p>
 						</div>
 					</li>
@@ -462,42 +455,32 @@ Domain Adaptation (DA) and Semi-supervised Learning (SSL) converge in Semi-super
 
 			<h2 class="year">2024</h2>
 
-			<!-- ECCV 2024 -->
+			
 			<div class="row" style="margin: 2.5em 0 ">
 				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="img/Publications/eccv24-overall.png"></img>
+					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/intent-o-meter.png"></img>
 				</div>
 				<div class="col-md-8">
 					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">Forget More to Learn More: Domain-specific Feature Unlearning for Semi-supervised and Unsupervised Domain Adaptation</span>
+						<span itemprop="name">Towards Determining Perceived Human Intent for Multimodal Social Media Posts using The Theory of Reasoned Action</span>
 						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
 							<div class="pub-authors " itemprop="author ">
-								<!-- <text style="color: black">Nihal Jain</text>, -->
-								<!-- <text style="color: black">Praneetha Vaddamanu</text>, -->
-								<b style="color: #0095eb">Hritam Basak</b>,
-								<text style="color: black">Zhaozheng Yin</text>
-								<!-- <text style="color: black">Kuldeep Kulkarni</text> -->
+								
+								<text style="color: black">Trisha Mittal</text>,
+								<b style="color: #0095eb">Sanjoy Chowdhury</b>,
+								<text style="color: black">Pooja Guhan, Snikhita Chelluri, Dinesh Manocha </text>
+								
 							</div>
-							<div class="pub-publication ">European Conference on Computer Vision (ECCV 2024)</div>
+							<div class="pub-publication "> Nature Scientific Reports 2024</div>
 							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('CanvasAsContext_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05513.pdf">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/hritam-98/FMLM">Code</a>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('CanvasAsContext_bib_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a>
-<pre id="CanvasAsContext_abstract_publication", style="display:none">
-<!-- In creative workflows, designers compile a collection (or “moodboard”) of inspirational assets for ideation. They may use this as reference for finding additional assets. In this work, we aim to stimulate creative ideation by making suggestions that take cues from the designer’s moodboard but also carefully diverge from it. A collection of images may have rich information along different axes (e.g. color, composition, or style) – these axes or channels can be used to model relevance or divergence of any image from a query collection. So, we develop a self-supervised model that can extract channel-specific representations from collections of images. We propose a search algorithm that uses these representations to obtain results that satisfy the collection’s intent along some channels but diverge from the query along others. We show that this allows for effective exploration of the creative space of possibilities. Finally, we demonstrate a mix-and-match visual querying mechanism that allows us to combine channels from different collections of inspirational content, thus facilitating ease in creative expression. -->
-Semi-supervised Domain Adaptation (SSDA) encompasses the process of adapting representations acquired from the source domain to a new target domain, utilizing a limited number of labeled samples in conjunction with an abundance of unlabeled data from the target domain. Simple aggregation of domain adaptation (DA) and semi-supervised learning (SSL) falls short of optimal performance due to two primary challenges: (1) skewed training data distribution favoring the source representation learning, and (2) the persistence of superfluous domain-specific features, hindering effective domain-agnostic (i.e., task-specific) feature extraction. In pursuit of greater generalizability and robustness, we present an SSDA framework with a new episodic learning strategy: \lq\lq learn, forget, then learn more\rq\rq. First, we train two encoder-classifier pairs, one for the source and the other for the target domain, aiming to learn domain-specific features. This involves minimizing classification loss for in-domain images and maximizing uncertainty loss for out-of-domain images. Subsequently, we transform the images into a new space, strategically unlearning (forgetting) the domain-specific representations while preserving their structural similarity to the originals. 
-This proactive removal of domain-specific attributes is complemented by learning more domain-agnostic features using a Gaussian-guided latent alignment (GLA) strategy that uses a prior distribution to align domain-agnostic source and target representations.  
-The proposed SSDA framework can be further extended to unsupervised domain adaptation (UDA). Evaluation across {two} domain adaptive image classification tasks reveals our method's superiority over state-of-the-art (SoTA) methods in both SSDA and UDA scenarios.</pre>
-<pre id="CanvasAsContext_bib_publication", style="display:none">
-	@inproceedings{basak2024forget,
-		title={Forget More to Learn More: Domain-specific Feature Unlearning for Semi-supervised and Unsupervised Domain Adaptation},
-		author={Basak, Hritam and Yin, Zhaozheng},
-		booktitle={European Conference on Computer Vision},
-		year={2024},
-		organization={Springer}
-	  }
-}}</pre>
+								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('intentometer_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://www.nature.com/articles/s41598-024-60299-w.pdf">PDF</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://drive.google.com/drive/folders/1hQ1pdsuqBmKJkQ-bTQXdKuU2TkazCtbh">Dataset</a>
+								
+							<pre id="intentometer_abstract_publication", style="display:none">
+							We propose Intent-o-meter, a perceived human intent prediction model for multimodal (image and text) social media posts. Intent-o-meter models ideas from psychology and 
+								cognitive modeling literature, in addition to using the visual and textual features for an improved perceived intent prediction. 
+							</pre>
 							</p>
 						</div>
 					</li>
@@ -507,41 +490,31 @@ The proposed SSDA framework can be further extended to unsupervised domain adapt
 
 
 
-			<!-- MICCAI 2024 -->
+			
 			<div class="row" style="margin: 2.5em 0 ">
 				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="img/Publications/overall-miccai24-cropped.png"></img>
+					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/llmnav.png"></img>
 				</div>
 				<div class="col-md-8">
 					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">Quest for Clone: Test-Time Domain Adaptation for Medical Image Segmentation by Searching the Closest Clone in Latent Space</span>
+						<span itemprop="name">Can LLM’s Generate Human-Like Wayfinding Instructions? Towards Platform-Agnostic Embodied Instruction Synthesis</span>
 						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
 							<div class="pub-authors " itemprop="author ">
-								<!-- <text style="color: black">Nihal Jain</text>, -->
-								<!-- <text style="color: black">Praneetha Vaddamanu</text>, -->
-								<b style="color: #0095eb">Hritam Basak</b>,
-								<text style="color: black">Zhaozheng Yin</text>
-								<!-- <text style="color: black">Kuldeep Kulkarni</text> -->
+								
+								<text style="color: black">Vishnu Sashank Dorbala</text>,
+								<b style="color: #0095eb">Sanjoy Chowdhury</b>,
+								<text style="color: black">Dinesh Manocha</text>
+								
 							</div>
-							<div class="pub-publication ">International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI 2024)</div>
+							<div class="pub-publication ">North American Chapter of the Association for Computational Linguistic (NAACL 2024)</div>
 							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('miccai24_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://papers.miccai.org/miccai-2024/paper/0297_paper.pdf">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/hritam-98/Quest4Clone">Code</a>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('CanvasAsContext_bib_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a>
-<pre id="miccai24_abstract_publication", style="display:none">
-<!-- In creative workflows, designers compile a collection (or “moodboard”) of inspirational assets for ideation. They may use this as reference for finding additional assets. In this work, we aim to stimulate creative ideation by making suggestions that take cues from the designer’s moodboard but also carefully diverge from it. A collection of images may have rich information along different axes (e.g. color, composition, or style) – these axes or channels can be used to model relevance or divergence of any image from a query collection. So, we develop a self-supervised model that can extract channel-specific representations from collections of images. We propose a search algorithm that uses these representations to obtain results that satisfy the collection’s intent along some channels but diverge from the query along others. We show that this allows for effective exploration of the creative space of possibilities. Finally, we demonstrate a mix-and-match visual querying mechanism that allows us to combine channels from different collections of inspirational content, thus facilitating ease in creative expression. -->
-Unsupervised Domain Adaptation (UDA) aims to align labeled source distribution and unlabeled target distribution by mining domain-agnostic feature representation. However, adapting the source-trained model for new target domains after the model is deployed to users poses a significant challenge. To address this, we propose a generative latent search paradigm to reconstruct the closest clone of every target image from the source latent space. This involves utilizing a test-time adaptation (TTA) strategy, wherein a latent optimization step finds the closest clone of each target image from the source representation space using variational sampling of source latent distribution. Thus, our method facilitates domain adaptation without requiring target-domain supervision during training. Moreover, we demonstrate that our approach can be further fine-tuned using a few labeled target data without the need for unlabeled target data, by leveraging global and local label guidance from available target annotations to enhance the downstream segmentation task. We empirically validate the efficacy of our proposed method, surpassing existing UDA, TTA, and SSDA methods in two domain adaptive image segmentation tasks.</pre>
-<pre id="miccai24_bib_publication", style="display:none">
-	@inproceedings{basak2024quest,
-		title={Quest for Clone: Test-Time Domain Adaptation for Medical Image Segmentation by Searching the Closest Clone in Latent Space},
-		author={Basak, Hritam and Yin, Zhaozheng},
-		booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
-		pages={555--566},
-		year={2024},
-		organization={Springer}
-	  }
-}}</pre>
+								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('vlmnav_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://arxiv.org/pdf/2403.11487v1">PDF</a>
+<!-- 								<a class="btn btn-primary btn-outline btn-xs " href="">Code</a> -->
+<!-- 								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('CanvasAsContext_bib_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a> -->
+<pre id="vlmnav_abstract_publication", style="display:none">
+We present a novel approach to automatically synthesize "wayfinding instructions" for an embodied robot agent. In contrast to prior approaches that are heavily reliant on human-annotated datasets designed exclusively for specific simulation platforms, our algorithm uses in-context learning to condition an LLM to generate instructions using just a few references. 
+</pre>
 							</p>
 						</div>
 					</li>
@@ -552,41 +525,35 @@ Unsupervised Domain Adaptation (UDA) aims to align labeled source distribution a
 
 			<h2 class="year">2023</h2>
 
-			<!-- CVPR 23 -->
+			
 			<div class="row" style="margin: 2.5em 0 ">
 				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="img/Publications/PLGCL_overall.png"></img>
+					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/melfusion-diagram.jpg"></img>
 				</div>
 				<div class="col-md-8">
 					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">Pseudo Label Guided Contrastive Learning for Semi-supervised Medical Image Segmentation</span>
+						<span itemprop="name">MeLFusion: Synthesizing Music from Image and Language Cues using Diffusion Models</span>
 						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
 							<div class="pub-authors " itemprop="author ">
-								<!-- <text style="color: black">Nihal Jain</text>, -->
-								<!-- <text style="color: black">Praneetha Vaddamanu</text>, -->
-								<b style="color: #0095eb">Hritam Basak</b>,
-								<text style="color: black">Zhaozheng Yin</text>
-								<!-- <text style="color: black">Kuldeep Kulkarni</text> -->
+								
+								<b style="color: #0095eb">Sanjoy Chowdhury*</b>,
+								<text style="color: black">Sayan Nag*, Joseph KJ, Balaji Vasan Srinivasan, Dinesh Manocha </text>
+								
 							</div>
-							<div class="pub-publication ">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2023)</div>
+							<div class="pub-publication ">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2024)</div>
 							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('cvpr23_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://openaccess.thecvf.com/content/CVPR2023/papers/Basak_Pseudo-Label_Guided_Contrastive_Learning_for_Semi-Supervised_Medical_Image_Segmentation_CVPR_2023_paper.pdf">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/hritam-98/PatchCL-MedSeg">Code</a>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('CanvasAsContext_bib_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a>
-<pre id="cvpr23_abstract_publication", style="display:none">
+								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('melfusion_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://openaccess.thecvf.com/content/CVPR2024/papers/Chowdhury_MeLFusion_Synthesizing_Music_from_Image_and_Language_Cues_using_Diffusion_CVPR_2024_paper.pdf">PDF</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/schowdhury671/melfusion/tree/main">Code</a>
+								
+<pre id="melfusion_abstract_publication", style="display:none">
 <!-- In creative workflows, designers compile a collection (or “moodboard”) of inspirational assets for ideation. They may use this as reference for finding additional assets. In this work, we aim to stimulate creative ideation by making suggestions that take cues from the designer’s moodboard but also carefully diverge from it. A collection of images may have rich information along different axes (e.g. color, composition, or style) – these axes or channels can be used to model relevance or divergence of any image from a query collection. So, we develop a self-supervised model that can extract channel-specific representations from collections of images. We propose a search algorithm that uses these representations to obtain results that satisfy the collection’s intent along some channels but diverge from the query along others. We show that this allows for effective exploration of the creative space of possibilities. Finally, we demonstrate a mix-and-match visual querying mechanism that allows us to combine channels from different collections of inspirational content, thus facilitating ease in creative expression. -->
 Although recent works in semi-supervised learning (SemiSL) have accomplished significant success in natural image segmentation, the task of learning discriminative representations from limited annotations has been an open problem in medical images. Contrastive Learning (CL) frameworks use the notion of similarity measure which is useful for classification problems, however, they fail to transfer these quality representations for accurate pixel-level segmentation. To this end, we propose a novel semi-supervised patch-based CL framework for medical image segmentation without using any explicit pretext task. We harness the power of both CL and SemiSL, where the pseudo-labels generated from SemiSL aid CL by providing additional guidance, whereas discriminative class information learned in CL leads to accurate multi-class segmentation. Additionally, we formulate a novel loss that synergistically encourages inter-class separability and intra-class compactness among the learned representations. A new inter-patch semantic disparity mapping using average patch entropy is employed for a guided sampling of positives and negatives in the proposed CL framework. Experimental analysis on three publicly available datasets of multiple modalities reveals the superiority of our proposed method as compared to the state-of-the-art methods.
 </pre>
-<pre id="cvpr23_bib_publication", style="display:none">
-	@inproceedings{basak2023pseudo,
-		title={Pseudo-Label Guided Contrastive Learning for Semi-Supervised Medical Image Segmentation},
-		author={Basak, Hritam and Yin, Zhaozheng},
-		booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-		pages={19786--19797},
-		year={2023}
-	  }
-}}</pre>
+We propose MeLFusion, a model that can effectively use cues from a textual description and the corresponding image to synthesize music. MeLFusion is a text-to-music diffusion model 
+with a novel "visual synapse", which effectively infuses the semantics from the visual modality into the generated music. To facilitate research in this area, we introduce a new 
+dataset MeLBench, and propose a new evaluation metric IMSM. 
+</pre>
 							</p>
 						</div>
 					</li>
@@ -599,42 +566,31 @@ Although recent works in semi-supervised learning (SemiSL) have accomplished sig
 
 
 
-			<!-- MICCAI 23 -->
+			
 			<div class="row" style="margin: 2.5em 0 ">
 				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="img/Publications/style-content-miccai23.png"></img>
+					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/apollo.jpg"></img>
 				</div>
 				<div class="col-md-8">
 					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">Semi-supervised Domain Adaptive Medical Image Segmentation through Consistency Regularized Disentangled Contrastive Learning</span>
+						<span itemprop="name">APoLLo <img src="../images/rocket1.png" alt="project image" width="20" height="20" />: Unified Adapter and Prompt Learning for Vision Language Models</span>
 						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
 							<div class="pub-authors " itemprop="author ">
-								<b style="color: #0095eb">Hritam Basak</b>,
-								<text style="color: black">Zhaozheng Yin</text>
-								<!-- <text style="color: black">Praneetha Vaddamanu</text>,
-								<text style="color: black">Dhananjay Raut</text>,
-								<text style="color: black">Shraiysh Vaishay</text>,
-								<text style="color: black">Vishwa Vinay</text> -->
+								<b style="color: #0095eb">Sanjoy Chowdhury*</b>,
+								<text style="color: black">Sayan Nag*, Dinesh Manocha</text>
+								
 							</div>
-							<div class="pub-publication ">International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI 2023)</div>
+							<div class="pub-publication ">Conference on Empirical Methods in Natural Language Processing (EMNLP 2023)</div>
 							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('AttributeComposition_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://link.springer.com/epdf/10.1007/978-3-031-43901-8_25?sharing_token=fKuDPiCxykqg1xU-hoykUPe4RwlQNchNByi7wbcMAY7w2JJtACqQoRPL8LPCRrDOiMd-AD9rORop3ByrXn6ukE75nsnha3KyvBjGQlQg0gauqN36z02fIyGmGiezSJ1c3L9qrlBv2ENrLhqXcJo9rNyy-MwnAm1bjp34Osxh_O4%3D">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/hritam-98/GFDA-disentangled">Code</a>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('AttributeComposition_bib_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a>
-<pre id="AttributeComposition_abstract_publication", style="display:none">
-	Although unsupervised domain adaptation (UDA) is a promising direction to alleviate domain shift, they fall short of their supervised counterparts. In this work, we investigate relatively less explored semi-supervised domain adaptation (SSDA) for medical image segmentation, where access to a few labeled target samples can improve the adaptation performance substantially. Specifically, we propose a two-stage training process. First, an encoder is pre-trained in a self-learning paradigm using a novel domain-content disentangled contrastive learning (CL) along with a pixel-level feature consistency constraint. The proposed CL enforces the encoder to learn discriminative content-specific but domain-invariant semantics on a global scale from the source and target images, whereas consistency regularization enforces the mining of local pixel-level information by maintaining spatial sensitivity. This pre-trained encoder, along with a decoder, is further fine-tuned for the downstream task, (i.e. pixel-level segmentation) using a semi-supervised setting. Furthermore, we experimentally validate that our proposed method can easily be extended for UDA settings, adding to the superiority of the proposed strategy. Upon evaluation on two domain adaptive image segmentation tasks, our proposed method outperforms the SoTA methods, both in SSDA and UDA settings.
+								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('apollo_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://aclanthology.org/2023.emnlp-main.629.pdf">PDF</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/schowdhury671/APoLLo">Code</a>
+								
+<pre id="apollo_abstract_publication", style="display:none">
+Our method is designed to substantially improve the generalization capabilities of VLP models when they are fine-tuned in a few-shot setting. We introduce trainable cross-attention-based
+	adapter layers in conjunction with vision and language encoders to strengthen the alignment between the two modalities. </p>
 </pre>
-<pre id="AttributeComposition_bib_publication", style="display:none">
-	@inproceedings{basak2023semi,
-		title={Semi-supervised domain adaptive medical image segmentation through consistency regularized disentangled contrastive learning},
-		author={Basak, Hritam and Yin, Zhaozheng},
-		booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
-		pages={260--270},
-		year={2023},
-		organization={Springer}
-	  }
-}</pre>
+
 							</p>
 						</div>
 					</li>
@@ -649,135 +605,108 @@ Although recent works in semi-supervised learning (SemiSL) have accomplished sig
 
 
 			
-			<!-- ICASSP 2023 -->
+			
 			<div class="row" style="margin: 2.5em 0 ">
 				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto; width: 120%; height: 100%" src="img/Publications/icassp-23.png"></img>
+					<img class="pub-img " style="margin-right: auto; margin-left: auto; width: 120%; height: 100%" src="../images/adverb.png"></img>
 				</div>
 				<div class="col-md-8 ">
 					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">IDEAL: Improved DEnse locAL Contrastive Learning for Semi-Supervised Medical Image Segmentation</span>
+						<span itemprop="name">AdVerb: Visually Guided Audio Dereverberation</span>
 						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
 							<div class="pub-authors " itemprop="author ">
-								<b style="color: #0095eb">Hritam Basak<sup></sup></b>,
-								<text style="color: black">Soumitri Chattopadhyay<sup>&dagger;</sup></text>,
-								<text style="color: black">Rohit Kundu<sup>&dagger;</sup></text>,
-								<text style="color: black">Sayan Nag<sup>&dagger;</sup></text>,
-								<text style="color: black">Rammohan Malippeddi</text>
-								<text style="color: black"><small>(&dagger; denotes equal contribution)</small></text>
-							</div>
-							<div class="pub-publication "> IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2023)</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('SG_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://arxiv.org/abs/2210.15075">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://rohit-kundu.github.io/IDEAL-ICASSP23/">Project</a>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('SG_bib_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a>
-<pre id="SG_abstract_publication", style="display:none">
-	Due to the scarcity of labeled data, Contrastive Self-Supervised Learning (SSL) frameworks have lately shown great potential in several medical image analysis tasks. However, the existing contrastive mechanisms are sub-optimal for dense pixel-level segmentation tasks due to their inability to mine local features. To this end, we extend the concept of metric learning to the segmentation task, using a dense (dis)similarity learning for pre-training a deep encoder network, and employing a semi-supervised paradigm to fine-tune for the downstream task. Specifically, we propose a simple convolutional projection head for obtaining dense pixel-level features, and a new contrastive loss to utilize these dense projections thereby improving the local representations. A bidirectional consistency regularization mechanism involving two-stream model training is devised for the downstream task. Upon comparison, our IDEAL method outperforms the SoTA methods by fair margins on cardiac MRI segmentation.
-</pre>
-<pre id="SG_bib_publication", style="display:none">
-	@inproceedings{basak2023ideal,
-		title={Ideal: Improved Dense Local Contrastive Learning For Semi-Supervised Medical Image Segmentation},
-		author={Basak, Hritam and Chattopadhyay, Soumitri and Kundu, Rohit and Nag, Sayan and Mallipeddi, Rammohan},
-		booktitle={ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
-		pages={1--5},
-		year={2023},
-		organization={IEEE}
-	  }
-}</pre>
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>
-
-
-
-
-
-
-
-
-			<!-- UT-Net -->
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="img/Publications/ut-net.png"></img>
-				</div>
-				<div class="col-md-8">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">UT-Net: Combining U-Net and Transformer for Joint Optic Disc and Cup Segmentation and Glaucoma Detection</span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-								<!-- <text style="color: black">Nihal Jain</text>, -->
-								<!-- <text style="color: black">Praneetha Vaddamanu</text>, -->
-								<text style="color: black">Rukhshanda Hussain</text>,
-								<b style="color: #0095eb">Hritam Basak</b>
+								<b style="color: #0095eb">Sanjoy Chowdhury<sup></sup></b>,
+								<text style="color: black">Sreyan Ghosh*, Subhrajyoti Dasgupta, Anton Ratnarajah, Utkarsh Tyagi, Dinesh Manocha <sup>&dagger;</sup></text>,
 								
-								<!-- <text style="color: black">Kuldeep Kulkarni</text> -->
+								
 							</div>
-							<div class="pub-publication ">International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC 2023)</div>
+							<div class="pub-publication "> IEEE International Conference on Computer Vision (ICCV 2023)</div>
 							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('utnet_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://arxiv.org/abs/2303.04939">PDF</a>
-								<!-- <a class="btn btn-primary btn-outline btn-xs " href="https://github. com/hritam-98/PatchCL-MedSeg">Code</a> -->
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('utnet_bib_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a>
-<pre id="utnet_abstract_publication", style="display:none">
-<!-- In creative workflows, designers compile a collection (or “moodboard”) of inspirational assets for ideation. They may use this as reference for finding additional assets. In this work, we aim to stimulate creative ideation by making suggestions that take cues from the designer’s moodboard but also carefully diverge from it. A collection of images may have rich information along different axes (e.g. color, composition, or style) – these axes or channels can be used to model relevance or divergence of any image from a query collection. So, we develop a self-supervised model that can extract channel-specific representations from collections of images. We propose a search algorithm that uses these representations to obtain results that satisfy the collection’s intent along some channels but diverge from the query along others. We show that this allows for effective exploration of the creative space of possibilities. Finally, we demonstrate a mix-and-match visual querying mechanism that allows us to combine channels from different collections of inspirational content, thus facilitating ease in creative expression. -->
-Glaucoma is a chronic visual disease that may cause permanent irreversible blindness. Measurement of the cup-to-disc ratio (CDR) plays a pivotal role in the detection of glaucoma in its early stage, preventing visual disparities. Therefore, accurate and automatic segmentation of optic disc (OD) and optic cup (OC) from retinal fundus images is a fundamental requirement. Existing CNN-based segmentation frameworks resort to building deep encoders with aggressive downsampling layers, which suffer from a general limitation on modeling explicit long-range dependency. To this end, in this paper, we propose a new segmentation pipeline, called UT-Net, availing the advantages of U-Net and transformer both in its encoding layer, followed by an attention-gated bilinear fusion scheme. In addition to this, we incorporate Multi-Head Contextual attention to enhance the regular self-attention used in traditional vision transformers. Thus low-level features along with global dependencies are captured in a shallow manner. Besides, we extract context information at multiple encoding layers for better exploration of receptive fields, and to aid the model to learn deep hierarchical representations. Finally, an enhanced mixing loss is proposed to tightly supervise the overall learning process. The proposed model has been implemented for joint OD and OC segmentation on three publicly available datasets: DRISHTI-GS, RIM-ONE R3, and REFUGE. Additionally, to validate our proposal, we have performed exhaustive experimentation on Glaucoma detection from all three datasets by measuring the Cup to Disc Ratio (CDR) value. Experimental results demonstrate the superiority of UT-Net as compared to the state-of-the-art methods.
+								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('adverb_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://openaccess.thecvf.com/content/ICCV2023/papers/Chowdhury_AdVerb_Visually_Guided_Audio_Dereverberation_ICCV_2023_paper.pdf">PDF</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://schowdhury671.github.io/adverb/">Project</a>
+								
+<pre id="SG_abstract_publication", style="display:none">
+We present a novel audio-visual dereverberation framework that uses visual cues in addition to the reverberant sound to estimate clean audio.
 </pre>
-<pre id="utnet_bib_publication", style="display:none">
-	@article{hussain2023ut,
-		title={UT-Net: Combining U-Net and Transformer for Joint Optic Disc and Cup Segmentation and Glaucoma Detection},
-		author={Hussain, Rukhshanda and Basak, Hritam},
-		journal={arXiv preprint arXiv:2303.04939},
-		year={2023}
-	  }
-}}</pre>
 							</p>
 						</div>
 					</li>
 				</div>
 			</div>
 
-			<h2 class="year">2022</h2>
 
 
 
 
 
 
-			<!-- MICCAI 2022 -->
+
+			
 			<div class="row" style="margin: 2.5em 0 ">
 				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto; width: 90%" src="img/Publications/MICCAI_Overall_final.png"></img>
+					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/iccp.png"></img>
 				</div>
 				<div class="col-md-8">
 					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">Addressing Class Imbalance in Semi-supervised Image Segmentation: A Study on Cardiac MRI</span>
+						<span itemprop="name">Measured Albedo in the Wild: Filling the Gap in Intrinsics Evaluation</span>
 						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
 							<div class="pub-authors " itemprop="author ">
-								<b style="color: #0095eb">Hritam Basak</b>,
-								<text style="color: black">Sagnik Ghosal</text>,
-								<text style="color: black">Ram Sarkar</text>
+								
+								<text style="color: black">Jiaye Wu</text>,
+								<b style="color: #0095eb">Sanjoy Chowdhury</b>,
+								<text style="color: black">Hariharmano Shanmugaraja, David Jacobs, Soumyadip Sengupta </text>
+								
+								
 							</div>
-							<div class="pub-publication ">International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI 2022)</div>
+							<div class="pub-publication ">International Conference on Computational Photography (ICCP 2023)</div>
 							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('miccai22_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://rdcu.be/cVRY4">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('miccai22_bib_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a>
+								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('maw_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://arxiv.org/pdf/2306.15662.pdf">PDF</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://measuredalbedo.github.io/">Project Page</a>
+								
+<pre id="maw_abstract_publication", style="display:none">
+In order to comprehensively evaluate albedo, we collect a new dataset, Measured Albedo in the Wild (MAW), and propose three new metrics that complement WHDR
+</pre>
+
+							</p>
+						</div>
+					</li>
+				</div>
+			</div>
+
+			<h2 class="year">2023</h2>
+
+
+
+
+
+
+			
+			<div class="row" style="margin: 2.5em 0 ">
+				<div class="col-md-4">
+					<img class="pub-img " style="margin-right: auto; margin-left: auto; width: 90%" src="../images/audViSum_bmvc.png"></img>
+				</div>
+				<div class="col-md-8">
+					<li itemscope itemtype="http://schema.org/CreativeWork ">
+						<span itemprop="name">AudViSum: Self-Supervised Deep Reinforcement Learning for Diverse Audio-Visual Summary Generation</span>
+						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
+							<div class="pub-authors " itemprop="author ">
+								<b style="color: #0095eb">Sanjoy Chowdhury*</b>,
+								<text style="color: black">Aditya P. Patra*, Subhrajyoti Dasgupta, Ujjwal Bhattacharya</text>,
+								
+							</div>
+							<div class="pub-publication ">British Machine Vision Conference  (BMVC 2021)</div>
+							<p>
+								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('audvisum_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://www.bmvc2021-virtualconference.com/assets/papers/1430.pdf">PDF</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/schowdhury671/AudViSum">Code</a>
+								
+								
 <pre id="miccai22_abstract_publication", style="display:none">
-	Due to the imbalanced and limited data, semi-supervised medical image segmentation methods often fail to produce superior performance for some specific tailed classes. Inadequate training for those particular classes could introduce more noise to the generated pseudo labels, affecting overall learning. To alleviate this shortcoming and identify the under-performing classes, we propose maintaining a confidence array that records class-wise performance during training. A fuzzy fusion of these confidence scores is proposed to adaptively prioritize individual confidence metrics in every sample rather than traditional ensemble approaches, where a set of predefined fixed weights are assigned for all the test cases. Further, we introduce a robust class-wise sampling method and dynamic stabilization for better training strategy. Our proposed method considers all the under-performing classes with dynamic weighting and tries to remove most of the noises during training. Upon evaluation on two cardiac MRI datasets, ACDC and MMWHS, our proposed method shows effectiveness and generalizability and outperforms several state-of-the-art methods found in the literature.
+	Introduced a novel deep reinforcement learning-based self-supervised audio-visual summarization model that leverages both audio and visual information to generate diverse yet semantically meaningful summaries.
 </pre>
-<pre id="miccai22_bib_publication", style="display:none">
-	@inproceedings{basak2022addressing,
-		title={Addressing class imbalance in semi-supervised image segmentation: A study on cardiac mri},
-		author={Basak, Hritam and Ghosal, Sagnik and Sarkar, Ram},
-		booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
-		pages={224--233},
-		year={2022},
-		organization={Springer}
-	  }
-}</pre>
+
 							</p>
 						</div>
 					</li>
@@ -790,43 +719,32 @@ Glaucoma is a chronic visual disease that may cause permanent irreversible blind
 
 
 
-			<!-- ISBI 2022 -->
+			
 			<div class="row" style="margin: 2.5em 0 ">
 				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="img/Publications/ICT-MedSeg-Overall.png"></img>
+					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/rr_iccv.png"></img>
 				</div>
 				<div class="col-md-8">
 					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">An Embarassingly Simple Consistency Regularization Method for Semi-Supervised Medical Image Segmentation</span>
+						<span itemprop="name">V-DESIRR: Very Fast Deep Embedded Single Image Reflection Removal</span>
 						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
 							<div class="pub-authors " itemprop="author ">
-								<!-- <text style="color: black">Natwar Modani<sup>&dagger;</sup></text>, -->
-								<b style="color: #0095eb">Hrtam Basak<sup></sup></b>,
-								<text style="color: black">Rajarshi Bhattacharya</text>,
-								<text style="color: black">Rukhshanda Hussain</text>,
-								<text style="color: black">Agniv Chatterjee</text>
-								<!-- <text style="color: black">Somak Aditya</text> -->
-								<!-- <text style="color: black"><small>(&dagger; denotes equal contribution)</small></text> -->
+								
+								<text style="color: black">B H Pawan Prasad, Green Rosh K S, Lokesh R B, Kaushik Mitra,</text>,
+								<b style="color: #0095eb">Sanjoy Chowdhury<sup></sup></b>,
+								
+								
 							</div>
-							<div class="pub-publication ">IEEE International Symposium on Biomedical Imaging (ISBI 2022)</div>
+							<div class="pub-publication ">IEEE International Conference on Computer Vision (ICCV 2021)</div>
 							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('isbi22_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://arxiv.org/abs/2202.00677">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/hritam-98/ICT-MedSeg">Code</a>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('isbi22_bib_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a>
-<pre id="isbi22_abstract_publication", style="display:none">
-	The scarcity of pixel-level annotation is a prevalent problem in medical image segmentation tasks. In this paper, we introduce a novel regularization strategy involving interpolation-based mixing for semi-supervised medical image segmentation. The proposed method is a new consistency regularization strategy that encourages segmentation of interpolation of two unlabelled data to be consistent with the interpolation of segmentation maps of those data. This method represents a specific type of data-adaptive regularization paradigm which aids to minimize the overfitting of labelled data under high confidence values. The proposed method is advantageous over adversarial and generative models as it requires no additional computation. Upon evaluation on two publicly available MRI datasets: ACDC and MMWHS, experimental results demonstrate the superiority of the proposed method in comparison to existing semi-supervised models.
+								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('vdesirr_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://openaccess.thecvf.com/content/ICCV2021/papers/Prasad_V-DESIRR_Very_Fast_Deep_Embedded_Single_Image_Reflection_Removal_ICCV_2021_paper.pdf">PDF</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/ee19d005/vdesirr">Code</a>
+								
+<pre id="vdesirr_abstract_publication", style="display:none">
+We propose a multi-scale end-to-end architecture for detecting and removing weak, medium, and strong reflections from naturally occurring images.	
 </pre>
-<pre id="isbi22_bib_publication", style="display:none">
-	@inproceedings{basak2022exceedingly,
-		title={An exceedingly simple consistency regularization method for semi-supervised medical image segmentation},
-		author={Basak, Hritam and Bhattacharya, Rajarshi and Hussain, Rukhshanda and Chatterjee, Agniv},
-		booktitle={2022 IEEE 19th International Symposium on Biomedical Imaging (ISBI)},
-		pages={1--4},
-		year={2022},
-		organization={IEEE}
-	  }
-}</pre>
+
 							</p>
 						</div>
 					</li>
@@ -844,152 +762,39 @@ Glaucoma is a chronic visual disease that may cause permanent irreversible blind
 			<!-- MFSNet -->
 			<div class="row" style="margin: 2.5em 0 ">
 				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto; width: 80%" src="img/Publications/mfsnet.png"></img>
+					<img class="pub-img " style="margin-right: auto; margin-left: auto; width: 80%" src="../images/audVi_coseg_icip.png"></img>
 				</div>
 				<div class="col-md-8">
 					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">MFSNet: A multi focus segmentation network for skin lesion segmentation</span>
+						<span itemprop="name">Listen to the Pixels</span>
 						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
 							<div class="pub-authors " itemprop="author ">
-								<!-- <text style="color: black">Sumit Shekhar</text>, -->
-								<b style="color: #0095eb">Hritam Basak</b>,
-								<text style="color: black">Rohit Kundu</text>,
-								<text style="color: black">Ram Sarkar</text>
-								<!-- <text style="color: black">Kush Kumar Singh</text>,
-								<text style="color: black">Kundan Krishna</text> -->
+								
+								<b style="color: #0095eb">Sanjoy Chowdhury</b>,
+								<text style="color: black">Subhrajyoti Dasgupta, Sudip Das, Ujjwal Bhattacharya</text>,
+								
 							</div>
 							<div class="pub-publication ">Pattern Recognition, Elsevier</div>
 							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('MFSNet'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://www.sciencedirect.com/science/article/abs/pii/S0031320322001546">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/Rohit-Kundu/MFSNet">Code</a>
-								<!-- <a class="btn btn-primary btn-outline btn-xs " href="https://www.youtube.com/watch?v=Utt6VIpzbf8">Demo</a> -->
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('MFSNet'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a>
-<pre id="MFSNet", style="display:none">
-	Segmentation is essential for medical image analysis to identify and localize diseases, monitor morphological changes, and extract discriminative features for further diagnosis. Skin cancer is one of the most common types of cancer globally, and its early diagnosis is pivotal for the complete elimination of malignant tumors from the body. This research develops an Artificial Intelligence (AI) framework for supervised skin lesion segmentation employing the deep learning approach. The proposed framework, called MFSNet (Multi-Focus Segmentation Network), uses differently scaled feature maps for computing the final segmentation mask using raw input RGB images of skin lesions. In doing so, initially, the images are preprocessed to remove unwanted artifacts and noises. The MFSNet employs the Res2Net backbone, a recently proposed convolutional neural network (CNN), for obtaining deep features used in a Parallel Partial Decoder (PPD) module to get a global map of the segmentation mask. In different stages of the network, convolution features and multi-scale maps are used in two boundary attention (BA) modules and two reverse attention (RA) modules to generate the final segmentation output. MFSNet, when evaluated on three publicly available datasets: ISIC 2017, and HAM10000, outperforms state-of-the-art methods, justifying the reliability of the framework.
-</pre>
-<pre id="MFSNet", style="display:none">
-	@article{basak2022mfsnet,
-		title={MFSNet: A multi focus segmentation network for skin lesion segmentation},
-		author={Basak, Hritam and Kundu, Rohit and Sarkar, Ram},
-		journal={Pattern Recognition},
-		volume={128},
-		pages={108673},
-		year={2022},
-		publisher={Elsevier}
-	  }
-}</pre>
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>
-
-
-
-
-
-
-			<!-- Fuzzy-fusion -->
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="img/Publications/gompertz.png"></img>
-				</div>
-				<div class="col-md-8">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">Fuzzy rank-based fusion of CNN models using Gompertz function for screening COVID-19 CT-scans</span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-								<text style="color: black">Rohit Kundu</text>,
-								<b style="color: #0095eb">Hritam Basak</b>,
-								<text style="color: black">Pawan Kumar Singh</text>,
-								<text style="color: black">Ali Ahmadian</text>,
-								<text style="color: black">Massimiliano Ferrara</text>,
-								<text style="color: black">Ram Sarkar</text>
-								<!-- <text style="color: black">Balaji Vasan Srinivasan</text> -->
-							</div>
-							<div class="pub-publication ">Scientific Reports, Nature</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('gompertz_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://www.nature.com/articles/s41598-021-93658-y.pdf">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/Rohit-Kundu/COVID-Detection-Gompertz-Function-Ensemble">Code</a>
-								<!-- <a class="btn btn-primary btn-outline btn-xs " href="https://www.youtube.com/watch?v=3O1TFApSTPQ">Talk</a> -->
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('gompertz_bib_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a>
-<pre id="gompertz_abstract_publication", style="display:none">
-	COVID-19 has crippled the world’s healthcare systems, setting back the economy and taking the lives of several people. Although potential vaccines are being tested and supplied around the world, it will take a long time to reach every human being, more so with new variants of the virus emerging, enforcing a lockdown-like situation on parts of the world. Thus, there is a dire need for early and accurate detection of COVID-19 to prevent the spread of the disease, even more. The current gold-standard RT-PCR test is only 71% sensitive and is a laborious test to perform, leading to the incapability of conducting the population-wide screening. To this end, in this paper, we propose an automated COVID-19 detection system that uses CT-scan images of the lungs for classifying the same into COVID and Non-COVID cases. The proposed method applies an ensemble strategy that generates fuzzy ranks of the base classification models using the Gompertz function and fuses the decision scores of the base models adaptively to make the final predictions on the test cases. Three transfer learning-based convolutional neural network models are used, namely VGG-11, Wide ResNet-50-2, and Inception v3, to generate the decision scores to be fused by the proposed ensemble model. The framework has been evaluated on two publicly available chest CT scan datasets achieving state-of-the-art performance, justifying the reliability of the model. 
-</pre>
-<pre id="gompertz_bib_publication", style="display:none">
-	@article{kundu2021fuzzy,
-		title={Fuzzy rank-based fusion of CNN models using Gompertz function for screening COVID-19 CT-scans},
-		author={Kundu, Rohit and Basak, Hritam and Singh, Pawan Kumar and Ahmadian, Ali and Ferrara, Massimiliano and Sarkar, Ram},
-		journal={Scientific reports},
-		volume={11},
-		number={1},
-		pages={14133},
-		year={2021},
-		publisher={Nature Publishing Group UK London}
-	  }
-}</pre>
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>
-
-	
-	
-	
-	
-	
-	
-			<!-- <h2 class="year">2018</h2> -->
-
-			<!-- 3DHar -->
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto; width: 90%" src="img/Publications/3dhar.png"></img>
-				</div>
-				<div class="col-md-8">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">A union of deep learning and swarm-based optimization for 3D human action recognition</span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-								<!-- <text style="color: black">Abhilasha Sancheti</text>, -->
-								<b style="color: #0095eb">Hritam Basak</b>,
-								<text style="color: black">Rohit Kundu</text>,
-								<text style="color: black">Pawan Kumar Singh</text>,
-								<text style="color: black">Muhammad Fazal Ijaz</text>,
-								<text style="color: black">Marcin Woźniak</text>, 
-								<text style="color: black">Ram Sarkar</text>
+								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('ltp'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://ieeexplore.ieee.org/document/9506019">PDF</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/schowdhury671/Audio-visual-joint-segmentation">Code</a>
+								<a class="btn btn-primary btn-outline btn-xs " href="https://www.youtube.com/watch?v=xUwzSQaQ9oQ">Video</a>
 								
-							</div>
-							<div class="pub-publication ">Scientific Reports, Nature</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('3dhar_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://www.nature.com/articles/s41598-022-09293-8.pdf">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('3dhar_bib_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a>
-<pre id="3dhar_abstract_publication", style="display:none">
-	Human Action Recognition (HAR) is a popular area of research in computer vision due to its wide range of applications such as surveillance, health care, and gaming, etc. Action recognition based on 3D skeleton data allows simplistic, cost-efficient models to be formed making it a widely used method. In this work, we propose DSwarm-Net, a framework that employs deep learning and swarm intelligence-based metaheuristic for HAR that uses 3D skeleton data for action classification. We extract four different types of features from the skeletal data namely: Distance, Distance Velocity, Angle, and Angle Velocity, which capture complementary information from the skeleton joints for encoding them into images. Encoding the skeleton data features into images is an alternative to the traditional video-processing approach and it helps in making the classification task less complex. The Distance and Distance Velocity encoded images have been stacked depth-wise and fed into a Convolutional Neural Network model which is a modified version of Inception-ResNet. Similarly, the Angle and Angle Velocity encoded images have been stacked depth-wise and fed into the same network. After training these models, deep features have been extracted from the pre-final layer of the networks, and the obtained feature representation is optimized by a nature-inspired metaheuristic, called Ant Lion Optimizer, to eliminate the non-informative or misleading features and to reduce the dimensionality of the feature set. DSwarm-Net has been evaluated on three publicly available HAR datasets, namely UTD-MHAD, HDM05, and NTU RGB+D 60 achieving competitive results, thus confirming the superiority of the proposed model compared to state-of-the-art models.
+<pre id="ltp", style="display:none">
+In this study, we exploited the concurrency between audio and visual modalities in an attempt to solve the joint audio-visual segmentation problem in a self-supervised manner.
 </pre>
-<pre id="3dhar_bib_publication", style="display:none">
-	@article{basak2022union,
-		title={A union of deep learning and swarm-based optimization for 3D human action recognition},
-		author={Basak, Hritam and Kundu, Rohit and Singh, Pawan Kumar and Ijaz, Muhammad Fazal and Wo{\'z}niak, Marcin and Sarkar, Ram},
-		journal={Scientific Reports},
-		volume={12},
-		number={1},
-		pages={5494},
-		year={2022},
-		publisher={Nature Publishing Group UK London}
-	  }
-}</pre>
+
 							</p>
 						</div>
 					</li>
 				</div>
 			</div>
 
-		</div></ul>
+
+
+
+
 
 
 <table style="width:50%;border:0px;border-spacing:0px;horizontal-align:middle;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -997,20 +802,19 @@ Glaucoma is a chronic visual disease that may cause permanent irreversible blind
   <td style="padding:5px;width:50%;vertical-align:middle">
     <div style="border-bottom: 1px solid #aaaaaa;"><heading>Academic Services</heading></div>
     <ul id="services">
-      <li style="padding:4px"><b>Conference Reviewing:</b></li>
-      - CVPR '24: Reviewed 3 papers<br>
-      - MICCAI '23: Reviewed 4 papers<br>
-      - ICASSP '23: Reviewed 3 papers<br>
-      - ISBI '23: Reviewed 1 paper
+      <li style="padding:4px"><b>Reviewing:</b></li>
+	- <strong>CVPR:</strong> 2023, '24, '25<br>
+	- <strong>ICCV:</strong> 2023, '25<br>
+	- <strong>ECCV:</strong> 2024<br>
+	- <strong>NeurIPS:</strong> 2024<br>
+	- <strong>AAAI:</strong> 2025<br>    
+	- <strong>WACV:</strong> 2022, '23, '24<br>
+	- <strong>ACMMM:</strong> 2023, '24 <br>
+	- <strong>ACL:</strong> 2024
       <br>
-      <li style="padding:4px"><b>Journal Reviewing:</b></li>
-      - IEEE TNNLS ('23-Present)<br>
-      - IEEE TPAMI ('23-Present)<br>
-      - IEEE Cybernetics ('23-Present)<br>
-      - IEEE TCSVT ('23-Present)<br>
-      - ACM Multimedia ('22-Present)<br>
-      - Scientific Reports, Nature ('22-Present)<br>
-      - IJCV ('23-Present)
+     <li style="padding:4px"><b>Workshop:</b></li>
+	- Co-organised <a href="https://gen4avc.github.io/">Gen4AVC workshop </a> in conjunction with ICCV 2025.
+     
       
       <br>
     </ul>
@@ -1022,27 +826,17 @@ Glaucoma is a chronic visual disease that may cause permanent irreversible blind
 </table>
 
 
-<table class="globe" cellpadding="0" cellspacing="4" style="width:50%; margin:auto; border:5px; border-spacing:0px; border-collapse:separate;">
-    <!-- 4 columns -->
-    <tr>
-        <td></td>
-        <td rowspan="4" colspan="0" style="text-align: center">
-		<a href="https://info.flagcounter.com/q0IF"><img src="https://s01.flagcounter.com/countxl/q0IF/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
-<!--             <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=T9TbaiL1AyYllyDpTZfMyJ2wH6KTeGXXOAXwILXgSi8"></script> -->
-        </td>
-        <td></td>
-        <td></td>
-    </tr>
+<table style="width:20%;border:80px;border-spacing:0px;border-collapse:separate;margin-right:0;margin-left:auto;">
+          <tr>
+	 <script style="width:30px;height:20px;align:right" type="text/javascript"  id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=pgVlF5ljpLWpcNcZ70hmBZf0I-uNxgD0lqx-sfyNPZQ&cl=ffffff&w=a"></script>      
+	 </tr>
 </table>
 
 
 
 
 
-<!-- <table class="globe" cellpadding="0" cellspacing="4"> -->
-                    <!-- 4 columns -->
 
-                <!-- </table> -->
             </div>
         </main>
 
