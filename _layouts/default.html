@@ -1,875 +1,412 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="theme" content="hugo-academic">
-	<meta name="generator" content="Hugo 0.55.6" />
-	<meta name="author" content="Sanjoy Chowdhury">
-	<meta property="og:image" content="img/About/Adobe.png">
+  <meta charset="UTF-8">
+  <title>Sanjoy Chowdhury</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="css/highlight.min.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/academicons.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
-	<link rel="stylesheet" href="css/hugo-academic.css">
-	<link rel="stylesheet" href="css/custom.css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
 
-	<link rel="icon" type="image/png" href="../images/IMG-20200202-WA0044_2.jpg">
-	<link rel="apple-touch-icon" type="image/png" href="img/apple-touch-icon.png">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="garden.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <style id="flower_css"></style>
 
-	<link rel="canonical" href="https://schowdhury671.github.io/">
-	<title>Sanjoy Chowdhury</title>
+  <!-- Canonical Link -->
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GZEW5QH8Y5"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+  <!-- Embedded Styles -->
+  
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif; /* Use Raleway consistently */
+      margin: 0;
+      padding: 0;
+      background: white;
+      color: #111;
+      font-weight: 400; /* Set default weight */
+    }
 
-		gtag('config', 'G-GZEW5QH8Y5');
-	</script>
+.navbar {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  padding: 15px 10%;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar > * {  /* Add some space between the name and links */
+    margin: 40 120px;
+}
+
+    .site-name {
+      font-size: 38px;
+      font-weight: 600;
+      margin-right: 20px; /* Adjust as needed */
+    }
+
+    .nav-links {  /* Style the nav container */
+      display: flex; /* Make nav links also flex */
+    }
+
+    .nav-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500; /* Or keep consistent 400 */
+    }
+
+    /* Consistent heading fonts */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600; /* Or adjust as preferred */
+    }
+
+    .page-wrapper {
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 40px;
+    }
+
+    .code-box {
+      border: 2px solid #4CAF50;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #f9f9f9;
+      display: inline-block;
+    }
+
+    .center-content {
+      text-align: center;
+    }
+
+    .red-text {
+      color: red;
+    }
+  </style>
 </head>
 
-<body id="top">
+<body>
 
-	<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
-		<div class="container">
+  <header class="navbar">
+    <div class="site-name">Sanjoy Chowdhury</div>
+    <nav class="nav-links">
+      <a href="/about" style="font-size: large;">About</a>
+      <a href="/research" style="font-size: large;">Research</a>
+      <a href="/others" style="font-size: large;">Miscellaneous</a>
+    </nav>
+  </header>
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="/">Sanjoy Chowdhury</a>
-			</div>
+  <div class="page-wrapper">
+    <table style="width:80%;margin: 0 auto;border:0px;border-spacing:0px;border-collapse:separate;">
+      <tr>
+        <td>
+          <table style="width:80%;border-spacing:0px;border-collapse:separate;margin: 0 auto;">
+             <tr>
+ 	      <td style="padding:2.5%; width:100%; vertical-align:top;">
+  <img src="../images/IMG-20200202-WA0044_2.jpg"
+       alt="profile photo"
+       style="float: right; width: 240px; max-width: 35%; margin-left: 30px; margin-bottom: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              
+	      
+	      <p> <font size="4">I am a third year CS PhD student at <a href="https://www.cs.umd.edu/" style="font-size: large;"> University of Maryland, College Park </a> advised by <a href="https://www.cs.umd.edu/people/dmanocha" style="font-size: large;">Prof. Dinesh Manocha</a>. I am broadly interested in multi-modal learning and its different applications. My research primarily involves studying the interplay between the vision and audio modalities and developing systems equipped with their comprehensive understanding.
+	      </font>      
+	      </p>
+	       <p> <font size="4">I am currently working as an ML Research intern at Apple MLR hosted by <a href="https://chunliangli.github.io/" style="font-size: large;">Chun-Liang Li</a>  and <a href="https://karreny.github.io/" style="font-size: large;">Karren Yang</a>. I spent the summer of '24 at Meta Reality Labs working as a research scientist intern hosted by <a href = "https://ruohangao.github.io/" style="font-size: large;"> Ruohan Gao </a>. Before this, I was a student researcher at <a href="https://research.google/" style="font-size: large;">Google Research </a> with <a href = "https://scholar.google.co.in/citations?user=4zgNd2UAAAAJ&hl=en" style="font-size: large;">Avisek Lahiri </a> and <a href = "https://research.google/people/vivek-kwatra/" style="font-size: large;">Vivek Kwatra </a> in the Talking heads team on speech driven facial synthesis. Previously, I spent a wonderful summer with <a href = "https://research.adobe.com/" style="font-size: large;">Adobe Research </a> working with <a href = "https://josephkj.in/" style="font-size: large;"> Joseph K J </a> in the Multi-modal AI team as a research PhD intern on multi-modal audio generation. I am also fortunate to have had the chance to work with <a href = "https://www.cs.utexas.edu/users/grauman/" style="font-size: large;"> Prof. Kristen Grauman </a>, <a href = "https://mbzuai.ac.ae/study/faculty/salman-khan/" style="font-size: large;"> Prof. Salman Khan </a>, <a href = "https://www.mohamed-elhoseiny.com/" style="font-size: large;"> Prof. Mohamed Elhoseiny </a> among other wonderful mentors and collaborators. 
+	       </font>
+	       </p>        
+		<p> <font size="4"> Before joining for PhD, I was working as a Machine Learning Scientist with the Camera and Video AI team at <a href="https://sharechat.com/about" style="font-size: large;">ShareChat</a>, India. I was also a visiting researcher at the Computer Vision and Pattern Recognition Unit at Indian Statistical Institute Kolkata under <a href="https://www.isical.ac.in/~ujjwal/" style="font-size: large;"> Prof. Ujjwal Bhattacharya</a>. Even before, I was a Senior Research Engineer with the Vision Intelligence Group at <a href="https://research.samsung.com/sri-b" style="font-size: large;">Samsung R&D Institute Bangalore</a>. I primarily worked on developing novel AI-powered solutions for different smart devices of Samsung. 
+              </font>
+		</p>
+              <p><font size="4">
+                I received my MTech in Computer Science & Engineering from <a href="https://www.iiit.ac.in/" style="font-size: large;">IIIT Hyderabad</a> where I was fortunate to be advised by <a href="https://faculty.iiit.ac.in/~jawahar/" style="font-size: large;">Prof. C V Jawahar</a>. During my undergrad, I worked as a research intern under <a href="http://cse.iitkgp.ac.in/~pabitra/" style="font-size: large;">Prof. Pabitra Mitra </a> at IIT Kharagpur and the CVPR Unit at ISI Kolkata. 
+	      </font>
+	      </p>
 
-			<div class="collapse navbar-collapse" id="#navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="nav-item"><a href="#top">Home</a></li>
-					<li class="nav-item"><a href="#updates">Updates</a></li>
-					<li class="nav-item"><a href="#publications">Publications</a></li>
-					<!-- <li class="nav-item"><a href="#patents">Patents</a></li> -->
-				</ul>
-			</div>
-		</div>
-	</nav>
 
-	<span id="homepage" style="display: none"></span>
+	  <div class="center-content">
+	    <div class="code-box">
+	      <code>
+	        <b class="red-text"><font size="4">Feel free to contact me if you're interested in research collaboration!</b>
+	      </code>
+	    </div>
+	  </div>
 
-	<!-- Section: Home -->
-	<section id="bio" class="home-section">
-		<div class="container">
+		    
+              <p style="text-align:center">
+                <a target="_blank" href="https://mailhide.io/e/PbuZVINh" style="font-size: large;">Email</a> &nbsp;/&nbsp;
+                <a href="https://github.com/schowdhury671" style="font-size: large;">GitHub</a> &nbsp;/&nbsp;
+                <a href="https://scholar.google.com/citations?user=CEdJKCIAAAAJ&hl=en" style="font-size: large;">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="https://www.linkedin.com/in/sanjoy2528/" style="font-size: large;"> LinkedIn</a> &nbsp;/&nbsp;
+		<a href="https://twitter.com/schowdhury671" style="font-size: large;"> Twitter </a>      
+              </p>
+            </td>
+            
+<!--   	<img style="width:100%; max-width:560px; max-height:560px; object-fit: cover;" alt="profile photo" src="../images/IMG-20200202-WA0044_2.jpg"> -->
+<!-- 	<img style="float: right; width: 15%;" src="../images/IMG-20200202-WA0044_2.jpg"> -->
+<!-- 	<td style="padding:2.5%;width:100%; vertical-align:top;"><img src="../images/IMG-20200202-WA0044_2.jpg" alt="profile photo" style="float: right; max-width: 280px; margin-left: 30px; margin-bottom: 20px; border-radius: 12px;">
+	   </td> -->
 
-			<div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person">
-				<div class="col-xs-12 col-md-4">
-					<div id="profile">
+	   
 
-						<div class="portrait" itemprop="image" style="background-image: url('../images/IMG-20200202-WA0044_2.jpg');"></div>
+		    <br> <br>
+<!-- 		    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href="https://iribe.umd.edu/"><font color="#800080">Iribe #5116, 8125 Paint Branch Dr</font> <a href> <br>
+		    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  <font color="#800080">College Park, MD 20742 </font> <br> 
+		    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <font color="#800080">sanjoyc[at]umd[dot]edu </font>     -->
+            </td>
+          </tr>
+        </table>
+        
+	      
+	  <table style="width:80%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:80%;vertical-align:middle">
+              
+        
 
-						<div class="portrait-title">
-							<h2 itemprop="name">Sanjoy Chowdhury</h2>
-							<h3 id="stanford_email" onmouseover="shuffle_stanford()">hover over me @ umd.edu</h3>
-							<h3 itemprop="worksFor">University of Maryland, College Park</h3>
-						</div>
+	<!-- Research Garden -->
+	<svg id="flower_template" xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 20 20">
+	<ellipse rx="10" ry="20" transform="rotate(0)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<ellipse rx="10" ry="20" transform="rotate(45)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<ellipse rx="10" ry="20" transform="rotate(90)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<ellipse rx="10" ry="20" transform="rotate(135)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<ellipse rx="10" ry="20" transform="rotate(180)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<ellipse rx="10" ry="20" transform="rotate(225)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<ellipse rx="10" ry="20" transform="rotate(270)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<ellipse rx="10" ry="20" transform="rotate(315)" fill="[[COLOR]]" class="petal [[FLOWER_CLASS]]"/>
+	<circle r="6" fill="white"/>
+    </svg>
 
-						<ul class="social-icon " aria-hidden="true ">
-							<li><a href="mailto:sanjoyc@umd.edu"><i class="fa fa-envelope big-icon"></i></a></li>
-							<li><a href="https://scholar.google.com/citations?user=CEdJKCIAAAAJ&hl=en"><i class="ai ai-google-scholar big-icon"></i></a></li>
-							<li><a href="https://github.com/schowdhury671"><i class="fa fa-github big-icon"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/sanjoy2528/"><i class="fa fa-linkedin big-icon"></i></a></li>
-						</ul>
+		    
+    
 
-					</div>
-				</div>
 
-				<div class="col-xs-12 col-md-8 " itemprop="description ">
 
-					<h1 id="biography" style="margin-top: 12%">Biography</h1>
 
-						<p> I am a 3<sup>rd</sup> year CS PhD student at <a href="https://www.cs.umd.edu/" style="font-size: large;"> University of Maryland, College Park </a> 
-						advised by <a href="https://www.cs.umd.edu/people/dmanocha" style="font-size: large;">Prof. Dinesh Manocha</a>. I am broadly interested in multi-modal learning 
-						and its different applications. My research primarily involves studying the interplay between the vision and audio modalities and developing systems equipped with 
-						their comprehensive understanding.  </p>
-					
-						<p> I am currently working as an ML Research intern at Apple MLR hosted by <a href="https://chunliangli.github.io/" style="font-size: large;">Chun-Liang Li</a>  
-						and <a href="https://karreny.github.io/" style="font-size: large;">Karren Yang</a>. I spent the summer of '24 at Meta Reality Labs working as a research scientist intern hosted by 
-						<a href = "https://ruohangao.github.io/" style="font-size: large;"> Ruohan Gao </a>. Before this, I was a student researcher 
-						at <a href="https://research.google/" style="font-size: large;">Google Research </a> 
-						with <a href = "https://scholar.google.co.in/citations?user=4zgNd2UAAAAJ&hl=en" style="font-size: large;">Avisek Lahiri </a> 
-						and <a href = "https://research.google/people/vivek-kwatra/" style="font-size: large;">Vivek Kwatra </a> in the Talking heads team on speech driven facial synthesis. 
-						Previously, I spent a wonderful summer with <a href = "https://research.adobe.com/" style="font-size: large;">Adobe Research </a> working 
-						with <a href = "https://josephkj.in/" style="font-size: large;"> Joseph K J </a> in the Multi-modal AI team as a research PhD intern on multi-modal audio generation. 
-						I am also fortunate to have had the chance to work with <a href = "https://www.cs.utexas.edu/users/grauman/" style="font-size: large;"> Prof. Kristen Grauman </a>, 
-						<a href = "https://mbzuai.ac.ae/study/faculty/salman-khan/" style="font-size: large;"> Prof. Salman Khan </a>, 
-						<a href = "https://www.mohamed-elhoseiny.com/" style="font-size: large;"> Prof. Mohamed Elhoseiny </a> among other wonderful mentors and collaborators. </p>
-						
-						<p> Before joining for PhD, I was working as a Machine Learning Scientist with the Camera and Video AI team at <a href="https://sharechat.com/about" style="font-size: large;">ShareChat</a>, India. 
-						I was also a visiting researcher at the Computer Vision and Pattern Recognition Unit at Indian Statistical Institute Kolkata under 
-						<a href="https://www.isical.ac.in/~ujjwal/" style="font-size: large;"> Prof. Ujjwal Bhattacharya</a>. Even before, I was a Senior Research Engineer with the Vision Intelligence Group 
-						at <a href="https://research.samsung.com/sri-b" style="font-size: large;">Samsung R&D Institute Bangalore</a>. I primarily worked on developing novel AI-powered solutions for different 
-						smart devices of Samsung.</p> 
+<div id="garden_title">Sanjoy's Research Garden</div> 
+<div id="garden_container"> <svg id="garden" preserveAspectRatio="xMinYMin meet"></svg> </div> 
+<!--      <div id="coauthor_hall_of_fame"> 
+	<div id="coauthor_title">Recent Coauthors</div> 
+	<div id="coauthor_list"></div> </div> --> 
+<div id="paper_modal"> 
+<!-- a close icon at the top right --> 
+<div id="paper_modal_close" onclick="$('#paper_modal').fadeOut(200);">X</div> 
+<div id="paper_modal_title"></div> <div id="paper_modal_venue"></div> 	
+<div id="paper_modal_content"></div> <div id="paper_modal_links"></div> 
+</div>
+	
 
-						<p> I received my MTech in Computer Science & Engineering from <a href="https://www.iiit.ac.in/" style="font-size: large;">IIIT Hyderabad</a> where I was fortunate to be 
-						advised by <a href="https://faculty.iiit.ac.in/~jawahar/" style="font-size: large;">Prof. C V Jawahar</a>. During my undergrad, I worked as a research intern 
-						under <a href="http://cse.iitkgp.ac.in/~pabitra/" style="font-size: large;">Prof. Pabitra Mitra </a> at IIT Kharagpur and the CVPR Unit at ISI Kolkata.  </p>
-						
-					</p>
-				</div>
 
-			</div>
-			<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <div><h2>Research</h2></div>
-              <p>
-		I am interested in solving <b>Computer Vision</b>, <b>Computer Audition</b>, and <b>Machine Learning</b>b problems and applying them to broad AI applications. My research focuses on applying multi-modal 
-		learning (Vision + X) for generative modeling and holistic cross-modal understanding with minimal supervision. In the past, I have focused on computational photography, tackling 
-		challenges such as image reflection removal, intrinsic image decomposition, inverse rendering and video quality assessment.
-		Representative papers are highlighted. For full list of publications, please refer to my <a href="https://scholar.google.com/citations?user=CEdJKCIAAAAJ&hl=en">Google Scholar</a>.
+  <br>   <br>   <br>
 
-		      
+ 		    
+	      
+<h2><font color="blue">Updates </font></h2>
+      <p>
+            <div style="width:80%;overflow-y:scroll; height:300px;">
+                <ul id="News">
+        <p>
+        </p>
+	<li> 
+Mar 2025 - Joined <font color="#ff0000"> Apple MLR </font> as a ML Research intern. <img src="../images/new.png" alt="project image" width="20" height="20" />
+	</li>
+	<li>
+Feb 2025 - Invited talk at <a href="https://cs.nyu.edu/~fouhey/NYCVision2025/#:~:text=NYC%20Computer%20Vision%20Day%20is%20an%20invite-only%20event,visibility%20for%20graduate%20students%20and%20early%20career%20researchers.">NYC Computer Vision Day 2025</a> organised by New York University. 
+        </li>
+	<li>
+Oct 2024 - Invited talk on assessing and addressing the gaps in existing Audio-Visual LLMs at <a href="https://labsites.rochester.edu/air/index.html">AIR lab</a> at University of Rochester  
+        </li>
+	<li>
+July 2024 - Work on Audio-Visual LLM got accepted to <a href="https://eccv.ecva.net/"> <font color="#ff0000"> ECCV 2024 </font></a> <img src="../images/new.png" alt="project image" width="20" height="20" />
+        </li>
+		<li>
+June 2024 - Invited talk at the <a href="https://sightsound.org/"> <font color="#ff0000"> Sight and Sound workshop </font></a> at CVPR 2024
+        </li>
+
+        <li> 
+May 2024 - Joined <font color="#ff0000"> Meta Reality Labs </font> as a Research Scientist intern.
+	</li>
+
+	<li> 
+May 2024 - <a href="https://arxiv.org/pdf/2308.10103"> Paper </a> on Improving Robustness Against Spurious Correlations got accepted to <a href=""> <font color="#ff0000"> ACL 2024 Findings </font></a> 
+	</li>
+        
+        <li>
+
+May 2024 - Our <a href="https://www.nature.com/articles/s41598-024-60299-w.pdf"> paper </a> on determining perceived audience intent from multi-modal social media posts got accepted to <a href="https://www.nature.com/srep/"> <font color="#ff0000"> Nature Scientific Reports</font></a>
+        </li>
+
+        <li>
+Mar 2024 - <a href="https://arxiv.org/pdf/2403.11487.pdf"> Paper </a> on LLM guided navigational instruction generation got accepted to <a href="https://2024.naacl.org/"> <font color="#ff0000"> NAACL 2024 </font></a> 
+
+</li>
+
+
+        <li>
+Feb 2024 - MeLFusion (<font color="#ff0000"> <b> Highlight, Top 2.8% </b> </font>) got accepted to <a href="https://cvpr.thecvf.com/"> <font color="#ff0000"> CVPR 2024 </font></a>
+        </li>
+
+        <li>
+Feb 2024 - Joined <font color="#ff0000"> Google Research </font> as a student researcher.
+
+        </li>
+        <li>
+Oct 2023 - APoLLo gets accepted to <a href="https://2023.emnlp.org/"><font color="#ff0000">EMNLP 2023</font></a>
+
+        </li>
+        
+        <li>
+Oct 2023 - Invited talk on AdVerb at <a href="https://av4d.org/"> <font color="#ff0000">AV4D Workshop, ICCV 2023</font></a>
+
+        </li>
+        <li>
+July 2023 - AdVerb got accepted to <a href="https://iccv2023.thecvf.com/"><font color="#ff0000">ICCV 2023</font></a>
+
+        </li>
+        <li>
+May 2023 - Joined <a href="https://research.adobe.com/"><font color="#ff0000">Adobe Research</font></a> as a research intern.</a>
+        </li>
+        
+        <li>
+Aug 2022 - Joined as a CS PhD student at <a href="https://www.cs.umd.edu/"><font color="#ff0000">University of Maryland College Park</font> </a>. Awarded <font color="red"> Dean's fellowship. </font>
+
+        </li>
+
+        <li>
+Oct 2021 - Paper on audio-visual summarization accepted in <font color="#ff0000">BMVC 2021</font>.
+        </li>
+
+        <li>
+Sep 2021 - <a href=""><font color="#ff0000">Blog</font> </a> on Video Quality Enhancement released at Tech @ ShareChat.
+
+        </li>
+
+
+        <li>
+July 2021 - Paper on reflection removal got accepted in <font color="#ff0000">ICCV 2021</font>.
+
+
+        </li>
+
+        <li>
+June 2021 - Joined <font color="#ff0000">ShareChat</font> Data Science team.
+
+        </li>
+
+        <li>
+May 2021 - Paper on audio-visual joint segmentation accepted in <font color="#ff0000">ICIP 2021</font>.
+
+        </li>
+
+        <li>
+Dec 2018 - Accepted <font color="#ff0000">Samsung Research</font> offer. Will be joining in June'19.
+        </li>
+
+        <li>
+
+Sep 2018 - Received <font color="#ff0000">Dean's Merit List Award </font> for academic excellence at IIIT Hyderabad.
+        </li>
+
+
+        <li>
+Oct 2017 - Our work on a multi-scale, low-latency face detection framework received <font color="#ff0000">Best Paper Award</font> at NGCT-2017.
+
+        </li>
+
+
+            </ul>
+            </div>
+      </p>
+    </td>
+          </tr>
+        </table>
+	      
+	<br><br>     
+          
+        <br><br><br>
+	      
+	      
+<!-- 	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"> -->
+	
+	 
+
+	
+
+
+
+
+        
+       
+        
+        
+        
+        <!-- credits -->
+        
+        <table style="width:80%;border:20px;border-spacing:0px;border-collapse:separate;margin-right:0;;margin-left:auto;">
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:right;font-size:small;">
+                Template credits: <a style="font-size:small;margin-right" href="https://jonbarron.info/">Jon Barron</a>, <a style="font-size:small;margin-right" href="https://tingofurro.github.io/">Philippe Laban</a>. Thanks <a href="https://www.linkedin.com/in/richa-kushwaha/">Richa! </a>
               </p>
             </td>
           </tr>
-        </tbody></table>
-			<table class='about-edu'>
-				<tr>
-					<td align="middle" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://www.apple.com/careers/us/work-at-apple/seattle.html"><img src="../images/apple_logo.png" width="80% "></a>
-					</td>
-					<td align="middle" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://about.meta.com/realitylabs/"><img src="../images/metaAI_pic.png" width="80% "></a>
-					</td>
-					<td align="middle" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://research.google/"><img src="../images/google research.png" width="80% "></a>
-					</td>
-					<td align="middle" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://www.kaust.edu.sa/en/"><img src="../images/kaust-logo.jpg" width="80% "></a>
-					</td>
-					<td align="middle" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://research.adobe.com/"><img src="../images/adobe-logo-small.png" width="80% "></a>
-					</td>
-					<td align="middle" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://www.cs.umd.edu/"><img src="../images/umd-logo.jpg" width="80% "></a>
-					</td>
-					<td align="middle" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://sharechat.com/about"><img src="../images/ShareChat_logo.png" width="80% "></a>
-					</td>
-					<td align="middle" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://research.samsung.com/sri-b"><img src="../images/SamsungResearch Logo.jpeg" width="80% "></a>
-					</td>
-					<td align="middle" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://www.iiit.ac.in/"><img src="../images/iiith.jpeg" width="80% "></a>
-					</td>
-					<td align="middle" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://www.isical.ac.in/"><img src="../images/isi.jpeg" width="80% "></a>
-					</td>
-					<td align="middle" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="http://www.iitkgp.ac.in/"><img src="../images/iit-kgp.jpeg" width="80% "></a>
-					</td>
-					
-					
-					
-					
-					
-				</tr>
+        </table>
 
-				<tr>
-					<td align="center" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://www.apple.com/careers/us/work-at-apple/seattle.html"><div class="link-simple">Research Scientist Intern<br>Apple MLR<br>Mar - Aug, 2025</div></a>
-					</td>
-					<td align="center" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://about.meta.com/realitylabs/"><div class="link-simple">Research Scientist Intern<br>Meta Reality Labs<br>May - Nov, 2024</div></a>
-					</td>
-					<td align="center" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://research.google/"><div class="link-simple">Student Researcher<br>Google Research (now Deepmind)<br>Feb - May, 2024</div></a>
-					</td>
-					<td align="center" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://www.kaust.edu.sa/en/"><div class="link-simple">Visiting Researcher<br>KAUST<br>Jan 2024 - Present</div></a>
-					</td>
-					<td align="center" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://research.adobe.com/"><div class="link-simple">Research Scientist Intern<br>Adobe Research<br>May - Aug, 2023</div></a>
-					</td>
-					<td align="center" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://www.cs.umd.edu/"><div class="link-simple">Ph.D, Computer Science<br>UMD College Park<br>Aug 2022 - Present</div></a>
-					</td>
-					<td align="center" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://sharechat.com/about"><div class="link-simple">ML Research Engineer<br>ShareChat<br>June 2021 - May 2022</div></a>
-					</td>
-					<td align="center" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://research.samsung.com/sri-b"><div class="link-simple">Senior Research Engineer<br>Samsung Research, Bangalore<br>June 2019 - June 2021</div></a>
-					</td>
-					<td align="center" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://www.iiit.ac.in/"><div class="link-simple">M.Tech, Computer Science<br>IIIT Hyderabad<br>Aug 2017 - May 2019</div></a>
-					</td>
-					<td align="center" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="https://www.isical.ac.in/"><div class="link-simple">Research Intern<br>ISI Kolkata<br>Feb-July 2017</div></a>
-					</td>
-					<td align="center" style="vertical-align: middle; background-color: rgba(255, 255, 255, 1)">
-						<a href="http://www.iitkgp.ac.in/"><div class="link-simple">Research Intern<br>IIT Kharagpur<br>Apr-Sep 2016</div></a>
-					</td>
-					
-					
-					
-
-				</tr>
-			</table>
-		</div>
-	</section>
-
-	<!-- Section: Updates -->
-	<section id="updates" class="home-section">
-		<div class="container">
-
-			<div class="row">
-		            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <div class="section-heading text-center">
-                    <h1>Updates</h1></div>
-			</div>
-
-			<div class="col-xs-0 col-md-1"></div>
-			<div class="col-xs-12 col-md-11 update-text" style="margin: 0em; height: 250px; overflow-y: auto;">
-				
-			<li> Mar 2025 - Joined <font color="#ff0000"> Apple MLR </font> as a ML Research intern. <img src="../images/new.png" alt="project image" width="20" height="20" /></li>
-			<li> Feb 2025 - Invited talk at <a href="https://cs.nyu.edu/~fouhey/NYCVision2025/#:~:text=NYC%20Computer%20Vision%20Day%20is%20an%20invite-only%20event,visibility%20for%20graduate%20students%20and%20early%20career%20researchers.">
-				NYC Computer Vision Day 2025</a> organised by New York University. </li>
-			<li>Oct 2024 - Invited talk on assessing and addressing the gaps in existing Audio-Visual LLMs at <a href="https://labsites.rochester.edu/air/index.html">AIR lab</a> at 
-				University of Rochester  </li>
-			<li>July 2024 - Work on Audio-Visual LLM got accepted to <a href="https://eccv.ecva.net/"> <font color="#ff0000"> ECCV 2024 
-				</font></a> <img src="../images/new.png" alt="project image" width="20" height="20" /></li>
-			<li>June 2024 - Invited talk at the <a href="https://sightsound.org/"> <font color="#ff0000"> Sight and Sound workshop </font></a> at CVPR 2024</li>
-        		<li>May 2024 - Joined <font color="#ff0000"> Meta Reality Labs </font> as a Research Scientist intern.</li>
-			<li>May 2024 - <a href="https://arxiv.org/pdf/2308.10103"> Paper </a> on Improving Robustness Against Spurious Correlations got accepted to 
-				<a href=""> <font color="#ff0000"> ACL 2024 Findings </font></a> </li>
-        		<li>May 2024 - Our <a href="https://www.nature.com/articles/s41598-024-60299-w.pdf"> paper </a> on determining perceived audience intent from multi-modal social media posts 
-				got accepted to <a href="https://www.nature.com/srep/"> <font color="#ff0000"> Nature Scientific Reports</font></a></li>
-        		<li>Mar 2024 - <a href="https://arxiv.org/pdf/2403.11487.pdf"> Paper </a> on LLM guided navigational instruction generation got accepted to 
-				<a href="https://2024.naacl.org/"> <font color="#ff0000"> NAACL 2024 </font></a> </li>
-        		<li>Feb 2024 - MeLFusion (<font color="#ff0000"> <b> Highlight, Top 2.8% </b> </font>) got accepted to <a href="https://cvpr.thecvf.com/"> 
-				<font color="#ff0000"> CVPR 2024 </font></a> </li>
-        		<li>Feb 2024 - Joined <font color="#ff0000"> Google Research </font> as a student researcher.</li>
-        		<li>Oct 2023 - APoLLo gets accepted to <a href="https://2023.emnlp.org/"><font color="#ff0000">EMNLP 2023</font></a></li>
-        		<li>Oct 2023 - Invited talk on AdVerb at <a href="https://av4d.org/"> <font color="#ff0000">AV4D Workshop, ICCV 2023</font></a></li>
-        		<li>July 2023 - AdVerb got accepted to <a href="https://iccv2023.thecvf.com/"><font color="#ff0000">ICCV 2023</font></a></li>
-        		<li>May 2023 - Joined <a href="https://research.adobe.com/"><font color="#ff0000">Adobe Research</font></a> as a research intern.</a></li>
-        		<li>Aug 2022 - Joined as a CS PhD student at <a href="https://www.cs.umd.edu/"><font color="#ff0000">University of Maryland College Park</font> </a>. Awarded 
-				<font color="red"> Dean's fellowship. </font> </li>
-        		<li>Oct 2021 - Paper on audio-visual summarization accepted in <font color="#ff0000">BMVC 2021</font>.</li>
-        		<li>Sep 2021 - <a href=""><font color="#ff0000">Blog</font> </a> on Video Quality Enhancement released at Tech @ ShareChat.</li>
-        		<li>July 2021 - Paper on reflection removal got accepted in <font color="#ff0000">ICCV 2021</font>.</li>
-        		<li>June 2021 - Joined <font color="#ff0000">ShareChat</font> Data Science team.</li>
-        		<li>May 2021 - Paper on audio-visual joint segmentation accepted in <font color="#ff0000">ICIP 2021</font>.</li>
-        		<li>Dec 2018 - Accepted <font color="#ff0000">Samsung Research</font> offer. Will be joining in June'19.</li>
-        		<li>Sep 2018 - Received <font color="#ff0000">Dean's Merit List Award </font> for academic excellence at IIIT Hyderabad.</li>
-			<li>Oct 2017 - Our work on a multi-scale, low-latency face detection framework received <font color="#ff0000">Best Paper Award</font> at NGCT-2017.</li>
-					
-		</div>
-	</section>
-
-
-
-
-
-	<!-- Publication -->
-	<section id="publications" class="home-section ">
-		<ul class="fa-ul"><div class="container ">
-
-			<div class="row " style="margin: 0em 0 ">
-				<div class="col-md-4 "></div>
-				<div class="col-md-8 " style="margin-bottom: 0em; "><h1>Selected Publications</h1></div>
-			</div>
-
-			<h2 class="year">2025</h2>
-
-
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/aurelia.png"></img>
-				</div>
-				<div class="col-md-8">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">AURELIA: Test-time Reasoning Distillation in Audio-Visual LLMs</span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-					
-								<b style="color: #0095eb">Sanjoy Chowdhury*</b>,
-								<text style="color: black">Hanan Gani*, Nishit Anand, Sayan Nag, Ruohan Gao, Mohamed Elhoseiny, Salman Khan, Dinesh Manocha </text>
-								
-							</div>
-							<div class="pub-publication ">Arxiv Preprint</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('aurelia_abstract'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://arxiv.org/abs/2503.23219">Paper</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/schowdhury671/aurelia">Code</a>
-<!-- 								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('aurelia_bib_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a> -->
-								<pre id="aurelia_abstract", style="display:none">
-								In this paper, we introduce AURELIA, a novel actor-critic based audio-visual reasoning framework that distils structured, step-by-step reasoning into 
-								AVLLMs at test time, improving their ability to process
-								complex multi-modal inputs without additional training or
-								fine-tuning. To further advance AVLLM reasoning skills, we
-								present AVReasonBench, a challenging benchmark comprising 4500 audio-visual questions, each paired with detailed
-								step-by-step reasoning. Our benchmark spans six distinct
-								tasks, including AV-GeoIQ, which evaluates AV reasoning
-								combined with geographical and cultural knowledge
-									
-<!-- 								<pre id="aurelia_bib_publication", style="display:none">
-								@misc{chowdhury2025aureliatesttimereasoningdistillation,
-								      title={Aurelia: Test-time Reasoning Distillation in Audio-Visual LLMs}, 
-								      author={Sanjoy Chowdhury and Hanan Gani and Nishit Anand and Sayan Nag and Ruohan Gao and Mohamed Elhoseiny and Salman Khan and Dinesh Manocha},
-								      year={2025},
-								      eprint={2503.23219},
-								      archivePrefix={arXiv},
-								      primaryClass={eess.AS},
-								      url={https://arxiv.org/abs/2503.23219}, 
-								} -->
-								
-								</pre>
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>
-
-			
-			
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/avtrustbench_teaser.jpg"></img>
-				</div>
-				<div class="col-md-8">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">AVTrustBench: Assessing and Enhancing Reliability and Robustness in Audio-Visual LLMs</span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-								<b style="color: #0095eb">Sanjoy Chowdhury*</b>,
-							
-								<text style="color: black">Sayan Nag*, Subhrajyoti Dasgupta, Yaoting Wang, Mohamed Elhoseiny, Ruohan Gao, Dinesh Manocha 
-</text>
-								
-							</div>
-							<div class="pub-publication ">Arxiv Preprint</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('avtrustbench_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="">Code</a>
-
-							<pre id="avtrustbench_abstract_publication", style="display:none">
-								We introduce Audio-Visual Trustworthiness assessment Benchmark (AVTrustBench), comprising 600K samples spanning over 9 meticulously crafted tasks, evaluating the 
-								capabilities of AVLLMs across three distinct dimensions: Adversarial attack, Compositional reasoning, and Modality-specific dependency. Using our benchmark 
-								we extensively evaluate 16 state-of-the-art AVLLMs. The findings reveal that the majority of existing models fall significantly short of achieving 
-								human-like comprehension, offering valuable insights for future research directions. To alleviate the limitations in the existing approaches, we further propose a 
-								robust, model-agnostic calibrated audio-visual preference optimization based training strategy CAVPref, obtaining a gain up to 30.19% across all 9 tasks.  
-							
-							</pre>
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>		
-			
-			
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/meerkat_bg_removed.png"></img>
-				</div>
-				<div class="col-md-8">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">Meerkat: Audio-Visual Large Language Model for Grounding in Space and Time </span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-								
-							
-								 <b style="color: #0095eb">Sanjoy Chowdhury*</b>,
-								 
-								<text style="color: black">Sayan Nag*, Subhrajyoti Dasgupta*, Jun Chen, Mohamed Elhoseiny, Ruohan Gao, Dinesh Manocha </text>
-								
-							</div>
-							<div class="pub-publication "> European Conference on Computer Vision(ECCV 2024)</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('meerkat_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08071.pdf">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/schowdhury671/meerkat/tree/main">Code</a>
-								
-							<pre id="meerkat_abstract_publication", style="display:none">
-							We present Meerkat, an audio-visual LLM equipped with a
-							fine-grained understanding of image and audio both spatially and temporally.
-							With a new modality alignment module based on optimal transport and a
-							cross-attention module that enforces audio-visual consistency, Meerkat can
-							tackle challenging tasks such as audio referred image grounding, image guided
-							audio temporal localization, and audio-visual fact-checking. Moreover, we
-							carefully curate a large dataset AVFIT that comprises 3M instruction tuning
-							samples collected from open-source datasets, and introduce MeerkatBench that
-							unifies five challenging audio-visual tasks. 
-							</pre>
-
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>
-
-
-			
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto; height: auto;" src="../images/aspire.png"></img>
-				</div>
-				<div class="col-md-8">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">ASPIRE: Language-Guided Data Augmentation for Improving Robustness Against Spurious Correlations</span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-								<text style="color: black">Sreyan Ghosh*, Chandra Kiran Reddy Evuru*, Sonal Kumar, Utkarsh Tyagi, Sakshi Singh,</text>,
-							
-								<b style="color: #0095eb">Sanjoy Chowdhury</b>,
-								<text style="color: black">Dinesh Manocha</text>
-								
-							</div>
-							<div class="pub-publication ">Association for Computational Linguistics(ACL 2024) Findings</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('aspire_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://aclanthology.org/2024.findings-acl.22.pdf">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/Sreyan88/ASPIRE">Code</a>
-								
-							<pre id="semidavil_abstract_publication", style="display:none">
-							The paper proposes a simple yet effective solution for supplementing the training dataset with images without spurious features, 
-								for robust learning against spurious correlations via better generalization.
-							</pre>
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>
-			
-			
-
-
-
-			<h2 class="year">2024</h2>
-
-			
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/intent-o-meter.png"></img>
-				</div>
-				<div class="col-md-8">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">Towards Determining Perceived Human Intent for Multimodal Social Media Posts using The Theory of Reasoned Action</span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-								
-								<text style="color: black">Trisha Mittal</text>,
-								<b style="color: #0095eb">Sanjoy Chowdhury</b>,
-								<text style="color: black">Pooja Guhan, Snikhita Chelluri, Dinesh Manocha </text>
-								
-							</div>
-							<div class="pub-publication "> Nature Scientific Reports 2024</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('intentometer_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://www.nature.com/articles/s41598-024-60299-w.pdf">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://drive.google.com/drive/folders/1hQ1pdsuqBmKJkQ-bTQXdKuU2TkazCtbh">Dataset</a>
-								
-							<pre id="intentometer_abstract_publication", style="display:none">
-							We propose Intent-o-meter, a perceived human intent prediction model for multimodal (image and text) social media posts. Intent-o-meter models ideas from psychology and 
-								cognitive modeling literature, in addition to using the visual and textual features for an improved perceived intent prediction. 
-							</pre>
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>
-
-
-
-
-			
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/llmnav.png"></img>
-				</div>
-				<div class="col-md-8">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">Can LLM’s Generate Human-Like Wayfinding Instructions? Towards Platform-Agnostic Embodied Instruction Synthesis</span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-								
-								<text style="color: black">Vishnu Sashank Dorbala</text>,
-								<b style="color: #0095eb">Sanjoy Chowdhury</b>,
-								<text style="color: black">Dinesh Manocha</text>
-								
-							</div>
-							<div class="pub-publication ">North American Chapter of the Association for Computational Linguistic (NAACL 2024)</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('vlmnav_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://arxiv.org/pdf/2403.11487v1">PDF</a>
-<!-- 								<a class="btn btn-primary btn-outline btn-xs " href="">Code</a> -->
-<!-- 								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('CanvasAsContext_bib_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">BibTeX</a> -->
-<pre id="vlmnav_abstract_publication", style="display:none">
-We present a novel approach to automatically synthesize "wayfinding instructions" for an embodied robot agent. In contrast to prior approaches that are heavily reliant on human-annotated datasets designed exclusively for specific simulation platforms, our algorithm uses in-context learning to condition an LLM to generate instructions using just a few references. 
-</pre>
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>
-
-
-
-			<h2 class="year">2023</h2>
-
-			
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/melfusion-diagram.jpg"></img>
-				</div>
-				<div class="col-md-8">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">MeLFusion: Synthesizing Music from Image and Language Cues using Diffusion Models</span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-								
-								<b style="color: #0095eb">Sanjoy Chowdhury*</b>,
-								<text style="color: black">Sayan Nag*, Joseph KJ, Balaji Vasan Srinivasan, Dinesh Manocha </text>
-								
-							</div>
-							<div class="pub-publication ">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2024)</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('melfusion_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://openaccess.thecvf.com/content/CVPR2024/papers/Chowdhury_MeLFusion_Synthesizing_Music_from_Image_and_Language_Cues_using_Diffusion_CVPR_2024_paper.pdf">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/schowdhury671/melfusion/tree/main">Code</a>
-								
-<pre id="melfusion_abstract_publication", style="display:none">
-<!-- In creative workflows, designers compile a collection (or “moodboard”) of inspirational assets for ideation. They may use this as reference for finding additional assets. In this work, we aim to stimulate creative ideation by making suggestions that take cues from the designer’s moodboard but also carefully diverge from it. A collection of images may have rich information along different axes (e.g. color, composition, or style) – these axes or channels can be used to model relevance or divergence of any image from a query collection. So, we develop a self-supervised model that can extract channel-specific representations from collections of images. We propose a search algorithm that uses these representations to obtain results that satisfy the collection’s intent along some channels but diverge from the query along others. We show that this allows for effective exploration of the creative space of possibilities. Finally, we demonstrate a mix-and-match visual querying mechanism that allows us to combine channels from different collections of inspirational content, thus facilitating ease in creative expression. -->
-Although recent works in semi-supervised learning (SemiSL) have accomplished significant success in natural image segmentation, the task of learning discriminative representations from limited annotations has been an open problem in medical images. Contrastive Learning (CL) frameworks use the notion of similarity measure which is useful for classification problems, however, they fail to transfer these quality representations for accurate pixel-level segmentation. To this end, we propose a novel semi-supervised patch-based CL framework for medical image segmentation without using any explicit pretext task. We harness the power of both CL and SemiSL, where the pseudo-labels generated from SemiSL aid CL by providing additional guidance, whereas discriminative class information learned in CL leads to accurate multi-class segmentation. Additionally, we formulate a novel loss that synergistically encourages inter-class separability and intra-class compactness among the learned representations. A new inter-patch semantic disparity mapping using average patch entropy is employed for a guided sampling of positives and negatives in the proposed CL framework. Experimental analysis on three publicly available datasets of multiple modalities reveals the superiority of our proposed method as compared to the state-of-the-art methods.
-</pre>
-We propose MeLFusion, a model that can effectively use cues from a textual description and the corresponding image to synthesize music. MeLFusion is a text-to-music diffusion model 
-with a novel "visual synapse", which effectively infuses the semantics from the visual modality into the generated music. To facilitate research in this area, we introduce a new 
-dataset MeLBench, and propose a new evaluation metric IMSM. 
-</pre>
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>
-
-
-
-
-
-
-
-			
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/apollo.jpg"></img>
-				</div>
-				<div class="col-md-8">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">APoLLo <img src="../images/rocket1.png" alt="project image" width="20" height="20" />: Unified Adapter and Prompt Learning for Vision Language Models</span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-								<b style="color: #0095eb">Sanjoy Chowdhury*</b>,
-								<text style="color: black">Sayan Nag*, Dinesh Manocha</text>
-								
-							</div>
-							<div class="pub-publication ">Conference on Empirical Methods in Natural Language Processing (EMNLP 2023)</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('apollo_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://aclanthology.org/2023.emnlp-main.629.pdf">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/schowdhury671/APoLLo">Code</a>
-								
-<pre id="apollo_abstract_publication", style="display:none">
-Our method is designed to substantially improve the generalization capabilities of VLP models when they are fine-tuned in a few-shot setting. We introduce trainable cross-attention-based
-	adapter layers in conjunction with vision and language encoders to strengthen the alignment between the two modalities. </p>
-</pre>
-
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>
-
-			
-			
-
-
-
-
-
-			
-			
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto; width: 120%; height: 100%" src="../images/adverb.png"></img>
-				</div>
-				<div class="col-md-8 ">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">AdVerb: Visually Guided Audio Dereverberation</span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-								<b style="color: #0095eb">Sanjoy Chowdhury<sup></sup></b>,
-								<text style="color: black">Sreyan Ghosh*, Subhrajyoti Dasgupta, Anton Ratnarajah, Utkarsh Tyagi, Dinesh Manocha <sup>&dagger;</sup></text>,
-								
-								
-							</div>
-							<div class="pub-publication "> IEEE International Conference on Computer Vision (ICCV 2023)</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('adverb_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://openaccess.thecvf.com/content/ICCV2023/papers/Chowdhury_AdVerb_Visually_Guided_Audio_Dereverberation_ICCV_2023_paper.pdf">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://schowdhury671.github.io/adverb/">Project</a>
-								
-<pre id="SG_abstract_publication", style="display:none">
-We present a novel audio-visual dereverberation framework that uses visual cues in addition to the reverberant sound to estimate clean audio.
-</pre>
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>
-
-
-
-
-
-
-
-
-			
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/iccp.png"></img>
-				</div>
-				<div class="col-md-8">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">Measured Albedo in the Wild: Filling the Gap in Intrinsics Evaluation</span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-								
-								<text style="color: black">Jiaye Wu</text>,
-								<b style="color: #0095eb">Sanjoy Chowdhury</b>,
-								<text style="color: black">Hariharmano Shanmugaraja, David Jacobs, Soumyadip Sengupta </text>
-								
-								
-							</div>
-							<div class="pub-publication ">International Conference on Computational Photography (ICCP 2023)</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('maw_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://arxiv.org/pdf/2306.15662.pdf">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://measuredalbedo.github.io/">Project Page</a>
-								
-<pre id="maw_abstract_publication", style="display:none">
-In order to comprehensively evaluate albedo, we collect a new dataset, Measured Albedo in the Wild (MAW), and propose three new metrics that complement WHDR
-</pre>
-
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>
-
-			<h2 class="year">2023</h2>
-
-
-
-
-
-
-			
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto; width: 90%" src="../images/audViSum_bmvc.png"></img>
-				</div>
-				<div class="col-md-8">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">AudViSum: Self-Supervised Deep Reinforcement Learning for Diverse Audio-Visual Summary Generation</span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-								<b style="color: #0095eb">Sanjoy Chowdhury*</b>,
-								<text style="color: black">Aditya P. Patra*, Subhrajyoti Dasgupta, Ujjwal Bhattacharya</text>,
-								
-							</div>
-							<div class="pub-publication ">British Machine Vision Conference  (BMVC 2021)</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('audvisum_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://www.bmvc2021-virtualconference.com/assets/papers/1430.pdf">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/schowdhury671/AudViSum">Code</a>
-								
-								
-<pre id="miccai22_abstract_publication", style="display:none">
-	Introduced a novel deep reinforcement learning-based self-supervised audio-visual summarization model that leverages both audio and visual information to generate diverse yet semantically meaningful summaries.
-</pre>
-
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>
-
-
-
-
-
-
-
-			
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto;" src="../images/rr_iccv.png"></img>
-				</div>
-				<div class="col-md-8">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">V-DESIRR: Very Fast Deep Embedded Single Image Reflection Removal</span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-								
-								<text style="color: black">B H Pawan Prasad, Green Rosh K S, Lokesh R B, Kaushik Mitra,</text>,
-								<b style="color: #0095eb">Sanjoy Chowdhury<sup></sup></b>,
-								
-								
-							</div>
-							<div class="pub-publication ">IEEE International Conference on Computer Vision (ICCV 2021)</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('vdesirr_abstract_publication'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://openaccess.thecvf.com/content/ICCV2021/papers/Prasad_V-DESIRR_Very_Fast_Deep_Embedded_Single_Image_Reflection_Removal_ICCV_2021_paper.pdf">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/ee19d005/vdesirr">Code</a>
-								
-<pre id="vdesirr_abstract_publication", style="display:none">
-We propose a multi-scale end-to-end architecture for detecting and removing weak, medium, and strong reflections from naturally occurring images.	
-</pre>
-
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>
-
-			<!-- <h2 class="year">2019</h2> -->
-
-
-
-
-
-
-
-			<!-- MFSNet -->
-			<div class="row" style="margin: 2.5em 0 ">
-				<div class="col-md-4">
-					<img class="pub-img " style="margin-right: auto; margin-left: auto; width: 80%" src="../images/audVi_coseg_icip.png"></img>
-				</div>
-				<div class="col-md-8">
-					<li itemscope itemtype="http://schema.org/CreativeWork ">
-						<span itemprop="name">Listen to the Pixels</span>
-						<div class="pub-list-item " itemscope itemtype="http://schema.org/CreativeWork ">
-							<div class="pub-authors " itemprop="author ">
-								
-								<b style="color: #0095eb">Sanjoy Chowdhury</b>,
-								<text style="color: black">Subhrajyoti Dasgupta, Sudip Das, Ujjwal Bhattacharya</text>,
-								
-							</div>
-							<div class="pub-publication ">Pattern Recognition, Elsevier</div>
-							<p>
-								<a class="btn btn-primary btn-outline btn-xs" onclick="var div = document.getElementById('ltp'); if (div.style.display !== 'none') {div.style.display = 'none';} else {div.style.display = 'block';}">Abstract</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://ieeexplore.ieee.org/document/9506019">PDF</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://github.com/schowdhury671/Audio-visual-joint-segmentation">Code</a>
-								<a class="btn btn-primary btn-outline btn-xs " href="https://www.youtube.com/watch?v=xUwzSQaQ9oQ">Video</a>
-								
-<pre id="ltp", style="display:none">
-In this study, we exploited the concurrency between audio and visual modalities in an attempt to solve the joint audio-visual segmentation problem in a self-supervised manner.
-</pre>
-
-							</p>
-						</div>
-					</li>
-				</div>
-			</div>
-
-
-
-
-
-
-
-<table style="width:50%;border:0px;border-spacing:0px;horizontal-align:middle;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-  <tr>
-  <td style="padding:5px;width:50%;vertical-align:middle">
-    <div style="border-bottom: 1px solid #aaaaaa;"><heading>Academic Services</heading></div>
-    <ul id="services">
-      <li style="padding:4px"><b>Reviewing:</b></li>
-	- <strong>CVPR:</strong> 2023, '24, '25<br>
-	- <strong>ICCV:</strong> 2023, '25<br>
-	- <strong>ECCV:</strong> 2024<br>
-	- <strong>NeurIPS:</strong> 2024<br>
-	- <strong>AAAI:</strong> 2025<br>    
-	- <strong>WACV:</strong> 2022, '23, '24<br>
-	- <strong>ACMMM:</strong> 2023, '24 <br>
-	- <strong>ACL:</strong> 2024
-      <br>
-     <li style="padding:4px"><b>Workshop:</b></li>
-	- Co-organised <a href="https://gen4avc.github.io/">Gen4AVC workshop </a> in conjunction with ICCV 2025.
-     
-      
-      <br>
-    </ul>
-  </td>
-</tr></tbody>
-
-
-
-</table>
-
-
-<table style="width:20%;border:80px;border-spacing:0px;border-collapse:separate;margin-right:0;margin-left:auto;">
+	<table style="width:20%;border:80px;border-spacing:0px;border-collapse:separate;margin-right:0;margin-left:auto;">
           <tr>
+<!--             <td style="padding:2.5%;width:80%;vertical-align:middle"> -->
+	      
+<!-- 	 <table style="width:80%;border:20px;border-spacing:0px;border-collapse:separate;margin-right:0;">   -->
+<!-- 	 <tr>	  -->
 	 <script style="width:30px;height:20px;align:right" type="text/javascript"  id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=pgVlF5ljpLWpcNcZ70hmBZf0I-uNxgD0lqx-sfyNPZQ&cl=ffffff&w=a"></script>      
 	 </tr>
-</table>
+	 </table>	
+		
+        
+  </table>
 
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="garden.js?v=2"></script>
+    
+		
+<script>
+      var papers = [
+	
+	{"id": "adverb", "title": "Adverb", "venue": "ICCV 2023", "url": "https://openaccess.thecvf.com/content/ICCV2023/papers/Chowdhury_AdVerb_Visually_Guided_Audio_Dereverberation_ICCV_2023_paper.pdf", "root_node": 1, "root_name": "Cross-modal Generation\n2024-now", "root_color": "#FFE699", "coauthors": ["Sreyan Ghosh", "Subhrajyoti Dasgupta", "Anton Ratnarajah", "Utkarsh Tyagi", "Dinesh Manocha"], "full_title": "AdVerb: Visually Guided Audio Dereverberation", "summary": "We present a novel audio-visual dereverberation framework that uses visual cues in addition to the reverberant sound to estimate clean audio.", "additional_links": {"project page": "https://schowdhury671.github.io/adverb/", "code": "https://github.com/Sreyan88/AdVerb-dereverb", "video": "https://www.youtube.com/watch?v=dZuR-pZ9uM0"}},
+        {"id": "melfusion", "title": "MeLFusion", "venue": "CVPR 2024", "url": "https://www.arxiv.org/pdf/2406.04673", "parent": "adverb", "coauthors": ["Sayan Nag", "Joseph KJ", "BV Srinivasan", "Dinesh Manocha"], "full_title": "MeLFusion: Synthesizing Music from Image and Language Cues using Diffusion Models", "summary": "We propose MeLFusion, a model that can effectively use cues from a textual description and the corresponding image to synthesize music. MeLFusion is a text-to-music diffusion model with a novel `visual synapse`, which effectively infuses the semantics from the visual modality into the generated music. To facilitate research in this area, we introduce a new dataset MeLBench, and propose a new evaluation metric IMSM.", "additional_links": {"code": "https://github.com/schowdhury671/melfusion/tree/main", "data": "https://umd0-my.sharepoint.com/personal/sanjoyc_umd_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsanjoyc%5Fumd%5Fedu%2FDocuments%2FMeLFusion%20datasets&ga=1", "project page": "https://schowdhury671.github.io/melfusion_cvpr2024/"}},
+        {"id": "magnet", "title": "MAGNET", "venue": "arXiv", "url": "https://schowdhury671.github.io/", "parent": "melfusion", "coauthors": ["Sayan Nag", "Mohamed Elmoghany", "Yohan Abeysinghe", "Yunjie Fei", "Salman Khan", "Dinesh Manocha", "Mohamed Elhoseiny"], "full_title": "MAGNET: A Multi-agent Framework for Finding Audio-Visual Needles by Reasoning over Multi-Video Haystacks", "summary": "we introduce a novel task named AV-HaystacksQA, where the goal is to identify salient segments across different videos in response to a query and link them together to generate the most informative answer. To this end, we present AVHaystacks, an audio-visual benchmark comprising 3100 annotated QA pairs designed to assess the capabilities of LMMs in multi-video retrieval and temporal grounding task. Additionally, we propose a model-agnostic, multi-agent framework MAGNET to address this challenge, achieving up to 89% and 65% relative improvements over baseline methods on BLEU@4 and GPT evaluation scores in QA task on our proposed AVHaystacks. To enable robust evaluation of multi-video retrieval and temporal grounding for optimal response generation, we introduce two new metrics, STEM, which captures alignment errors between a ground truth and a predicted step sequence and MTGS, to facilitate balanced and interpretable evaluation of segment-level grounding performance.", "additional_links": {"code": "https://schowdhury671.github.io/", "data": "https://schowdhury671.github.io/"}},
 
+	
+        {"id": "ltl", "title": "Listen to Pixels", "venue": "ICIP 2021", "url": "https://ieeexplore.ieee.org/document/9506019", "root_node": 1, "root_name": "Audio-Visual Representation Learning\n2021-now", "root_color": "#B3F5BC", "coauthors": ["Subhrajyoti Dasgupta", "Sudip Das", "Ujjwal Bhattacharya"], "full_title": "Listen to the Pixels", "summary": "In this study, we exploited the concurrency between audio and visual modalities in an attempt to solve the joint audio-visual segmentation problem in a self-supervised manner.", "additional_links": {"code": "https://github.com/schowdhury671/Audio-visual-joint-segmentation", "video": "https://www.youtube.com/watch?v=xUwzSQaQ9oQ"}},
+        {"id": "audvisum", "title": "AudViSum", "venue": "BMVC 2021", "url": "https://www.bmvc2021-virtualconference.com/assets/papers/1430.pdf", "indirect_connections": ["magnet"], "parent": "ltl", "coauthors": ["Aditya Patra", "Subhrajyoti Dasgupta", "Ujjwal Bhattacharya"], "full_title": "AudViSum: Self-Supervised Deep Reinforcement Learning for Diverse Audio-Visual Summary Generation", "summary": "Introduced a novel deep reinforcement learning-based self-supervised audio-visual summarization model that leverages both audio and visual information to generate diverse yet semantically meaningful summaries.", "additional_links": {"code": "https://github.com/schowdhury671/AudViSum", "video": "https://www.youtube.com/watch?v=Hier-zMWcc0"}},
+        {"id": "egoadapt", "title": "EgoAdapt", "venue": "arXiv", "url": "https://schowdhury671.github.io/", "parent": "audvisum", "coauthors": ["Subrata Biswas", "Sayan Nag", "Tushar Nagarajan", "Calvin Murdock", "Yijun Qian", "Ishwarya Ananthabhotla", "Vamsi Ithapu", "Dinesh Manocha", "Ruohan Gao"], "full_title": "EgoAdapt: Adaptive Multisensory Distillation and Policy Learning for Efficient Egocentric Perception", "summary": "Modern perception models, particularly those designed for multisensory egocentric tasks, have achieved remark- able performance but often come with substantial compu- tational costs. These high demands pose challenges for real-world deployment, especially in resource-constrained environments. In this paper, we introduce EGOADAPT, a framework that adaptively performs cross-modal distilla- tion and policy learning to enable efficient inference across different egocentric perception tasks, including egocentric action recognition, active speaker localization, and behav- ior anticipation. Our proposed policy module is adaptable to task-specific action spaces, making it broadly applicable. Experimental results on three challenging egocentric datasets EPIC-Kitchens, EasyCom, and Aria Everyday Activities—demonstrate that our method significantly enhances efficiency, reducing GMACs by up to 89.09%, parameters up to 82.02%, and energy up to 9.6×, while still on-par and in many cases outperforming, the performance of corresponding state-of-the-art models.", "additional_links": {"code": "https://schowdhury671.github.io/", "data": "https://schowdhury671.github.io/"}},
 
+	{"id": "meerkat", "title": "Meerkat", "venue": "ECCV 2024", "url": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08071.pdf", "root_node": 1, "root_name": "Audio-Visual LLMs\n2024-now", "root_color": "#D1BDFF", "coauthors": ["Sayan Nag", "Subhrajyoti Dasgupta", "Jun Chen", "Mohamed Elhoseiny", "Ruohan Gao", "Dinesh Manocha"], "full_title": "Meerkat: Audio-Visual Large Language Model for Grounding in Space and Time", "summary": "We present Meerkat, an audio-visual LLM equipped with a fine-grained understanding of image and audio both spatially and temporally. With a new modality alignment module based on optimal transport and a cross-attention module that enforces audio-visual consistency, Meerkat can tackle challenging tasks such as audio referred image grounding, image guided audio temporal localization, and audio-visual fact-checking. Moreover, we carefully curate a large dataset AVFIT that comprises 3M instruction tuning samples collected from open-source datasets, and introduce MeerkatBench that unifies five challenging audio-visual tasks.","additional_links": {"code": "https://github.com/schowdhury671/meerkat/tree/main", "data": "https://umd0-my.sharepoint.com/personal/sanjoyc_umd_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsanjoyc%5Fumd%5Fedu%2FDocuments%2FAVFIT%20dataset&ga=1"}},
+	{"id": "aurelia", "title": "AURELIA", "venue": "arXiv", "url": "https://arxiv.org/pdf/2503.23219", "parent": "meerkat", "coauthors": ["Sayan Nag", "Hanan Gani", "Nishit Anand", "Mohamed Elhoseiny", "Ruohan Gao", "Salman Khan", "Dinesh Manocha"], "full_title": "AURELIA: Test-time Reasoning Distillation in Audio-Visual LLMs", "summary": "In this paper, we introduce AURELIA, a novel actor-critic based audio-visual reasoning framework that distils structured, step-by-step reasoning into AVLLMs at test time, improving their ability to process complex multi-modal inputs without additional training or fine-tuning. To further advance AVLLM reasoning skills, we present AVReasonBench, a challenging benchmark comprising 4500 audio-visual questions, each paired with detailed step-by-step reasoning. Our benchmark spans six distinct tasks, including AV-GeoIQ, which evaluates AV reasoning combined with geographical and cultural knowledge", "additional_links": {"code": "https://github.com/schowdhury671/aurelia", "data": "https://github.com/schowdhury671/aurelia"}},
+	{"id": "avtrustbench", "title": "AVTrustBench", "venue": "arXiv", "url": "https://arxiv.org/abs/2501.02135", "parent": "meerkat", "coauthors": ["Sayan Nag", "Subhrajyoti Dasgupta", "Yaoting Wang", "Mohamed Elhoseiny", "Ruohan Gao", "Dinesh Manocha"], "full_title": "AVTrustBench: Assessing and Enhancing Reliability and Robustness in Audio-Visual LLMs", "summary": "We introduce Audio-Visual Trustworthiness assessment Benchmark (AVTrustBench), comprising 600K samples spanning over 9 meticulously crafted tasks, evaluating the capabilities of AVLLMs across three distinct dimensions: Adversarial attack, Compositional reasoning, and Modality-specific dependency. Using our benchmark we extensively evaluate 16 state-of-the-art AVLLMs. The findings reveal that the majority of existing models fall significantly short of achieving human-like comprehension, offering valuable insights for future research directions. To alleviate the limitations in the existing approaches, we further propose a robust, model-agnostic calibrated audio-visual preference optimization based training strategy CAVPref, obtaining a gain up to 30.19% across all 9 tasks.", "additional_links": {"code": "https://github.com/schowdhury671/avtrustbench-", "data": "https://github.com/schowdhury671/avtrustbench-"}},
+        
+	{"id": "apollo", "title": "Apollo", "venue": "EMNLP 2023", "url": "https://aclanthology.org/2023.emnlp-main.629.pdf", "root_node": 1, "root_name": "Integrating Vision-Language\n2022-now", "root_color": "#FF409F", "coauthors": ["Sayan Nag", "Dinesh Manocha"], "full_title": "APoLLo: Unified Adapter and Prompt Learning for Vision Language Models", "summary": "Our method is designed to substantially improve the generalization capabilities of VLP models when they are fine-tuned in a few-shot setting. We introduce trainable cross-attention-based adapter layers in conjunction with vision and language encoders to strengthen the alignment between the two modalities.", "additional_links": {"code": "https://github.com/schowdhury671/APoLLo", "video": "https://www.youtube.com/watch?v=5OHwq3VCusA"}},
+	{"id": "aspire", "title": "ASPIRE", "venue": "ACL Findings 2024", "url": "https://aclanthology.org/2024.findings-acl.22.pdf", "indirect_connections": ["avtrustbench"], "parent": "apollo", "coauthors": ["Sreyan Ghosh", "Chandra Kiran", "Sakshi S", "Sonal Kumar", "Utkarsh Tyagi", "Dinesh Manocha"], "full_title": "ASPIRE: Language-Guided Data Augmentation for Improving Robustness Against Spurious Correlations", "summary": "The paper proposes a simple yet effective solution for supplementing the training dataset with images without spurious features, for robust learning against spurious correlations via better generalization", "additional_links": {"code": "https://github.com/Sreyan88/ASPIRE"}},
+	{"id": "vlmnav", "title": "VLMNav", "venue": "NAACL Findings 2024", "url": "https://arxiv.org/pdf/2403.11487v1", "parent": "aspire", "coauthors": ["Vishnu Dorbala", "Dinesh Manocha"], "full_title": "Can LLM’s Generate Human-Like Wayfinding Instructions? Towards Platform-Agnostic Embodied Instruction Synthesis", "summary": "We present a novel approach to automatically synthesize `wayfinding instructions` for an embodied robot agent. In contrast to prior approaches that are heavily reliant on human-annotated datasets designed exclusively for specific simulation platforms, our algorithm uses in-context learning to condition an LLM to generate instructions using just a few references."},      
+        {"id": "intent", "title": "Intent-o-Meter", "venue": "Nature Scientific Reports 2023", "url": "https://www.nature.com/articles/s41598-024-60299-w.pdf", "parent": "apollo", "coauthors": ["Trisha Mittal", "Pooja Guhan", "Dinesh Manocha", "Snikitha Chelluri"], "full_title": "Towards Determining Perceived Human Intent for Multimodal Social Media Posts using The Theory of Reasoned Action", "summary": "We propose Intent-o-meter, a perceived human intent prediction model for multimodal (image and text) social media posts. Intent-o-meter models ideas from psychology and cognitive modeling literature, in addition to using the visual and textual features for an improved perceived intent prediction.", "additional_links": {"data": "https://drive.google.com/drive/folders/1hQ1pdsuqBmKJkQ-bTQXdKuU2TkazCtbh"}},
+        
+	{"id": "vdesirr", "title": "VDESIRR", "venue": "ICCV 2021", "url": "https://openaccess.thecvf.com/content/ICCV2021/papers/Prasad_V-DESIRR_Very_Fast_Deep_Embedded_Single_Image_Reflection_Removal_ICCV_2021_paper.pdf", "root_node": 1, "root_name": "Computational Photography\n2021-2022", "root_color": "#FA9189", "coauthors": ["BH Pawan Prasad", "Lokesh RB", "Koushik Mitra", "Green Rosh"], "full_title": "V-DESIRR: Very Fast Deep Embedded Single Image Reflection Removal", "summary": "We have proposed a multi-scale end-to-end architecture for detecting and removing weak, medium, and strong reflections from naturally occurring images.", "additional_links": {"code": "https://github.com/ee19d005/vdesirr"}},
+        {"id": "maw", "title": "MAW", "venue": "ICCP 2023", "url": "https://arxiv.org/pdf/2306.15662", "parent": "vdesirr", "coauthors": ["Jiaye Wu", "Roni Sengupta", "David Jacobs"], "full_title": "Measured Albedo in the Wild: Filling the Gap in Intrinsics Evaluation", "summary": "In order to comprehensively evaluate albedo, we collect a new dataset, Measured Albedo in the Wild (MAW), and propose three new metrics that complement WHDR", "additional_links": {"project page": "https://measuredalbedo.github.io/", "data": "https://umd.app.box.com/s/rzuzf12ooqnaxyojjgam09zctgp8fr2c"}},
 
+	]
 
-            </div>
-        </main>
+      build_garden(papers);
+  </script>
 
-
-
-
-		</section>
-
-	<footer class="site-footer ">
-		<div class="container ">
-			<p class="powered-by ">
-
-				&copy; Powered by the <a href="https://github.com/gcushen/hugo-academic " target="_blank ">Academic theme</a> for <a href="http://gohugo.io " target="_blank ">Hugo</a>.
-
-				<span class="pull-right " aria-hidden="true ">
-					<a href="# " id="back_to_top ">
-						<span class="button_icon ">
-							<i class="fa fa-chevron-up fa-2x "></i>
-						</span>
-					</a>
-				</span>
-
-			</p>
-		</div>
-	</footer>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js "></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js "></script>
-	<script src="js/jquery-1.12.3.min.js "></script>
-	<script src="js/bootstrap.min.js "></script>
-	<script src="js/hugo-academic.js "></script>
-	<script src="js/shuffle.js "></script>
-	<script src="https://unpkg.com/shuffle-letters "></script>
-
+		
 </body>
+
 </html>
