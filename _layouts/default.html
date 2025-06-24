@@ -2,102 +2,67 @@
 <html lang="en">
 
 <head>
-    <title>Sanjoy Chowdhury's webpage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif; /* Use a clean font */
-            margin: 0; /* Remove default margins */
-            line-height: 1.6; /* Improve readability */
-        }
+  <title>Sanjoy's webpage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Use a clean font */
+    }
+    .navbar {
+      display: flex;
+      justify-content: center; /* Center the navbar items */
+      background-color: #f8f8f8; /* Light background color */
+      padding: 15px; /* Spacing around the navbar */
+      border-bottom: 2px solid #e0e0e0; /* Subtle border */
+    }
+    .navbar a {
+      margin: 0 30px; /* Increased spacing between links */
+      text-decoration: none; /* Remove underline */
+      color: #333; /* Text color */
+      font-weight: bold; /* Bold text for emphasis */
+    }
+    .navbar .name {
+      font-size: 2.5em; /* Make the name larger */
+      color: #4CAF50; /* Change color for prominence */
+    }
+    .navbar a:hover {
+      color: #4CAF50; /* Change color on hover */
+    }
+    .code-box {
+      border: 2px solid #4CAF50; /* Green border for the box */
+      padding: 15px 20px; /* Add padding inside the box */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
+      font-family: 'Courier New', Courier, monospace; /* Monospace font for a code look */
+      background-color: #f9f9f9; /* Light background color */
+      display: inline-block; /* Make the box fit around the content */
+    }
+    .center-content {
+      text-align: center; /* Center align the content */
+    }
+    .red-text {
+      color: red; /* Red color for the bold text */
+    }
+  </style>
 
-        .header {
-            text-align: center; /* Center the header content */
-            padding: 40px 0; /* Space around the header */
-        }
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta name="Sanjoy" content="Sanjoy's webpage" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        .header h1 {
-            font-size: 3em; /* Large font for the name */
-            margin: 0; /* Remove margin */
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: center; /* Center the navbar items */
-            background-color: #f8f8f8; /* Light background color */
-            padding: 15px; /* Spacing around the navbar */
-            border-bottom: 2px solid #e0e0e0; /* Subtle border */
-        }
-
-        .navbar a {
-            margin: 0 30px; /* Increased spacing between links */
-            text-decoration: none; /* Remove underline */
-            color: #333; /* Text color */
-            font-weight: bold; /* Bold text for emphasis */
-        }
-
-        .navbar a:hover {
-            color: #4CAF50; /* Change color on hover */
-        }
-
-        .bio {
-            text-align: center; /* Center the biography content */
-            padding: 20px; /* Space around the biography */
-            max-width: 600px; /* Maximum width for readability */
-            margin: 0 auto; /* Center the biography block */
-        }
-
-        .code-box {
-            border: 2px solid #4CAF50; /* Green border for the box */
-            padding: 15px 20px; /* Add padding inside the box */
-            border-radius: 8px; /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
-            font-family: 'Courier New', Courier, monospace; /* Monospace font for a code look */
-            background-color: #f9f9f9; /* Light background color */
-            display: inline-block; /* Make the box fit around the content */
-        }
-
-        .red-text {
-            color: red; /* Red color for the bold text */
-        }
-
-        .updates {
-            padding: 20px; /* Space around the updates section */
-            text-align: left; /* Align items to the left */
-        }
-
-        .updates ul {
-            max-height: 250px; /* Limit height for scroll */
-            overflow-y: auto; /* Enable scrolling */
-            padding-left: 0; /* Remove default padding */
-        }
-
-        .updates li {
-            margin-bottom: 10px; /* Space between entries */
-        }
-    </style>
-
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <meta name="Sanjoy" content="Sanjoy's webpage" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="icon" type="image/png" href="../images/IMG-20200202-WA0044_2.jpg">
-    <link rel="apple-touch-icon" type="image/png" href="img/apple-touch-icon.png">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="icon" type="image/png" href="../images/IMG-20200202-WA0044_2.jpg">
+  <link rel="apple-touch-icon" type="image/png" href="img/apple-touch-icon.png">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <!-- Header with Name -->
-    <div class="header">
-        <h1>Sanjoy Chowdhury</h1>
-    </div>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a class="name" href="#research-directions">Sanjoy Chowdhury</a>
+    <a href="#research-directions">Research Directions</a>
+    <a href="#more-details">More Details</a>
+  </div>
 
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <a href="#research-directions">Research Directions</a>
-        <a href="#more-details">More Details</a>
-    </div>
 
 	
 	
