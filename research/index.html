@@ -7,10 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Fonts -->
-<!--     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet"> -->
-
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" type="text/css" href="../style.css" />
@@ -18,112 +14,120 @@
 
     <style>
         body {
-            font-family: 'Raleway', sans-serif; /* Use Raleway consistently */
+            font-family: 'Raleway', sans-serif;
             margin: 0;
             padding: 0;
             background: white;
             color: #111;
-            font-weight: 400; /* Set default weight */
+            font-weight: 400;
         }
-	    <style>
-    body {
-      font-family: Arial, sans-serif; /* Use a clean font */
-    }
-    .navbar {
-      display: flex;
-      justify-content: center; /* Center the navbar items */
-      background-color: #f8f8f8; /* Light background color */
-      padding: 15px; /* Spacing around the navbar */
-      border-bottom: 2px solid #e0e0e0; /* Subtle border */
-    }
-    .navbar a {
-      margin: 0 30px; /* Increased spacing between links */
-      text-decoration: none; /* Remove underline */
-      color: #333; /* Text color */
-      font-weight: bold; /* Bold text for emphasis */
-    }
-    .navbar a:hover {
-      color: #4CAF50; /* Change color on hover */
-    }
-    .name {
-      font-family: 'Dancing Script', cursive; /* Artistic font for the name */
-      font-size: 2.5em; /* Make the name larger */
-      color: black; /* Black color for the name */
-      margin: 0; /* Remove default margin */
-    }
         
-       
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .navbar a {
+            margin: 0 30px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #4CAF50;
+        }
+
+        .name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5em;
+            color: black;
+            margin: 0;
+        }
 
         #garden_title {
             text-align: center;
-            font-size: 2.5em; /* Title size */
-            margin-top: 20px; /* Margins */
+            font-size: 2.5em;
+            margin-top: 20px;
         }
 
         #garden_container {
-            text-align: center; /* Center the garden */
+            text-align: center;
             margin: 20px auto;
         }
 
-        #flower_template {
-            display: none; /* Hide the original flower template */
+        .research-summary {
+            width: 90%;
+            border-collapse: collapse;
+            margin: 20px auto;
         }
-        /* Add your additional styles here */
-    </style>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> <!-- Importing the artistic font -->
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <meta name="Sanjoy" content="Sanjoy's webpage" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-  <link rel="icon" type="image/png" href="../images/IMG-20200202-WA0044_2.jpg">
-  <link rel="apple-touch-icon" type="image/png" href="img/apple-touch-icon.png">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+        .research-summary th, .research-summary td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .research-summary th {
+            background-color: #f4f4f4;
+        }
+    </style>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <div class="navbar">
-	 <a class="name" href="https://schowdhury671.github.io/">Sanjoy Chowdhury</a>
+        <a class="name" href="https://schowdhury671.github.io/">Sanjoy Chowdhury</a>
         <a href="https://schowdhury671.github.io/">Home</a>
         <a href="../others/index.html">Miscellaneous</a>
     </div>
 
-    
-
-	<table style="width:70%;border:20px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:70%;vertical-align:middle">
-              <h2><font color="blue">Blog(s)</font></h2>
-              <p>
-                Have tried my hand at writing technical blogs.
-              </p>
-            </td>
-          </tr>
+    <!-- Research Summary -->
+    <div id="garden_container">
+        <h2 id="garden_title">Sanjoy's Research Summary</h2>
+        <table class="research-summary">
+            <tr>
+                <th>Category</th>
+                <th>Summary</th>
+            </tr>
+            <tr>
+                <td>Cross-modal Generation (2024-now)</td>
+                <td>
+                    Recent work such as <strong>MAGNET (arXiv)</strong> and <strong>MeLFusion (CVPR 2024)</strong> explores innovative approaches to integrate and synthesize data across multiple modalities. The <strong>Adverb (ICCV 2023)</strong> paper focuses on visually guided audio dereverberation, showcasing advanced techniques in enhancing audio-visual synergy.
+                </td>
+            </tr>
+            <tr>
+                <td>Audio-Visual Representation Learning (2021-now)</td>
+                <td>
+                    The <strong>EgoAdapt (arXiv)</strong> and <strong>AudViSum (BMVC 2021)</strong> papers delve into adapting egocentric perspectives for efficient summarization of audio-visual data. <strong>Listen to Pixels (ICIP 2021)</strong> introduces methods to convert audio signals into visual representations, facilitating comprehensive understanding.
+                </td>
+            </tr>
+            <tr>
+                <td>Audio-Visual LLMs (2024-now)</td>
+                <td>
+                    In audio-visual large language models, <strong>AURELIA (arXiv)</strong>, <strong>AVTrustBench (ECCV 2024)</strong>, and <strong>Meerkat (ECCV 2024)</strong> investigate frameworks for integrating audio-visual interactions, enhancing contextual understanding and information processing in AI systems.
+                </td>
+            </tr>
+            <tr>
+                <td>Integrating Vision-Language (2022-now)</td>
+                <td>
+                    <strong>ASPIRE (ACL Findings 2024)</strong> and <strong>VLMNav (NAACL Findings 2024)</strong> highlight strides in integrating vision with language for AI tasks. <strong>Intent-o-Meter (Nature Scientific Reports 2023)</strong> introduces techniques for interpreting intent, while <strong>Apollo (EMNLP 2023)</strong> enhances word-image pair associations.
+                </td>
+            </tr>
+            <tr>
+                <td>Computational Photography (2021-2022)</td>
+                <td>
+                    In computational photography, <strong>MAW (ICCP 2023)</strong> and <strong>VDESIRR (ICCV 2021)</strong> focus on optimizing image and video quality through advanced processing, enhancing the aesthetic and functional aspects of visual media.
+                </td>
+            </tr>
         </table>
-	            
-        <table style="width:70%;border:20px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="../images/Screenshot 2021-12-01 at 1.12.53 PM.png" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-            </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <h3>The devil is in the details: Video Quality Enhancement Approaches</h3>
-              <br>
-              
-              
-              <a href="https://medium.com/sharechat-techbyte/the-devil-is-in-the-details-video-quality-enhancement-approaches-c382e42bf7ed">Link</a> 
-              <p></p>
-              <p>The blog contextualizes the problem of video enhancement in present-day scenarios and talks about a couple of interesting approaches to handle this challenging task.</p>
-              
-              <p></p>
-              <p></p>
+    </div>
 
-            </td>
-          </tr>
-          </table>
-
-	
 </body>
 
 </html>
