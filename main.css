@@ -23,12 +23,12 @@ body.sc-site {
     --sc-line: #dce4ef;
     --sc-accent: #1c4f90;
     --sc-accent-soft: #eaf2fc;
-    --sc-heading: 'Source Sans 3', 'Segoe UI', sans-serif;
+    --sc-heading: 'Avenir Next', -webkit-system-fallback, 'Segoe UI', Roboto, sans-serif;
     --sc-width: 1100px;
     margin: 0;
     background: var(--sc-bg);
     color: var(--sc-ink);
-    font: 400 17px/1.65 'Source Sans 3', 'Avenir Next', system-ui, -apple-system, sans-serif;
+    font: 400 16px/1.6 'Avenir Next', -webkit-system-fallback, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 .sc-site *, .sc-site *::before, .sc-site *::after { box-sizing: border-box; }
@@ -180,7 +180,7 @@ body.sc-site {
 .sc-site .sc-garden-stage-top span { color: var(--sc-muted); font-size: 14px; }
 .sc-site .sc-garden-canvas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px 20px; padding: 0 20px; align-items: end; }
 .sc-site .sc-garden-canvas svg { display: block; width: 100%; height: auto; }
-.sc-site .sc-garden-canvas svg text { font-family: 'Source Sans 3', system-ui, sans-serif; fill: var(--sc-ink) !important; opacity: 1; }
+.sc-site .sc-garden-canvas svg text { font-family: 'Avenir Next', -webkit-system-fallback, 'Segoe UI', Roboto, sans-serif; fill: var(--sc-ink) !important; opacity: 1; }
 .sc-site .sc-garden-plant h3 { min-height: 43px; font-size: 17px; padding: 7px 10px 0; }
 .sc-site .sc-garden-period { font-size: 14px; color: var(--sc-muted); padding: 0 10px; }
 .sc-site .sc-garden-intro { margin-bottom: 17px; font-size: 16px; }
@@ -430,7 +430,7 @@ a:hover {
 /* Open academic layout with the circle-and-line timelines from the reference. */
 .sc-site { --sc-width: 1040px; }
 .sc-site .sc-header { border: 0; border-bottom: 1px solid var(--sc-line); border-radius: 0; box-shadow: none; }
-.sc-site .sc-hero h1 { font-family: 'Source Sans 3', 'Segoe UI', sans-serif; font-weight: 600; letter-spacing: -.025em; }
+.sc-site .sc-hero h1 { font-family: 'Kaushan Script', cursive; font-weight: 400; letter-spacing: 0; }
 .sc-site .sc-contact a { padding: 3px 0; border: 0; background: transparent; border-radius: 0; }
 .sc-site .sc-contact { gap: 8px 22px; }
 .sc-site .sc-contact a:hover { background: transparent; text-decoration: underline; }
@@ -464,3 +464,24 @@ a:hover {
   .sc-site .sc-talk-list li::before, .sc-site .sc-awards-list li::before,
   .sc-site .sc-teaching-list li::before { left: -27px; }
 }
+
+.sc-site .sc-collaboration-invite { font-size: 15px; color: var(--sc-ink); margin-top: 12px; }
+.sc-site .sc-brand { font-family: 'Kaushan Script', cursive; font-weight: 400; font-size: 21px; }
+
+.sc-site .sc-paper-presentations { margin-top: 9px; font-size: 14px; line-height: 1.7; color: var(--sc-ink); }
+.sc-site .sc-paper-links, .sc-site .sc-topic-links { align-items: center; }
+.sc-site .sc-stars { display: inline-flex; align-items: center; border: 0; }
+.sc-site .sc-stars img { width: auto; height: 20px; max-width: 180px; }
+
+/* Match the reference site typography while keeping the calligraphic name. */
+.sc-site .sc-section-intro, .sc-site .sc-bio-copy, .sc-site .sc-page-hero p { font-size: 16px; line-height: 1.6; }
+.sc-site .sc-paper-summary, .sc-site .sc-authors, .sc-site .sc-topic-summary { line-height: 1.6; }
+
+/* Recognition accents and oval profile links. */
+.sc-site .sc-recognition-emphasis { color: #bd2424 !important; font-weight: 600; }
+.sc-site .sc-badge { background: #fff0f0; color: #bd2424 !important; border: 1px solid #f1caca; }
+.sc-site .sc-contact a, .sc-site .sc-footer-links a { display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; min-height: 38px; border: 1px solid #dce6f2; border-radius: 999px; background: #f1f6fd; box-shadow: 0 2px 0 #cfdeef; color: #1b365d; }
+.sc-site .sc-contact { gap: 9px; }
+.sc-site .sc-contact a:hover, .sc-site .sc-footer-links a:hover { background: #e5effc; border-color: #bdcfe5; text-decoration: none; }
+.sc-site .sc-email { width: fit-content; max-width: 100%; padding: 7px 14px; min-height: 38px; border: 1px solid #dce6f2; border-radius: 999px; background: #f1f6fd; box-shadow: 0 2px 0 #cfdeef; }
+.sc-site .sc-footer-links a { padding: 5px 11px; min-height: 32px; }

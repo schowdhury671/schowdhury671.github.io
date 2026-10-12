@@ -20,13 +20,14 @@ window.SC_RESEARCH = {
           "url": "https://arxiv.org/abs/2610.07332"
         }
       ],
-      "topic_label": "Agents & Efficient Reasoning"
+      "topic_label": "Agents & Efficient Reasoning",
+      "presentations": []
     },
     {
       "id": "rltldr",
       "short": "RLTL;DR",
       "year": 2026,
-      "venue": "NeurIPS",
+      "venue": "arXiv",
       "topic": "agents",
       "image": "images/rltldr-overview.png",
       "recognition": "",
@@ -44,7 +45,8 @@ window.SC_RESEARCH = {
           "url": "https://machinelearning.apple.com/research/rltl-dr-self-improvement"
         }
       ],
-      "topic_label": "Agents & Efficient Reasoning"
+      "topic_label": "Agents & Efficient Reasoning",
+      "presentations": []
     },
     {
       "id": "simulate",
@@ -68,7 +70,8 @@ window.SC_RESEARCH = {
           "url": "https://machinelearning.apple.com/research/environment-free"
         }
       ],
-      "topic_label": "Agents & Efficient Reasoning"
+      "topic_label": "Agents & Efficient Reasoning",
+      "presentations": []
     },
     {
       "title": "AMUSE: Audio-Visual Benchmark and Alignment Framework for Agentic Multi-Speaker Understanding",
@@ -80,10 +83,6 @@ window.SC_RESEARCH = {
         {
           "label": "Paper",
           "url": "https://arxiv.org/abs/2512.16250"
-        },
-        {
-          "label": "Apple MLR",
-          "url": "https://machinelearning.apple.com/research/amuse"
         }
       ],
       "id": "amuse",
@@ -92,7 +91,13 @@ window.SC_RESEARCH = {
       "summary": "A benchmark for agentic multi-speaker understanding, paired with the RAFT alignment framework.",
       "recognition": "",
       "primary": "https://arxiv.org/abs/2512.16250",
-      "topic_label": "Audio-Visual LLMs"
+      "topic_label": "Audio-Visual LLMs",
+      "presentations": [
+        {
+          "label": "Research presentation \u00b7 Apple booth, CVPR 2026",
+          "url": "https://machinelearning.apple.com/updates/apple-at-cvpr-2026"
+        }
+      ]
     },
     {
       "title": "Uncovering the Representation Geometry of Minimal Cores in Overcomplete Reasoning Traces",
@@ -112,7 +117,8 @@ window.SC_RESEARCH = {
       "summary": "Identifying the compact support within long reasoning traces and studying its representation geometry.",
       "recognition": "",
       "primary": "https://arxiv.org/abs/2605.14358",
-      "topic_label": "Agents & Efficient Reasoning"
+      "topic_label": "Agents & Efficient Reasoning",
+      "presentations": []
     },
     {
       "id": "agent-survey",
@@ -140,11 +146,12 @@ window.SC_RESEARCH = {
           "url": "https://jmlr.org/tmlr/papers/"
         },
         {
-          "label": "Resources",
+          "label": "GitHub",
           "url": "https://github.com/rishieraj/awesome-multimodal-agents"
         }
       ],
-      "topic_label": "Agents & Efficient Reasoning"
+      "topic_label": "Agents & Efficient Reasoning",
+      "presentations": []
     },
     {
       "title": "MAGNET: A Multi-agent Framework for Finding Audio-Visual Needles by Reasoning over Multi-Video Haystacks",
@@ -184,7 +191,8 @@ window.SC_RESEARCH = {
       "summary": "Multi-agent retrieval and reasoning over audio-visual evidence distributed across multiple videos.",
       "recognition": "",
       "primary": "https://arxiv.org/abs/2506.07016",
-      "topic_label": "Agents & Efficient Reasoning"
+      "topic_label": "Agents & Efficient Reasoning",
+      "presentations": []
     },
     {
       "title": "AURELIA: Test-time Reasoning Distillation in Audio-Visual LLMs",
@@ -209,10 +217,20 @@ window.SC_RESEARCH = {
       "id": "aurelia",
       "short": "AURELIA",
       "topic": "understanding",
-      "summary": "An actor–critic framework for structured audio-visual reasoning at test time, alongside AVReasonBench.",
+      "summary": "An actor\u2013critic framework for structured audio-visual reasoning at test time, alongside AVReasonBench.",
       "recognition": "",
       "primary": "https://arxiv.org/abs/2503.23219",
-      "topic_label": "Audio-Visual LLMs"
+      "topic_label": "Audio-Visual LLMs",
+      "presentations": [
+        {
+          "label": "Invited presentation \u00b7 CLVL, ICCV 2025",
+          "url": "https://iccv-clvl.github.io/2025/"
+        },
+        {
+          "label": "Invited presentation \u00b7 AVGenL, ICCV 2025",
+          "url": "https://avgen123.github.io/iccv25.html"
+        }
+      ]
     },
     {
       "title": "AVTrustBench: Assessing and Enhancing Reliability and Robustness in Audio-Visual LLMs",
@@ -240,7 +258,8 @@ window.SC_RESEARCH = {
       "summary": "Evaluating audio-visual reliability under adversarial attacks, compositional reasoning, and modality-specific dependencies.",
       "recognition": "",
       "primary": "https://arxiv.org/abs/2501.02135",
-      "topic_label": "Audio-Visual LLMs"
+      "topic_label": "Audio-Visual LLMs",
+      "presentations": []
     },
     {
       "title": "EgoAdapt: Adaptive Multisensory Distillation and Policy Learning for Efficient Egocentric Perception",
@@ -268,7 +287,17 @@ window.SC_RESEARCH = {
       "summary": "Adaptive multisensory distillation and policy learning for efficient egocentric perception.",
       "recognition": "",
       "primary": "https://arxiv.org/abs/2506.21080",
-      "topic_label": "Audio-Visual Representation Learning"
+      "topic_label": "Audio-Visual Representation Learning",
+      "presentations": [
+        {
+          "label": "Oral presentation \u00b7 BinEgo-360\u00b0, ICCV 2025",
+          "url": "https://x360dataset.github.io/BinEgo-360/#programme"
+        },
+        {
+          "label": "Invited talk \u00b7 NYC Computer Vision Day, NYU 2025",
+          "url": "https://cs.nyu.edu/~fouhey/NYCVision2025/"
+        }
+      ]
     },
     {
       "id": "aura",
@@ -292,7 +321,8 @@ window.SC_RESEARCH = {
           "url": "https://rishieraj.github.io/aura-project-page/"
         }
       ],
-      "topic_label": "Audio-Visual LLMs"
+      "topic_label": "Audio-Visual LLMs",
+      "presentations": []
     },
     {
       "title": "Meerkat: Audio-Visual Large Language Model for Grounding in Space and Time",
@@ -332,7 +362,13 @@ window.SC_RESEARCH = {
       "summary": "Fine-grained audio-visual grounding in space and time through modality alignment and instruction tuning.",
       "recognition": "",
       "primary": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08071.pdf",
-      "topic_label": "Audio-Visual LLMs"
+      "topic_label": "Audio-Visual LLMs",
+      "presentations": [
+        {
+          "label": "Invited talk \u00b7 AVGenL, ECCV 2024",
+          "url": "https://avgen123.github.io/"
+        }
+      ]
     },
     {
       "title": "Towards Determining Perceived Human Intent for Multimodal Social Media Posts using The Theory of Reasoned Action",
@@ -356,7 +392,8 @@ window.SC_RESEARCH = {
       "summary": "Predicting perceived intent in multimodal social media posts using visual, textual, and psychological cues.",
       "recognition": "",
       "primary": "https://www.nature.com/articles/s41598-024-60299-w.pdf",
-      "topic_label": "Integrating Vision-Language"
+      "topic_label": "Integrating Vision-Language",
+      "presentations": []
     },
     {
       "title": "ASPIRE: Language-Guided Data Augmentation for Improving Robustness Against Spurious Correlations",
@@ -380,10 +417,11 @@ window.SC_RESEARCH = {
       "summary": "Language-guided image augmentation to reduce dependence on spurious visual features.",
       "recognition": "",
       "primary": "https://aclanthology.org/2024.findings-acl.22.pdf",
-      "topic_label": "Integrating Vision-Language"
+      "topic_label": "Integrating Vision-Language",
+      "presentations": []
     },
     {
-      "title": "Can LLM’s Generate Human-Like Wayfinding Instructions? Towards Platform-Agnostic Embodied Instruction Synthesis",
+      "title": "Can LLM\u2019s Generate Human-Like Wayfinding Instructions? Towards Platform-Agnostic Embodied Instruction Synthesis",
       "authors": "Vishnu Sashank Dorbala, Sanjoy Chowdhury, Dinesh Manocha",
       "venue": "NAACL",
       "year": 2024,
@@ -400,7 +438,8 @@ window.SC_RESEARCH = {
       "summary": "Generating platform-independent wayfinding instructions with in-context learning.",
       "recognition": "",
       "primary": "https://arxiv.org/abs/2403.11487",
-      "topic_label": "Integrating Vision-Language"
+      "topic_label": "Integrating Vision-Language",
+      "presentations": []
     },
     {
       "title": "MeLFusion: Synthesizing Music from Image and Language Cues using Diffusion Models",
@@ -438,9 +477,15 @@ window.SC_RESEARCH = {
       "short": "MeLFusion",
       "topic": "generation",
       "summary": "Synthesizing music from image and text cues with a diffusion model and visual synapses.",
-      "recognition": "Highlight · Top 2.8%",
+      "recognition": "Highlight \u00b7 Top 2.8%",
       "primary": "https://arxiv.org/abs/2406.04673",
-      "topic_label": "Cross-modal Generation"
+      "topic_label": "Cross-modal Generation",
+      "presentations": [
+        {
+          "label": "Invited talk \u00b7 Sight and Sound, CVPR 2024",
+          "url": "https://sightsound.org/"
+        }
+      ]
     },
     {
       "title": "APoLLo: Unified Adapter and Prompt Learning for Vision Language Models",
@@ -476,7 +521,8 @@ window.SC_RESEARCH = {
       "summary": "Combining adapters and prompts to improve few-shot generalization in vision-language models.",
       "recognition": "",
       "primary": "https://aclanthology.org/2023.emnlp-main.629.pdf",
-      "topic_label": "Integrating Vision-Language"
+      "topic_label": "Integrating Vision-Language",
+      "presentations": []
     },
     {
       "title": "AdVerb: Visually Guided Audio Dereverberation",
@@ -512,7 +558,13 @@ window.SC_RESEARCH = {
       "summary": "Using visual context to help estimate clean audio from reverberant recordings.",
       "recognition": "",
       "primary": "https://openaccess.thecvf.com/content/ICCV2023/papers/Chowdhury_AdVerb_Visually_Guided_Audio_Dereverberation_ICCV_2023_paper.pdf",
-      "topic_label": "Cross-modal Generation"
+      "topic_label": "Cross-modal Generation",
+      "presentations": [
+        {
+          "label": "Invited talk \u00b7 AV4D, ICCV 2023",
+          "url": "https://av4d.org/"
+        }
+      ]
     },
     {
       "title": "Measured Albedo in the Wild: Filling the Gap in Intrinsics Evaluation",
@@ -540,7 +592,8 @@ window.SC_RESEARCH = {
       "summary": "A measured-albedo dataset and evaluation metrics for intrinsic image decomposition.",
       "recognition": "",
       "primary": "https://arxiv.org/abs/2306.15662",
-      "topic_label": "Computational Photography"
+      "topic_label": "Computational Photography",
+      "presentations": []
     },
     {
       "title": "AudViSum: Self-Supervised Deep Reinforcement Learning for Diverse Audio-Visual Summary Generation",
@@ -568,7 +621,8 @@ window.SC_RESEARCH = {
       "summary": "Self-supervised reinforcement learning for diverse, informative audio-visual summaries.",
       "recognition": "",
       "primary": "https://www.bmvc2021-virtualconference.com/assets/papers/1430.pdf",
-      "topic_label": "Audio-Visual Representation Learning"
+      "topic_label": "Audio-Visual Representation Learning",
+      "presentations": []
     },
     {
       "title": "V-DESIRR: Very Fast Deep Embedded Single Image Reflection Removal",
@@ -592,7 +646,8 @@ window.SC_RESEARCH = {
       "summary": "A multi-scale architecture for fast single-image reflection removal.",
       "recognition": "",
       "primary": "https://openaccess.thecvf.com/content/ICCV2021/papers/Prasad_V-DESIRR_Very_Fast_Deep_Embedded_Single_Image_Reflection_Removal_ICCV_2021_paper.pdf",
-      "topic_label": "Computational Photography"
+      "topic_label": "Computational Photography",
+      "presentations": []
     },
     {
       "title": "Listen to the Pixels",
@@ -620,7 +675,8 @@ window.SC_RESEARCH = {
       "summary": "Self-supervised joint audio-visual segmentation by exploiting correspondence between the modalities.",
       "recognition": "",
       "primary": "https://ieeexplore.ieee.org/document/9506019",
-      "topic_label": "Audio-Visual Representation Learning"
+      "topic_label": "Audio-Visual Representation Learning",
+      "presentations": []
     }
   ],
   "directions": [
@@ -631,7 +687,7 @@ window.SC_RESEARCH = {
         "Agents & efficient",
         "reasoning"
       ],
-      "period": "2025–present",
+      "period": "2025\u2013present",
       "color": "#507f65",
       "description": "At Apple, my current focus is efficient on-device tool-calling agents and reasoning compression. My public work studies how agents learn from feedback, reason over evidence, and act in unfamiliar environments. MAGNET (NeurIPS 2025) coordinates agents across multiple videos. In 2026, Simulate to Generalize scales stateful API-calling supervision with LLM world models; RLTL;DR internalizes self-generated insights; and MoE Expert Selection aligns expert routing with agent operations. Minimal Cores examines which reasoning steps support a prediction, while our TMLR survey maps perception, reasoning, planning, memory, and action in multimodal agents.",
       "ids": [
@@ -650,7 +706,7 @@ window.SC_RESEARCH = {
         "Cross-modal",
         "generation"
       ],
-      "period": "2023–present",
+      "period": "2023\u2013present",
       "color": "#b89846",
       "description": "How can visual and language cues guide the generation or refinement of audio? MeLFusion (CVPR 2024, Highlight) combines images and text to synthesize music with diffusion models. AdVerb (ICCV 2023) uses visual context to estimate clean audio from reverberant recordings. Together, they study cross-modal conditioning for creative synthesis and audio restoration. More recent work, including MAGNET and AMUSE, broadens my focus to evidence-grounded multimodal reasoning and agents; those papers appear in the related directions below.",
       "ids": [
@@ -665,7 +721,7 @@ window.SC_RESEARCH = {
         "Audio-visual",
         "representations"
       ],
-      "period": "2021–present",
+      "period": "2021\u2013present",
       "color": "#8c76a6",
       "description": "This direction develops useful audio-visual representations while controlling the cost of perception. Listen to the Pixels (ICIP 2021) learns joint segmentation from correspondences between sound and vision. AudViSum (BMVC 2021) uses self-supervised reinforcement learning to produce diverse audio-visual summaries. EgoAdapt (ICCV 2025) brings this strand to efficient egocentric perception through adaptive cross-modal distillation and policy learning, covering action recognition, active-speaker localization, and behavior anticipation. This interest in selecting useful information also connects to my newer work on efficient reasoning.",
       "ids": [
@@ -681,7 +737,7 @@ window.SC_RESEARCH = {
         "Audio-visual",
         "LLMs"
       ],
-      "period": "2024–present",
+      "period": "2024\u2013present",
       "color": "#c08b64",
       "description": "I build and evaluate models that jointly ground sound, video, and language. Meerkat (ECCV 2024) addresses fine-grained grounding in space and time. AURELIA (ICCV 2025) improves structured reasoning at test time, while AVTrustBench (ICCV 2025) examines robustness and reliability. AURA separates perceptual grounding from the validity of reasoning steps, revealing gaps that answer accuracy can miss. AMUSE (CVPR 2026) extends the direction to multi-speaker interactions: identifying who speaks, tracking roles and events, and evaluating agentic understanding, with RAFT for data-efficient alignment.",
       "ids": [
@@ -699,7 +755,7 @@ window.SC_RESEARCH = {
         "Integrating",
         "vision-language"
       ],
-      "period": "2022–present",
+      "period": "2022\u2013present",
       "color": "#588f9b",
       "description": "My vision-language work connects robust representation learning to understanding and embodied interaction. APoLLo (EMNLP 2023) combines adapters and prompts for few-shot adaptation. ASPIRE (ACL Findings 2024) uses language-guided augmentation to reduce reliance on spurious visual cues. Wayfinding / VLMNav (NAACL 2024) synthesizes platform-independent navigation instructions through in-context learning. Intent-o-meter (Scientific Reports 2024) combines image, text, and psychological cues to model perceived intent in social media posts. These foundations connect to the newer agentic work on learning, reasoning, and acting across environments.",
       "ids": [
@@ -716,7 +772,7 @@ window.SC_RESEARCH = {
         "Computational",
         "photography"
       ],
-      "period": "2021–2023",
+      "period": "2021\u20132023",
       "color": "#858e9a",
       "description": "Earlier work focuses on efficient image restoration and physically grounded evaluation. V-DESIRR (ICCV 2021) is a multi-scale network for single-image reflection removal, addressing weak through strong reflections. Measured Albedo in the Wild (MAW, ICCP 2023) introduces measured-albedo data and complementary metrics for evaluating intrinsic image decomposition. This strand sits alongside my broader work on inverse rendering and video quality assessment, including the video enhancement article linked under Miscellaneous.",
       "ids": [
@@ -820,6 +876,26 @@ window.SC_RESEARCH = {
     const topic = document.createElement('span');
     topic.textContent = paper.venue === 'arXiv' ? '· Preprint · ' + paper.topic_label : '· ' + paper.topic_label;
     meta.append(venue, topic);
+    const presentations = detail('presentations');
+    if (presentations) {
+      presentations.replaceChildren();
+      presentations.hidden = !paper.presentations?.length;
+      if (paper.presentations?.length) {
+        const label = document.createElement('strong');
+        label.textContent = 'Presentations: ';
+        presentations.append(label);
+        paper.presentations.forEach((presentation, index) => {
+          if (index) presentations.append(document.createTextNode(' · '));
+          const link = document.createElement('a');
+          link.href = presentation.url;
+          link.textContent = presentation.label;
+          if (/\b(oral|spotlight|highlight)\b/i.test(presentation.label)) link.className = 'sc-recognition-emphasis';
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          presentations.append(link);
+        });
+      }
+    }
     const links = detail('links');
     links.replaceChildren();
     paper.links.forEach(resource => {
@@ -829,6 +905,22 @@ window.SC_RESEARCH = {
       anchor.target = '_blank';
       anchor.rel = 'noopener noreferrer';
       links.appendChild(anchor);
+      const repo = resource.url.match(/^https:\/\/github\.com\/([^/]+\/[^/#?]+)/);
+      if (repo) {
+        const badge = document.createElement('a');
+        badge.className = 'sc-stars';
+        badge.href = 'https://github.com/' + repo[1];
+        badge.target = '_blank';
+        badge.rel = 'noopener noreferrer';
+        const image = document.createElement('img');
+        image.src = 'https://img.shields.io/github/stars/' + repo[1] + '?style=social&label=Stars';
+        image.alt = 'GitHub stars for ' + repo[1];
+        image.loading = 'lazy';
+        image.height = 20;
+        badge.append(image);
+        links.appendChild(badge);
+      }
+
     });
     dialog.showModal();
     return true;
