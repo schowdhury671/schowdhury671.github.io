@@ -485,3 +485,5 @@ a:hover {
 .sc-site .sc-contact a:hover, .sc-site .sc-footer-links a:hover { background: #e5effc; border-color: #bdcfe5; text-decoration: none; }
 .sc-site .sc-email { width: fit-content; max-width: 100%; padding: 7px 14px; min-height: 38px; border: 1px solid #dce6f2; border-radius: 999px; background: #f1f6fd; box-shadow: 0 2px 0 #cfdeef; }
 .sc-site .sc-footer-links a { padding: 5px 11px; min-height: 32px; }
+
+.sc-site .sc-collaboration-invite { width: fit-content; max-width: 100%; margin-top: 16px; padding: 12px 16px; border: 1px solid #c8d9ee; border-left: 4px solid var(--sc-accent); border-radius: 7px; background: #edf4fd; color: #1b365d; font-size: 15px; font-weight: 600; line-height: 1.5; }

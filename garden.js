@@ -147,7 +147,8 @@ window.SC_RESEARCH = {
         },
         {
           "label": "GitHub",
-          "url": "https://github.com/rishieraj/awesome-multimodal-agents"
+          "url": "https://github.com/rishieraj/awesome-multimodal-agents",
+          "stars": 3
         }
       ],
       "topic_label": "Agents & Efficient Reasoning",
@@ -182,7 +183,8 @@ window.SC_RESEARCH = {
         },
         {
           "label": "Code",
-          "url": "https://github.com/schowdhury671/magnet"
+          "url": "https://github.com/schowdhury671/magnet",
+          "stars": 4
         }
       ],
       "id": "magnet",
@@ -211,7 +213,8 @@ window.SC_RESEARCH = {
         },
         {
           "label": "Code",
-          "url": "https://github.com/schowdhury671/aurelia"
+          "url": "https://github.com/schowdhury671/aurelia",
+          "stars": 13
         }
       ],
       "id": "aurelia",
@@ -249,7 +252,8 @@ window.SC_RESEARCH = {
         },
         {
           "label": "Code",
-          "url": "https://github.com/schowdhury671/avtrustbench-"
+          "url": "https://github.com/schowdhury671/avtrustbench-",
+          "stars": 4
         }
       ],
       "id": "avtrustbench",
@@ -278,7 +282,8 @@ window.SC_RESEARCH = {
         },
         {
           "label": "Code",
-          "url": "https://github.com/schowdhury671/EgoAdapt"
+          "url": "https://github.com/schowdhury671/EgoAdapt",
+          "stars": 5
         }
       ],
       "id": "egoadapt",
@@ -353,7 +358,8 @@ window.SC_RESEARCH = {
         },
         {
           "label": "Code",
-          "url": "https://github.com/schowdhury671/meerkat/tree/main"
+          "url": "https://github.com/schowdhury671/meerkat/tree/main",
+          "stars": 36
         }
       ],
       "id": "meerkat",
@@ -408,7 +414,8 @@ window.SC_RESEARCH = {
         },
         {
           "label": "Code",
-          "url": "https://github.com/Sreyan88/ASPIRE"
+          "url": "https://github.com/Sreyan88/ASPIRE",
+          "stars": 0
         }
       ],
       "id": "aspire",
@@ -470,7 +477,8 @@ window.SC_RESEARCH = {
         },
         {
           "label": "Code",
-          "url": "https://github.com/schowdhury671/melfusion/tree/main"
+          "url": "https://github.com/schowdhury671/melfusion/tree/main",
+          "stars": 59
         }
       ],
       "id": "melfusion",
@@ -512,7 +520,8 @@ window.SC_RESEARCH = {
         },
         {
           "label": "Code",
-          "url": "https://github.com/schowdhury671/APoLLo"
+          "url": "https://github.com/schowdhury671/APoLLo",
+          "stars": 24
         }
       ],
       "id": "apollo",
@@ -608,7 +617,8 @@ window.SC_RESEARCH = {
         },
         {
           "label": "Code",
-          "url": "https://github.com/schowdhury671/AudViSum"
+          "url": "https://github.com/schowdhury671/AudViSum",
+          "stars": 5
         },
         {
           "label": "Presentation",
@@ -637,7 +647,8 @@ window.SC_RESEARCH = {
         },
         {
           "label": "Code",
-          "url": "https://github.com/ee19d005/vdesirr"
+          "url": "https://github.com/ee19d005/vdesirr",
+          "stars": 1
         }
       ],
       "id": "vdesirr",
@@ -662,7 +673,8 @@ window.SC_RESEARCH = {
         },
         {
           "label": "Code",
-          "url": "https://github.com/schowdhury671/Audio-visual-joint-segmentation"
+          "url": "https://github.com/schowdhury671/Audio-visual-joint-segmentation",
+          "stars": 1
         },
         {
           "label": "Presentation",
@@ -906,7 +918,7 @@ window.SC_RESEARCH = {
       anchor.rel = 'noopener noreferrer';
       links.appendChild(anchor);
       const repo = resource.url.match(/^https:\/\/github\.com\/([^/]+\/[^/#?]+)/);
-      if (repo) {
+      if (repo && Number(resource.stars) >= 20) {
         const badge = document.createElement('a');
         badge.className = 'sc-stars';
         badge.href = 'https://github.com/' + repo[1];
