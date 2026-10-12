@@ -426,3 +426,41 @@ a:hover {
         padding-top: 20px;
     }
 }
+
+/* Open academic layout with the circle-and-line timelines from the reference. */
+.sc-site { --sc-width: 1040px; }
+.sc-site .sc-header { border: 0; border-bottom: 1px solid var(--sc-line); border-radius: 0; box-shadow: none; }
+.sc-site .sc-hero h1 { font-family: 'Source Sans 3', 'Segoe UI', sans-serif; font-weight: 600; letter-spacing: -.025em; }
+.sc-site .sc-contact a { padding: 3px 0; border: 0; background: transparent; border-radius: 0; }
+.sc-site .sc-contact { gap: 8px 22px; }
+.sc-site .sc-contact a:hover { background: transparent; text-decoration: underline; }
+.sc-site .sc-introduction { padding-top: 28px; }
+.sc-site .sc-paper { padding: 20px 0; border: 0; border-bottom: 1px solid var(--sc-line); border-radius: 0; box-shadow: none; margin-bottom: 0; }
+.sc-site .sc-paper:hover { border-color: var(--sc-line); box-shadow: none; }
+.sc-site .sc-paper-image { border: 0; border-radius: 3px; }
+.sc-site .sc-news-list, .sc-site .sc-experience, .sc-site .sc-talk-list,
+.sc-site .sc-awards-list, .sc-site .sc-teaching-list { position: relative; padding-left: 24px; margin-left: 7px; border-left: 2px solid #d8e3f1; }
+.sc-site .sc-news-item, .sc-site .sc-experience-item, .sc-site .sc-talk-list li,
+.sc-site .sc-awards-list li, .sc-site .sc-teaching-list li { position: relative; }
+.sc-site .sc-news-item::before, .sc-site .sc-experience-item::before,
+.sc-site .sc-talk-list li::before, .sc-site .sc-awards-list li::before,
+.sc-site .sc-teaching-list li::before { content: ''; position: absolute; left: -31px; top: 17px; width: 12px; height: 12px; border: 2px solid #2868b2; border-radius: 50%; background: #fff; }
+.sc-site #updates > .sc-news-list > .sc-news-item:nth-child(-n+3)::before { background: #edb523; border-color: #edb523; }
+.sc-site .sc-news-item time { color: #1b365d; font-weight: 600; }
+.sc-site .sc-experience-item { border: 0; padding: 13px 0 23px; }
+.sc-site .sc-experience-item::before { top: 23px; }
+.sc-site .sc-experience-item time { width: 100%; text-align: left; margin-left: 51px; }
+.sc-site .sc-talk-list li, .sc-site .sc-awards-list li, .sc-site .sc-teaching-list li { border-bottom: 0; }
+.sc-site .sc-talk-list li::before, .sc-site .sc-awards-list li::before,
+.sc-site .sc-teaching-list li::before { top: 23px; }
+.sc-site .sc-service-entry { position: relative; border-left: 2px solid #d8e3f1; padding-left: 24px; margin-left: 7px; }
+.sc-site .sc-service-entry::before { content: ''; position: absolute; left: -7px; top: 7px; width: 12px; height: 12px; border: 2px solid #2868b2; border-radius: 50%; background: #fff; }
+@media (max-width: 650px) {
+  .sc-site .sc-news-item, .sc-site .sc-talk-list li { grid-template-columns: 1fr; gap: 2px; padding: 10px 0 16px; }
+  .sc-site .sc-news-item::before, .sc-site .sc-talk-list li::before { top: 17px; }
+  .sc-site .sc-news-list, .sc-site .sc-experience, .sc-site .sc-talk-list,
+  .sc-site .sc-awards-list, .sc-site .sc-teaching-list { padding-left: 20px; }
+  .sc-site .sc-news-item::before, .sc-site .sc-experience-item::before,
+  .sc-site .sc-talk-list li::before, .sc-site .sc-awards-list li::before,
+  .sc-site .sc-teaching-list li::before { left: -27px; }
+}

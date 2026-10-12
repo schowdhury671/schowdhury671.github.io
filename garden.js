@@ -71,7 +71,7 @@ window.SC_RESEARCH = {
       "topic_label": "Agents & Efficient Reasoning"
     },
     {
-      "title": "AMusE: Audio-Visual Benchmark and Alignment Framework for Agentic Multi-Speaker Understanding",
+      "title": "AMUSE: Audio-Visual Benchmark and Alignment Framework for Agentic Multi-Speaker Understanding",
       "authors": "Sanjoy Chowdhury, Karren D. Yang, Xudong Liu, Fartash Faghri, Pavan Kumar Anasosalu Vasu, Oncel Tuzel, Dinesh Manocha, Chun-Liang Li, Raviteja Vemulapalli",
       "venue": "CVPR",
       "year": 2026,
@@ -87,7 +87,7 @@ window.SC_RESEARCH = {
         }
       ],
       "id": "amuse",
-      "short": "AMusE",
+      "short": "AMUSE",
       "topic": "understanding",
       "summary": "A benchmark for agentic multi-speaker understanding, paired with the RAFT alignment framework.",
       "recognition": "",
@@ -652,7 +652,7 @@ window.SC_RESEARCH = {
       ],
       "period": "2023–present",
       "color": "#b89846",
-      "description": "How can visual and language cues guide the generation or refinement of audio? MeLFusion (CVPR 2024, Highlight) combines images and text to synthesize music with diffusion models. AdVerb (ICCV 2023) uses visual context to estimate clean audio from reverberant recordings. Together, they study cross-modal conditioning for creative synthesis and audio restoration. More recent work, including MAGNET and AMusE, broadens my focus to evidence-grounded multimodal reasoning and agents; those papers appear in the related directions below.",
+      "description": "How can visual and language cues guide the generation or refinement of audio? MeLFusion (CVPR 2024, Highlight) combines images and text to synthesize music with diffusion models. AdVerb (ICCV 2023) uses visual context to estimate clean audio from reverberant recordings. Together, they study cross-modal conditioning for creative synthesis and audio restoration. More recent work, including MAGNET and AMUSE, broadens my focus to evidence-grounded multimodal reasoning and agents; those papers appear in the related directions below.",
       "ids": [
         "melfusion",
         "adverb"
@@ -683,7 +683,7 @@ window.SC_RESEARCH = {
       ],
       "period": "2024–present",
       "color": "#c08b64",
-      "description": "I build and evaluate models that jointly ground sound, video, and language. Meerkat (ECCV 2024) addresses fine-grained grounding in space and time. AURELIA (ICCV 2025) improves structured reasoning at test time, while AVTrustBench (ICCV 2025) examines robustness and reliability. AURA separates perceptual grounding from the validity of reasoning steps, revealing gaps that answer accuracy can miss. AMusE (CVPR 2026) extends the direction to multi-speaker interactions: identifying who speaks, tracking roles and events, and evaluating agentic understanding, with RAFT for data-efficient alignment.",
+      "description": "I build and evaluate models that jointly ground sound, video, and language. Meerkat (ECCV 2024) addresses fine-grained grounding in space and time. AURELIA (ICCV 2025) improves structured reasoning at test time, while AVTrustBench (ICCV 2025) examines robustness and reliability. AURA separates perceptual grounding from the validity of reasoning steps, revealing gaps that answer accuracy can miss. AMUSE (CVPR 2026) extends the direction to multi-speaker interactions: identifying who speaks, tracking roles and events, and evaluating agentic understanding, with RAFT for data-efficient alignment.",
       "ids": [
         "amuse",
         "aura",
