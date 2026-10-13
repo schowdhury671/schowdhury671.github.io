@@ -485,7 +485,7 @@ window.SC_RESEARCH = {
       "short": "MeLFusion",
       "topic": "generation",
       "summary": "Synthesizing music from image and text cues with a diffusion model and visual synapses.",
-      "recognition": "Highlight \u00b7 Top 2.8%",
+      "recognition": "CVPR Highlight \u00b7 Top 2.8%",
       "primary": "https://arxiv.org/abs/2406.04673",
       "topic_label": "Cross-modal Generation",
       "presentations": [
@@ -720,7 +720,7 @@ window.SC_RESEARCH = {
       ],
       "period": "2023\u2013present",
       "color": "#b89846",
-      "description": "How can visual and language cues guide the generation or refinement of audio? MeLFusion (CVPR 2024, Highlight) combines images and text to synthesize music with diffusion models. AdVerb (ICCV 2023) uses visual context to estimate clean audio from reverberant recordings. Together, they study cross-modal conditioning for creative synthesis and audio restoration. More recent work, including MAGNET and AMUSE, broadens my focus to evidence-grounded multimodal reasoning and agents; those papers appear in the related directions below.",
+      "description": "How can visual and language cues guide the generation or refinement of audio? MeLFusion (CVPR 2024, Highlight · Top 2.8%) combines images and text to synthesize music with diffusion models. AdVerb (ICCV 2023) uses visual context to estimate clean audio from reverberant recordings. Together, they study cross-modal conditioning for creative synthesis and audio restoration. More recent work, including MAGNET and AMUSE, broadens my focus to evidence-grounded multimodal reasoning and agents; those papers appear in the related directions below.",
       "ids": [
         "melfusion",
         "adverb"
@@ -888,6 +888,13 @@ window.SC_RESEARCH = {
     const topic = document.createElement('span');
     topic.textContent = paper.venue === 'arXiv' ? '· Preprint · ' + paper.topic_label : '· ' + paper.topic_label;
     meta.append(venue, topic);
+    if (paper.recognition) {
+      const recognition = document.createElement('span');
+      recognition.className = 'sc-badge sc-award-badge';
+      recognition.textContent = paper.recognition;
+      meta.appendChild(recognition);
+    }
+
     const presentations = detail('presentations');
     if (presentations) {
       presentations.replaceChildren();
@@ -1266,3 +1273,32 @@ window.build_garden = build_garden;
 window.open_paper = open_paper;
 window.select_coauthor = select_coauthor;
 }
+
+/* Theme preference persists across pages; use the device preference initially. */
+(function () {
+  const buttons = document.querySelectorAll('[data-theme-toggle]');
+  function applyTheme(theme, persist) {
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = theme === 'dark' ? '#101923' : '#ffffff';
+    buttons.forEach(button => {
+      button.setAttribute('aria-pressed', String(theme === 'dark'));
+      button.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' mode');
+      button.querySelector('[data-theme-label]').textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+    });
+    if (persist) { try { localStorage.setItem('sc-theme', theme); } catch (_) {} }
+  }
+  applyTheme(document.documentElement.dataset.theme || 'light', false);
+  buttons.forEach(button => button.addEventListener('click', () => applyTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark', true)));
+  if (window.matchMedia) {
+    const preference = window.matchMedia('(prefers-color-scheme: dark)');
+    preference.addEventListener?.('change', event => {
+      let saved; try { saved = localStorage.getItem('sc-theme'); } catch (_) {}
+      if (saved !== 'light' && saved !== 'dark') applyTheme(event.matches ? 'dark' : 'light', false);
+    });
+  }
+}());
+
+/* Newly inserted news rows automatically receive the same featured treatment. */
+(function(){const items=Array.from(document.querySelectorAll('#updates > .sc-news-list > .sc-news-item'));items.forEach((item,index)=>{item.classList.toggle('sc-news-featured',index<3);const time=item.querySelector('time');const old=item.querySelector('.sc-news-label');if(index<3 && time && !old){const label=document.createElement('span');label.className='sc-news-label';label.textContent='Latest';time.append(label);}else if(index>=3 && old){old.remove();}});})();
