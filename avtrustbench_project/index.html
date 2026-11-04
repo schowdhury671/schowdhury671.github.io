@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AVTrustBench: Assessing and Enhancing Reliability and Robustness in Audio-Visual LLMs</title>
+	
+ 
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+<style>
+.container {
+  position: relative;
+}
+
+.text-block {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  margin-left: 5px;
+  width: 97.5%;
+  text-align: center;
+  border-radius:10px 10px 0px 0px;
+  border: 1px solid #787878;
+  background-color: #787878;
+  color: white;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+</style>
+</head>
+<body>
+
+<!-- <nav class="navbar" style="margin-bottom:-40px" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="index.html">
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>-->
+
+
+<section class="hero">
+  <div style="margin-bottom:-80px" class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">AVTrustBench: Assessing and Enhancing Reliability and Robustness in Audio-Visual LLMs</h1>
+          <h1 style="font-size:2vw"><font color="#ff0000"> <b> ICCV 2025 </b> </font></h1> <br>
+		<h1 style="font-size:2vw"><font color="#ff0000"> <b>  </b> </font></h1> <br>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://schowdhury671.github.io/">Sanjoy Chowdhury</a><sup>*1,3</sup>,</span>
+            <span class="author-block">
+              <a href="https://sayannag.github.io/">Sayan Nag</a><sup>*2,3</sup>,</span>
+            <span class="author-block">
+              <a href="https://subhrajyotidasgupta.github.io/">Subhrajyoti Dasgupta</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="#">Yaoting Wang</a><sup>5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.mohamed-elhoseiny.com/">Mohamed Elhoseiny</a><sup>5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ruohangao.github.io/">Ruohan Gao</a><sup>1</sup>,
+            </span>
+			      <span class="author-block">
+              <a href="https://www.cs.umd.edu/people/dmanocha/">Dinesh Manocha</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Maryland,</span>
+            <span class="author-block"><sup>2</sup>University of Toronto,</span>
+			      <span class="author-block"><sup>3</sup>Adobe Research,</span>
+            <span class="author-block"><sup>4</sup>Mila and Université de Montréal,</span>
+            <span class="author-block"><sup>5</sup>KAUST</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+			  <!--
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2501.02135"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=fFMRsLEiA5g&t=1s"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+			        <!--  Link. -->
+              <span class="link-block">
+                <a href="https://umd0-my.sharepoint.com/:f:/r/personal/sanjoyc_umd_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsanjoyc%5Fumd%5Fedu%2FDocuments%2FAVTrustBench&share=cgqJKdyg9lL8QIIgj7V3j8lyEgUC3%2DzpOBN%2D%2D%2DQluvE2JaXiSg"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/schowdhury671/avtrustbench-"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+			  <!--
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+				 -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    
+	<!-- TL;DR. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">TL;DR</h2>
+		<center>
+        <div class="content has-text-justified" style='width:750px'>
+          <p>
+            We introduce AVTrustBench as a comprehensive 600K-sample benchmark evaluating AVLLMs on adversarial attacks, compositional reasoning, and modality-specific dependencies.
+            We further propose a new model-agnostic calibrated audio-visual preference optimization-based training strategy, CAVPref, that improves performance of existing AVLLMs by up to 30.19%.
+          </p>
+        </div>
+		</center>
+      </div>
+    </div>
+	
+</div>
+</section>
+    <!--/ TL;DR. -->
+	
+  <section class="columns is-vcentered interpolation-panel" width=100%>
+  <div class="container is-max-desktop">
+    <div class="hero-body" style='margin-top:-25px;margin-bottom:-25px'>
+	<center>
+      <!-- <h2 class="title is-3">MelFusion Framework</h2> -->
+      <img src="./static/images/teaser.png"
+                 class="interpolation-image" width=80%/></center>
+      <p class="content has-text-justified">
+		We present AVTrustBench, a new benchmark comprising three challenging
+yet unexplored axes, i.e., Adversarial Attack, Compositional Reasoning, and Modality Dependency, and evaluate SOTA Audio-Visual
+LLMs (AVLLMs) on this benchmark. We observe that these models demonstrate poor performances under these settings. To alleviate these
+limitations, we propose a novel AVLLM-agnostic preference optimization strategy CAVPref, which substantially improves the reliability
+and robustness of these models over existing solutions such as DPO. [Representative Model: VideoLlama-2.]
+      </p>
+    </div>
+  </div>
+  </section>
+
+  <section class="section">
+  <div class="container is-max-desktop">
+    
+  <!-- TL;DR. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Abstract</h2>
+    <center>
+        <div class="hero-body">
+          <p class="content has-text-justified">
+			With the rapid advancement of Multi-modal Large Language Models (MLLMs), several diagnostic benchmarks
+have recently been developed to assess these models’ multimodal reasoning proficiency. However, these benchmarks
+are restricted to assessing primarily the visual aspect and
+do not examine the holistic audio-visual (AV) understanding.
+Moreover, currently, there are no benchmarks that investigate the capabilities of AVLLMs to calibrate their responses
+when presented with perturbed inputs. To this end, we introduce Audio-Visual Trustworthiness assessment Benchmark
+(AVTrustBench), comprising 600K samples spanning
+over 9 meticulously crafted tasks, evaluating the capabilities
+of AVLLMs across three distinct dimensions: Adversarial
+attack, Compositional reasoning, and Modality-specific dependency. Using our benchmark, we extensively evaluate 13
+state-of-the-art AVLLMs. The findings reveal that the majority of existing models fall significantly short of achieving
+human-like comprehension, offering valuable insights for
+future research directions. To alleviate the limitations in the
+existing approaches, we further propose a robust, modelagnostic calibrated audio-visual preference optimizationbased training strategy CAVPref, obtaining a gain up to
+30.19% across all 9 tasks. 
+		  </p>
+        </div>
+    </center>
+      </div>
+    </div>
+  
+</div>
+</section>
+
+<section class="columns is-vcentered interpolation-panel" width=100%>
+  <div class="container is-max-desktop" >
+    <div class="hero-body" style='margin-top:-25px;margin-bottom:-25px'>
+    <center><h2 class="title is-3">AVTrustBench Statistics and AVLLMs Leaderboard</h2></center><br>
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column" >
+        <div class="content">
+          <!-- <center><h1 style="font-size: 25px; color:brown" " class="title is-3"></h1></center> -->
+          <img src="static/images/data_pie_leaderboard.png" height=100%/>
+          <p class="content has-text-justified">
+          <b>AVTRUSTBENCH statistics and AVLLMs leaderboard.</b> (Left) Task-wise data distribution. Our benchmark comprises 9 diverse
+tasks spanning over 3 dimensions. (Right) Performance comparison on AVTRUSTBENCH. Values represent dimension-wise averages.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop" >
+    <center><h2 class="title is-3">AVTrustBench Task Examples</h2></center><br>
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column" >
+        <div class="content">
+          <!-- <center><h1 style="font-size: 25px; color:brown" " class="title is-3"></h1></center> -->
+          <img src="static/images/task_diag.png" height=100%/>
+          <p class="content has-text-justified">
+            <b>Task definitions:</b> AVTrustBench comprises a total of 9 tasks tasks MCIT, ICIT, MVIT and MAIT from Adversarial Attack,
+COT-Stitch, COT-Swap and CAT from Compositional Reasoning and MAT and MVT from Modality-specific Dependency respectively. The
+goal of each dimension is to critically assess the robustness of existing AVLLMs under different modes of challenges. In each case, the
+AVLLMs are presented with a multiple-choice question setup. Refer to Sec. 3.1 in the paper for task-specific details.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="columns is-vcentered interpolation-panel" width=100%>
+  <div class="container is-max-desktop" >
+    <div class="hero-body" style='margin-top:-25px;margin-bottom:-25px'>
+    <center><h2 class="title is-3">Zero-shot Qualitative Results</h2></center><br>
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column" >
+        <div class="content">
+          <!-- <center><h1 style="font-size: 25px; color:brown" " class="title is-3"></h1></center> -->
+          <img src="static/images/qual_main_paper_zs.png" height=100%/>
+          <p class="content has-text-justified">
+            <b>Qualitative results:</b> We report top 8 models’ performance on three representative tasks MCIT, COT-Swap and MAT. GPT-4o
+consistently outperforms open-source models. Under instruction setting we append the phrase “If the correct answer is not
+present respond with None of the above”. More qualitative results can be found in the supplementary.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop" >
+    <center><h2 class="title is-3">CAVPref Architecture</h2></center><br>
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column" >
+        <div class="content">
+          <!-- <center><h1 style="font-size: 25px; color:brown" " class="title is-3"></h1></center> -->
+          <img src="static/images/mitigation_avllm.png" height=20%/>
+          <p class="content has-text-justified">
+            <b>Overview of CAVPref:</b> We formulate a distributionally
+robust AV preferential optimization objective to incorporate the
+multi-modal relationships across different modalities and counter
+the tailing effect across diverse categories in the dataset.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="columns is-vcentered interpolation-panel" width=100%>
+  <div class="container is-max-desktop" >
+    <div class="hero-body" style='margin-top:-25px;margin-bottom:-25px'>
+    <center><h2 class="title is-3">Task-wise Leaderboards</h2></center><br>
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column" >
+        <div class="content">
+          <!-- <center><h1 style="font-size: 25px; color:brown" " class="title is-3"></h1></center> -->
+          <img src="static/images/full_leaderboard.png" height=100%/>
+          <p class="content has-text-centered">
+            Leaderboards for zero-shot evaluation on 9 different tasks in AVTRUSTBENCH.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+    
+
+<section class="section">
+  <div class="container is-max-desktop" >
+    <center><h2 class="title is-3">Qualitative Results</h2></center><br>
+
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column" >
+        <div class="content">
+          <!-- <center><h1 style="font-size: 25px; color:brown" " class="title is-3"></h1></center> -->
+          <img src="static/images/mcit_supp_new.png" height=100%/>
+          <img src="static/images/icit_supp_new.png" height=100%/>
+          <img src="static/images/mvit_supp_new.png" height=100%/>
+          <img src="static/images/mait_supp_new.png" height=100%/>
+          <img src="static/images/mvt_supp_new.png" height=100%/>
+          <img src="static/images/mat_supp_new.png" height=100%/>
+          <img src="static/images/cot_stitch_supp_new.png" height=100%/>
+          <img src="static/images/cot_swap_supp_new.png" height=100%/>
+          <img src="static/images/cat_supp_new.png" height=100%/>
+          <p class="content has-text-centered">
+            Qualitative results on the 9 AVTrustBench tasks - MCIT, ICIT, MVIT, MAIT, MVT, MAT, COT-Stitch, COT-Swap and CAT.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content" style="margin-top:0px">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{chowdhury2025avtrustbench,
+  title={AVTrustBench: Assessing and Enhancing Reliability and Robustness in Audio-Visual LLMs},
+  author={Chowdhury, Sanjoy and Nag, Sayan and Dasgupta, Subhrajyoti and Wang, Yaoting and Elhoseiny, Mohamed and Gao, Ruohan and Manocha, Dinesh},
+  journal={arXiv preprint arXiv:2501.02135},
+  year={2025}
+}
+</code></pre>
+  </div>
+</section>
+
+<!--<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content" style="margin-top:-70px">
+    <h2 class="title">Acknowledgement</h2>
+TODO
+</code></pre>
+  </div>
+</section>-->
+
+
+<!-- <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Template of this website is borrowed from <a
+              href="https://nerfies.github.io/">nerfies</a> website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+</body>
+</html>

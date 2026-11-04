@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aurelia: Test-time Reasoning Distillation in Audio-Visual LLMs</title>
+	
+ 
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+<style>
+.container {
+  position: relative;
+}
+
+.text-block {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  margin-left: 5px;
+  width: 97.5%;
+  text-align: center;
+  border-radius:10px 10px 0px 0px;
+  border: 1px solid #787878;
+  background-color: #787878;
+  color: white;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+</style>
+</head>
+<body>
+
+<!-- <nav class="navbar" style="margin-bottom:-40px" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="index.html">
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>-->
+
+
+<section class="hero">
+  <div style="margin-bottom:-80px" class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+        <img src="static/images/aurelia_logo.png" alt="Aurelia" width="100">
+          <h1 class="title is-1 publication-title">Aurelia: Test-time Reasoning Distillation in Audio-Visual LLMs</h1>
+		<h1 style="font-size:2vw"><font color="#ff0000"> <b> ICCV 2025 </b> </font></h1> <br>
+		<!-- <h1 style="font-size:2vw"><font color="#ff0000"> <b> CVPR 2024 [Highlight, Top 2.8%] </b> </font></h1> <br> -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://schowdhury671.github.io/">Sanjoy Chowdhury</a><sup>*1</sup>,</span>
+            <span class="author-block">
+                <a href="https://hananshafi.github.io/">Hanan Gani</a><sup>*2</sup>,</span>
+            <span class="author-block">
+                    <a href="https://nishitanand.github.io/">Nishit Anand</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://sayannag.github.io/">Sayan Nag</a><sup>3,4</sup>,</span>
+              <span class="author-block">
+                <a href="https://ruohangao.github.io/">Ruohan Gao</a><sup>1</sup>,</span>
+                <span class="author-block">
+                    <a href="https://www.mohamed-elhoseiny.com/">Mohamed Elhoseiny</a><sup>5</sup>,</span>
+                <span class="author-block">
+                        <a href="https://salman-h-khan.github.io/">Salman Khan</a><sup>2</sup>,</span>
+			<span class="author-block">
+              <a href="https://www.cs.umd.edu/people/dmanocha/">Dinesh Manocha</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Maryland,</span>
+            <span class="author-block"><sup>2</sup>MBZUAI,</span>
+            <span class="author-block"><sup>3</sup>University of Toronto,</span>
+			<span class="author-block"><sup>4</sup>Adobe Research</span>
+            <span class="author-block"><sup>5</sup>KAUST</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+			  <!--
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2503.23219"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=hak2mm-Bpy0"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+			  <!--  Link. -->
+              <span class="link-block">
+                <a href="https://umd0-my.sharepoint.com/:f:/r/personal/sanjoyc_umd_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsanjoyc%5Fumd%5Fedu%2FDocuments%2FAurelia%2DAVReasonBench&share=cgqhkDmenz2qSLOAe%5FEWW1rREgUCZd84tlZ2keG%2DyYuIysZvQA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/schowdhury671/aurelia"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+			  <!--
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+				 -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    
+	<!-- TL;DR. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">TL;DR</h2>
+		<center>
+        <div class="content has-text-justified" style='width:750px'>
+          <img id="teaser" width="100%" src="static/images/teaser_diagram.png">
+          <p>
+            We introduce <b>AURELIA</b>, a novel actor-critic based audio-visual (AV) reasoning
+framework that distills structured, step-by-step reasoning
+into AVLLMs at test time, improving their ability to process
+complex multi-modal inputs without additional training or
+fine-tuning. To further advance AVLLM reasoning skills, we
+present AVReasonBench, a challenging benchmark compris-
+ing 4500 audio-visual questions, each paired with detailed
+step-by-step reasoning. Our benchmark spans six distinct
+tasks, including AV-GeoIQ, which evaluates AV reasoning
+combined with geographical and cultural knowledge.
+          </p>
+        </div>
+		</center>
+      </div>
+    </div>
+	
+</div>
+</section>
+    <!--/ TL;DR. -->
+
+
+  
+
+
+<section class="section"  style="background-color:#efeff081">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-six-fifths">
+            <h2 class="title is-3">🔥Highlights</h2>
+            <div class="content has-text-justified">
+              Key contributions of AURELIA: 
+    
+              <ol type="1">
+                <li>We present <b>AURELIA</b>, a scalable and automated pipeline
+                  for generating high-quality Audio-Visual reasoning data,
+                  serving as both an evaluation resource and to the best of
+                  our knowledge, the first training-free reasoning distillation
+                  framework for Audio Visual LLMs</li><br>
+                  
+                <li>Leveraging our proposed reasoning data generation
+                  pipeline, we introduce <b>AVReasonBench</b>, a comprehensive
+                  AV benchmark featuring 4500 audio-visual samples with
+                  detailed step-by-step reasoning solutions across six diverse
+                  tasks, encompassing multimodal commonsense reasoning,
+                  music comprehension, and humor detection. Additionally, as a part of our benchmark, we introduce a novel
+                  task <b>AV-GeoIQ</b> for geographical understanding and curate 1000 AV-Compositional and 100 AV-Meme understanding
+                  samples through careful manual inspection.</li><br>
+                <li>Leveraging our curated reasoning dataset, we demonstrate
+                  up to 100% relative improvement in AVLLM performance
+                  through zero-shot reasoning distillation, demonstrating the
+                  effectiveness of our approach in enhancing the reasoning
+                  capabilities of AV models.</li><br>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+	
+  <section class="columns is-vcentered interpolation-panel" width=100%>
+  <div class="container is-max-desktop">
+    <div class="hero-body" style='margin-top:-25px;margin-bottom:-25px'>
+	<center>
+      <h2 class="title is-3">AURELIA Framework</h2>
+      <img src="./static/images/Main_Diagram.png"
+                 class="interpolation-image" width=80%/></center>
+      <p class="content has-text-justified">
+        <b>AURELIA</b> consists of a multi-agent interactive framework that functions in sync and
+        generates reasoning steps that are then distilled inside the target model. The input set consisting of the audio, video, and question is first fed
+        into the reasoning generator agent, which generates an initial set of reasoning steps that provide a structured pathway to reach the final
+        answer. These reasoning steps are synthesized into a detailed caption by a Summarizer agent. The Evaluator agent then outputs a score that
+        measures the relevance of the caption with the input audio and video. A feedback mechanism then provides supervision to the Reasoning
+        generator based on the evaluation score, which adjusts its output to maximize the evaluation score. This actor-critique framework continues
+        until the evaluation score exceeds a specific threshold or the number of iterations are exhausted.
+      </p>
+    </div>
+  </div>
+  </section>
+
+
+  <section class="columns is-vcentered interpolation-panel" width=100%>
+    <div class="container is-max-desktop">
+      <div class="hero-body" style='margin-top:-25px;margin-bottom:-25px'>
+    <center>
+        <h2 class="title is-3">AVReasonBench: Audio-Visual Reasoning
+          Benchmark</h2>
+        <p class="content has-text-justified">
+          <b>AVReasonBench</b> comprises of 4500 audio-visual questions, each paired with detailed
+          step-by-step reasoning. Our benchmark spans six distinct
+          tasks, including AV-GeoIQ, which evaluates AV reasoning
+          combined with geographical and cultural knowledge.
+        </p>
+        <img src="./static/images/avreasonbench_tasks.png"
+                   class="interpolation-image" width=80%/></center>
+      </div>
+    </div>
+</section>
+
+
+
+<section class="columns is-vcentered interpolation-panel" width=100%>
+  <div class="container is-max-desktop">
+    <div class="hero-body" style='margin-top:-25px;margin-bottom:-25px'>
+  <center>
+      <h2 class="title is-3">Quantitative Results</h2>
+      <!-- <p class="content has-text-justified">
+        <b>AVReasonBench</b> comprises of 4500 audio-visual questions, each paired with detailed
+        step-by-step reasoning. Our benchmark spans six distinct
+        tasks, including AV-GeoIQ, which evaluates AV reasoning
+        combined with geographical and cultural knowledge.
+      </p> -->
+      <img src="./static/images/quantitative.png"
+                 class="interpolation-image" width=80%/></center>
+    </div>
+  </div>
+</section>
+
+
+<section class="columns is-vcentered interpolation-panel" width=100%>
+  <div class="container is-max-desktop">
+    <div class="hero-body" style='margin-top:-25px;margin-bottom:-25px'>
+  <center>
+      <h2 class="title is-3">Qualitative Results</h2>
+      <!-- <p class="content has-text-justified">
+        <b>AVReasonBench</b> comprises of 4500 audio-visual questions, each paired with detailed
+        step-by-step reasoning. Our benchmark spans six distinct
+        tasks, including AV-GeoIQ, which evaluates AV reasoning
+        combined with geographical and cultural knowledge.
+      </p> -->
+      <img src="./static/images/qualitative_combined.png"
+                 class="interpolation-image" width=80%/></center>
+    </div>
+  </div>
+</section>
+
+  <!-- <section class="section">
+  <div class="container is-max-desktop"> -->
+    
+  <!-- TL;DR. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Abstract</h2>
+    <center>
+        <div class="hero-body">
+          <p class="content has-text-justified">
+			Music is a universal language that can communicate emotions and feelings. It forms an essential part of the whole spectrum of creative media, ranging from movies to social media posts. 
+			Machine learning models that can synthesize music are predominantly conditioned on textual descriptions of it. 
+			Inspired by how musicians compose music not just from a movie script, but also through visualizations, we propose MeLFusion, 
+			a model that can effectively use cues from a textual description and the corresponding image to synthesize music. 
+			MeLFusion is a text-to-music diffusion model with a novel <strong><i>visual synapse</i></strong>, which effectively infuses the semantics from the visual modality into the generated music. 
+			To facilitate research in this area, we introduce a new dataset MeLBench, and propose a new evaluation metric IMSM. 
+			Our exhaustive experimental evaluation suggests that adding visual information to the music synthesis pipeline significantly improves 
+			the quality of generated music, measured both objectively and subjectively, with a relative gain of up to 67.98% on the FAD score. 
+			We hope that our work gathers attention to this pragmatic, yet relatively under-explored research area.
+		  </p>
+        </div>
+    </center>
+      </div>
+    </div>
+  
+</div>
+</section> -->
+<!-- 
+<section class="section">
+  <div class="container is-max-desktop" style="margin-top:-90px">
+  <center><h2 class="title is-3">Dataset Examples</h2></center><br>
+
+    <div class="columns is-centered"> -->
+
+      <!-- Visual Effects. -->
+      <!-- <div class="column" >
+        <div class="content"> -->
+          <!-- <center><h1 style="font-size: 25px; color:brown" " class="title is-3"></h1></center> -->
+          <!-- <img src="static/images/dataset_samples/dataset_1.jpg" height=100%/>
+        </div>
+      </div> -->
+
+      <!-- Matting. -->
+      <!-- <div class="column" >
+        <div class="content"> -->
+          <!-- <center><h1 style="font-size: 25px; color:brown" " class="title is-3"></h1></center> -->
+          <!-- <img src="static/images/dataset_samples/dataset_2.jpg" height=100%/>
+        </div>
+      </div>
+      </div>
+	  <div class="content" style="margin-top:-20px"> -->
+          <!-- <center><h1 style="font-size: 25px; color:brown" " class="title is-3"></h1></center> -->
+          <!-- <center><img src="static/images/dataset_samples/dataset_3.png" height=100% width=98%/></center>
+        </div>
+    </div>
+
+  </div>
+</section> -->
+
+    
+  <!-- TL;DR. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Qualitative Results of MeLFusion</h2>
+      </div>
+    </div>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="container pt-3">
+
+        <div class="table-responsive pt-3">
+          <table class="table pt-2" id="painting-generation">
+            <thead>
+              <tr>
+                <th><center>Visual Prompt</center></th>
+                <th><center>Textual Prompt</center></th>
+                <th><center>Generated audio</center></th>
+              </tr>
+            <tr><td><img src="static/images/audio_samples/slide_4_image.jpg" width="450" style="object-fit:fit; height:200px; border: solid 1px #FFF"></td><td><center>An ambient composition with flute and guitar.</center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_4_audio.wav" type="audio/wav">Your browser does not support the audio element.</audio></td></tr>
+			<tr><td><img src="static/images/audio_samples/slide_6_image.jpg" width="450" style="object-fit:fit; height:200px; border: solid 1px #FFF"></td><td><center>A solo violin piece that goes well with this oil painting.</center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_6_audio.wav" type="audio/wav">Your browser does not support the audio element.</audio></td></tr>
+			<tr><td><img src="static/images/audio_samples/slide_8_image.jpg" width="450" style="object-fit:fit; height:200px; border: solid 1px #FFF"></td><td><center>Hip-Hop music for a setting with people in a jolly mood relaxing at poolside.</center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_8_audio.wav" type="audio/wav">Your browser does not support the audio element.</audio></td></tr>
+			<tr><td><img src="static/images/audio_samples/slide_10_image.jpg" width="450" style="object-fit:fit; height:200px; border: solid 1px #FFF"></td><td><center>Jazz piano with mild drumming.</center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_10_audio.mp3" type="audio/mp3">Your browser does not support the audio element.</audio></td></tr></thead>
+            <tr><td><img src="static/images/audio_samples/slide_12_image.jpg" width="450" style="object-fit:fit; height:200px; border: solid 1px #FFF"></td><td><center>An upbeat soundtrack from heavy metal genre containing fast drumbeats and cymbal crashes.</center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_12_audio.wav" type="audio/wav">Your browser does not support the audio element.</audio></td></tr>
+			<tbody></tbody>
+          </table>
+          
+        </div>
+      </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop"> -->
+    
+  <!-- TL;DR. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">MeLFusion Ablations</h2>
+      </div>
+    </div>
+  
+</div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+	<center><h2 class="title is-3">Example 1</h2></center>
+      <div class="container pt-3">
+
+        <div class="table-responsive pt-3">
+          <table class="table pt-2" id="painting-generation">
+            <thead>
+              <tr>
+                <th><center>Visual Prompt</center></th>
+                <th><center>Textual Prompt</center></th>
+                <th><center>Generated audio</center></th>
+              </tr>
+           	<tr><td><img src="static/images/audio_samples/slide_16_image.jpg" width="450" style="object-fit:fit; height:200px; border: solid 1px #FFF"></td><td><center>None</center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_16_audio.mp3" type="audio/mp3">Your browser does not support the audio element.</audio></td></tr></thead>
+            <tr><td><center>None</center></td><td><center><p style="color:#3f5db5">This is an orchestral music piece. The track can be played at the climax of a movie.</p></center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_17_audio.wav" type="audio/wav">Your browser does not support the audio element.</audio></td></tr>
+			<tr><td><img src="static/images/audio_samples/slide_18_image.jpg" width="450" style="object-fit:fit; height:200px; border: solid 1px #FFF"></td><td><center><p style="color:#3f5db5">This is an orchestral music piece. The track can be played at the climax of a movie.</p></center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_18_audio.wav" type="audio/wav">Your browser does not support the audio element.</audio></td></tr>
+			<tr><td><img src="static/images/audio_samples/slide_19_image.jpg" width="450" style="object-fit:fit; height:200px; border: solid 1px #FFF"></td><td><center><p style="color:#ed3978">Sudden up tempo dramatic music amplifying the emotion of the scene followed by downtempo orchestra.</p></center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_19_audio.wav" type="audio/wav">Your browser does not support the audio element.</audio></td></tr>
+			<tr><td><img src="static/images/audio_samples/slide_20_image.jpg" width="450" style="object-fit:fit; height:200px; border: solid 1px #FFF"></td><td><center><p style="color:#3f5db5">This is an orchestral music piece. The track can be played at the climax of a movie.</p></center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_20_audio.wav" type="audio/wav">Your browser does not support the audio element.</audio></td></tr>
+			<tbody></tbody>
+          </table>
+          
+        </div>
+      </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+	<center><h2 class="title is-3">Example 2</h2></center>
+      <div class="container pt-3">
+
+        <div class="table-responsive pt-3">
+          <table class="table pt-2" id="painting-generation">
+            <thead>
+              <tr>
+                <th><center>Visual Prompt</center></th>
+                <th><center>Textual Prompt</center></th>
+                <th><center>Generated audio</center></th>
+              </tr>
+           	<tr><td><img src="static/images/audio_samples/slide_23_image.jpg" width="220" style="object-fit:fit; height:200px; border: solid 1px #FFF"></td><td><center>None</center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_23_audio.wav" type="audio/wav">Your browser does not support the audio element.</audio></td></tr></thead>
+            <tr><td><center>None</center></td><td><center><p style="color:#3f5db5">String orchestra playing a tune from horror genre.</p></center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_24_audio.mp3" type="audio/mp3">Your browser does not support the audio element.</audio></td></tr>
+			<tr><td><img src="static/images/audio_samples/slide_25_image.jpg" width="220" style="object-fit:fit; height:200px; border: solid 1px #FFF"></td><td><center><p style="color:#3f5db5">String orchestra playing a tune from horror genre.</p></center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_25_audio.wav" type="audio/wav">Your browser does not support the audio element.</audio></td></tr>
+			<tr><td><img src="static/images/audio_samples/slide_26_image.jpg" width="220" style="object-fit:fit; height:200px; border: solid 1px #FFF"></td><td><center><p style="color:#ed3978">Haunting soundtrack.</p></center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_26_audio.mp3" type="audio/mp3">Your browser does not support the audio element.</audio></td></tr>
+			<tr><td><img src="static/images/audio_samples/slide_27_image.jpg" width="220" style="object-fit:fit; height:200px; border: solid 1px #FFF"></td><td><center><p style="color:#3f5db5">String orchestra playing a tune from horror genre.</p></center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_27_audio.mp3" type="audio/mp3">Your browser does not support the audio element.</audio></td></tr>
+			<tbody></tbody>
+          </table>
+          
+        </div>
+      </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop"> -->
+    
+  <!-- TL;DR. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Comparison of MeLFusion with other approaches</h2>
+      </div>
+    </div>
+  
+</div>
+</section> -->
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="container pt-3">
+
+        <div class="table-responsive pt-3">
+          <table class="table pt-2" id="painting-generation">
+            <thead>
+              <tr>
+				<th><center>Method</center></th>
+                <th><center>Visual Prompt</center></th>
+                <th><center>Textual Prompt</center></th>
+                <th><center>Generated audio</center></th>
+              </tr>
+            <tr><td><center>MusicLM</center></td><td><center>None</center></td><td><p align="justify">A soft musical track played on violin for a tranquil scenery is captured with the view of the night sky just before sunrise. The sky consists of dynamic spiraling clouds which symbolizes movement and aliveness. The stars are bright and prominent with strokes of yellows and whites represent a vivid yet peaceful moment. The village in the scene has houses whose windows emit warm and glowing light, giving a contrast to the cool, celestial tones of sky depicting pleasant emotions.</p></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/musiclm.wav" type="audio/wav">Your browser does not support the audio element.</audio></td></tr>
+			<tr><td><center>Moûsai</center></td><td><center>None</center></td><td><p align="justify">A soft musical track played on violin for a tranquil scenery is captured with the view of the night sky just before sunrise. The sky consists of dynamic spiraling clouds which symbolizes movement and aliveness. The stars are bright and prominent with strokes of yellows and whites represent a vivid yet peaceful moment. The village in the scene has houses whose windows emit warm and glowing light, giving a contrast to the cool, celestial tones of sky depicting pleasant emotions.</p></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/mousai.wav" type="audio/wav">Your browser does not support the audio element.</audio></td></tr>
+			<tr><td><center>MusicGen</center></td><td><center>None</center></td><td><p align="justify">A soft musical track played on violin for a tranquil scenery is captured with the view of the night sky just before sunrise. The sky consists of dynamic spiraling clouds which symbolizes movement and aliveness. The stars are bright and prominent with strokes of yellows and whites represent a vivid yet peaceful moment. The village in the scene has houses whose windows emit warm and glowing light, giving a contrast to the cool, celestial tones of sky depicting pleasant emotions.</p></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/musicgen.wav" type="audio/wav">Your browser does not support the audio element.</audio></td></tr>
+			<tr><td><center>MeLFusion (Ours)</center></td><td><img src="static/images/audio_samples/slide_32_image.jpg" width="2000" style="object-fit:fit; height:150px; border: solid 1px #FFF"></td><td><center>A soft musical track of folk acoustic genre played on violin.</center></td><td><audio controls="" controlslist="nodownload" class="px-1"> <source src="static/images/audio_samples/slide_32_audio.mp3" type="audio/mp3">Your browser does not support the audio element.</audio></td></tr>
+			<tbody></tbody>
+          </table>
+          
+        </div>
+      </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content" style="margin-top:0px">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{chowdhury2025aurelia,
+      title={Aurelia: Test-time Reasoning Distillation in Audio-Visual LLMs},
+      author={Chowdhury, Sanjoy and Gani, Hanan and Anand, Nishit and Nag, Sayan and Gao, Ruohan and Elhoseiny, Mohamed and Khan, Salman and Manocha, Dinesh},
+      journal={arXiv preprint arXiv:2503.23219},
+      year={2025}
+    }
+</code></pre>
+  </div>
+</section>
+
+<!--<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content" style="margin-top:-70px">
+    <h2 class="title">Acknowledgement</h2>
+TODO
+</code></pre>
+  </div>
+</section>-->
+
+
+<!-- <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Template of this website is borrowed from <a
+              href="https://nerfies.github.io/">nerfies</a> website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+</body>
+</html>
